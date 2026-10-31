@@ -73,6 +73,7 @@ def batch_body(args, manifest, offset):
     for module in (args.python_module, args.cuda_module):
         if module:
             lines.append("module load " + shlex.quote(module))
+    lines.append("unset PYTHONPATH PYTHONHOME")
     lines.append("cd -- " + shlex.quote(str(Path(args.chdir).resolve())))
     exports = {"PYTHONUNBUFFERED": "1", "PYTHONNOUSERSITE": "1",
                "OMP_NUM_THREADS": str(args.cpus), "CACHEBENCH_VENDOR": str(vendor),
@@ -119,7 +120,7 @@ def submit_arrays(result, content):
     receipt_path = Path(result["receipt"])
     snapshot = Path(result["manifest_snapshot"])
     output.mkdir(parents=True, exist_ok=True)
-    with (output / ".slurm_submission.lock").open("a") as lock:
+    with (receipt_path.parent / ("." + receipt_path.stem + ".lock")).open("a") as lock:
         try:
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError as error:
@@ -191,6 +192,8 @@ def main():
         p.add_argument("--" + key, required=True)
     p.add_argument("--partition"); p.add_argument("--account"); p.add_argument("--qos")
     p.add_argument("--dependency", help="Slurm dependency, e.g. afterok:12345")
+    p.add_argument("--submission-name", default="",
+                   help="Optional lowercase name for separate manifests/receipts in a shared result directory")
     p.add_argument("--concurrency", type=int, help="Optional cap per array; no default %%N cap")
     p.add_argument("--time", help="Optional wall time; omitted uses Slurm policy defaults")
     p.add_argument("--cpus", type=int, default=8); p.add_argument("--memory", default="64G")
@@ -204,6 +207,10 @@ def main():
     p.add_argument("--max-array-tasks", type=int, help="Optional additional site max_array_tasks limit")
     p.add_argument("--submit", action="store_true")
     a = p.parse_args()
+    if a.submission_name and not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,63}", a.submission_name):
+        p.error("--submission-name must be a lowercase letter/digit slug, at most 64 characters")
+    if a.time is None and os.environ.get("SBATCH_TIMELIMIT"):
+        a.time = os.environ["SBATCH_TIMELIMIT"]
     if a.cpus < 1 or (a.concurrency is not None and a.concurrency < 1):
         p.error("CPU count and an explicit concurrency cap must be positive")
     if not Path(a.chdir).is_dir():
@@ -218,9 +225,10 @@ def main():
         p.error("Manifest contains duplicate run_ids")
     n = len(rows)
     output = Path(a.output_dir).resolve()
-    receipt_path = output / "slurm_submission.json"
+    prefix = "slurm_" + (a.submission_name + "_" if a.submission_name else "")
+    receipt_path = output / (prefix + "submission.json")
     limits = array_limits(a)
-    snapshot = output / "slurm_manifest.jsonl"
+    snapshot = output / (prefix + "manifest.jsonl")
     arrays = []
     for offset in range(0, n, limits["chunk_size"]):
         count = min(limits["chunk_size"], n - offset)

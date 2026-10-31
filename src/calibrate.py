@@ -7,21 +7,229 @@ the converter missing from the upstream script; it is an experimental convention
 not a claim that the authors' released profile used this exact aggregation.
 """
 from __future__ import annotations
-import argparse, copy, hashlib, json, math, time
+import argparse, copy, hashlib, json, math, os, tempfile, time
 from pathlib import Path
+from urllib.parse import urlparse
+from urllib.request import Request, urlopen
 from .policies import config_signature,validate_row,canonical_prompt
 
 def read_samples(path,method):
- samples=[json.loads(line) for line in Path(path).read_text().splitlines() if line.strip()]
+ if method not in {'magcache','sencache'}:raise ValueError('Unknown calibration method')
+ path=Path(path).expanduser().resolve()
+ samples=[json.loads(line) for line in path.read_text().splitlines() if line.strip()]
  if not samples:raise ValueError('Empty calibration set')
- ids=set();prompts=set()
+ ids=set();prompts=set();videos=set()
  for s in samples:
+  if not isinstance(s,dict):raise ValueError('Every calibration sample must be a JSON object')
   if s.get('split')!='calibration':raise ValueError('Every row must explicitly have split=calibration')
-  if not s.get('prompt_id') or not s.get('prompt'):raise ValueError('Every calibration sample needs prompt_id and prompt')
+  if not isinstance(s.get('prompt_id'),str) or not s['prompt_id'].strip() or not isinstance(s.get('prompt'),str) or not s['prompt'].strip():raise ValueError('Every calibration sample needs prompt_id and prompt')
   if s['prompt_id'] in ids or canonical_prompt(s['prompt']) in prompts:raise ValueError('Duplicate calibration sample')
   ids.add(s['prompt_id']);prompts.add(canonical_prompt(s['prompt']))
-  if method=='sencache' and not s.get('video_path'):raise ValueError('SenCache needs actual independent calibration videos')
+  seed=s.get('seed',0)
+  if type(seed) is not int or seed<0:raise ValueError('Calibration seed must be a nonnegative integer')
+  if method=='sencache':
+   if not isinstance(s.get('video_path'),str) or not s['video_path'].strip():raise ValueError('SenCache needs actual independent calibration videos')
+   video=Path(s['video_path']).expanduser()
+   video=(video if video.is_absolute() else path.parent/video).resolve()
+   if str(video) in videos:raise ValueError('Duplicate calibration video path')
+   videos.add(str(video));s['video_path']=str(video)
  return samples
+
+def validate_exclusions(samples,paths):
+ """Check the entire calibration set, even when this task handles one sample."""
+ from .manifest import load_prompts
+ ids={s['prompt_id'] for s in samples};prompts={canonical_prompt(s['prompt']) for s in samples}
+ records=[]
+ for path in paths:
+  path=Path(path).expanduser().resolve()
+  rows=load_prompts(path)
+  for row in rows:
+   if row['prompt_id'] in ids or canonical_prompt(row['prompt']) in prompts:
+    raise ValueError(f'Calibration/evaluation overlap in {path}: {row["prompt_id"]}')
+  records.append({'path':str(path),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'prompts':len(rows)})
+ return records
+
+def sha256_file(path):
+ digest=hashlib.sha256()
+ with Path(path).open('rb') as stream:
+  while chunk:=stream.read(8*1024*1024):digest.update(chunk)
+ return digest.hexdigest()
+
+def _valid_sha256(value):
+ return isinstance(value,str) and len(value)==64 and all(c in '0123456789abcdef' for c in value)
+
+def fetch_calibration_video(sample):
+ """Fetch an explicitly supplied public HTTPS asset; never guess a media URL.
+
+ Existing files are reused and hashed. A supplied video_sha256 is enforced;
+ otherwise the observed hash is recorded, without claiming prior verification.
+ The destination is installed atomically and an existing file is never replaced.
+ """
+ path=Path(sample['video_path']).expanduser().resolve()
+ expected=sample.get('video_sha256')
+ if expected is not None and not _valid_sha256(expected):raise ValueError('video_sha256 must be a lowercase SHA-256 digest')
+ url=sample.get('video_url')
+ def record(status):
+  if path.stat().st_size==0:raise ValueError(f'Empty calibration video: {path}')
+  actual=sha256_file(path)
+  if expected is not None and actual!=expected:raise ValueError(f'Calibration video checksum mismatch: {path}')
+  return {'path':str(path),'sha256':actual,'expected_sha256':expected,
+          'checksum_status':'matches_expected' if expected is not None else 'observed_only',
+          'source_url':url,'status':status,'bytes':path.stat().st_size}
+ if path.is_file():return record('existing')
+ if not isinstance(url,str) or urlparse(url).scheme!='https' or not urlparse(url).netloc:
+  raise ValueError(f'Missing local video {path}; provide an explicit HTTPS video_url')
+ path.parent.mkdir(parents=True,exist_ok=True)
+ for attempt in range(3):
+  fd,temporary=tempfile.mkstemp(prefix=path.name+'.download-',dir=path.parent)
+  try:
+   with os.fdopen(fd,'wb') as target:
+    with urlopen(Request(url,headers={'User-Agent':'CE6190-calibration/1.0'}),timeout=30) as response:
+     if urlparse(response.geturl()).scheme!='https':raise ValueError('Video download redirected away from HTTPS')
+     content_type=response.headers.get('Content-Type','').lower()
+     if 'text/html' in content_type or 'application/json' in content_type:raise ValueError('Video URL returned a page instead of video bytes')
+     digest=hashlib.sha256();size=0
+     while chunk:=response.read(1024*1024):
+      target.write(chunk);digest.update(chunk);size+=len(chunk)
+     if not size:raise ValueError('Empty calibration video download')
+     if expected is not None and digest.hexdigest()!=expected:raise ValueError('Downloaded calibration video checksum mismatch')
+    target.flush();os.fsync(target.fileno())
+   try:os.link(temporary,path)
+   except FileExistsError:return record('existing')
+   return record('downloaded')
+  except (OSError,ValueError):
+   if attempt==2:raise
+   time.sleep(2**attempt)
+  finally:
+   if os.path.exists(temporary):os.unlink(temporary)
+
+def write_profile_atomic(path,data):
+ """Publish a complete profile without clobbering any earlier result."""
+ path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+ fd,temporary=tempfile.mkstemp(prefix=path.name+'.',suffix='.tmp',dir=path.parent)
+ try:
+  with os.fdopen(fd,'w') as stream:
+   json.dump(data,stream,indent=2,allow_nan=False);stream.write('\n');stream.flush();os.fsync(stream.fileno())
+  os.link(temporary,path)
+ finally:
+  if os.path.exists(temporary):os.unlink(temporary)
+
+def _profile_header(method,row,samples,indices,manifest_path,exclusions):
+ selected=[samples[i] for i in indices]
+ return {'schema_version':1,'method':method,'config':config_signature(row),
+  'sample_ids':[s['prompt_id'] for s in selected],
+  'prompt_sha256':[hashlib.sha256(canonical_prompt(s['prompt']).encode()).hexdigest() for s in selected],
+  'samples':selected,'created_by':'cachebench.calibrate','is_model_training':False,
+  'selection':{'manifest_path':str(Path(manifest_path).resolve()),
+   'manifest_sha256':sha256_file(manifest_path),'total_samples':len(samples),'sample_indices':list(indices)},
+  'excluded_prompt_files':exclusions}
+
+def _number(value,*,positive=False):
+ if type(value) not in (int,float) or not math.isfinite(value) or value<0 or (positive and value<=0):
+  raise ValueError('Calibration contains invalid numeric values')
+ return float(value)
+
+def _mean_columns(rows):
+ return [math.fsum(row[j] for row in rows)/len(rows) for j in range(len(rows[0]))]
+
+def _check_vector(actual,expected,label):
+ if not isinstance(actual,list) or len(actual)!=len(expected):raise ValueError(f'Bad {label} dimensions')
+ if any(not math.isclose(_number(a),b,rel_tol=1e-12,abs_tol=1e-12) for a,b in zip(actual,expected)):
+  raise ValueError(f'{label} differs from retained raw calibration values')
+
+def merge_profiles(paths,method,row,samples,manifest_path,exclusions):
+ """Merge complete sample coverage using stdlib only; no GPU/model imports.
+
+ Every raw value is retained in original manifest order. The sum of shard
+ durations measures aggregate work, not elapsed parallel wall time, so the
+ merged calibration_wall_seconds is explicitly unknown (None).
+ """
+ started=time.perf_counter()
+ if not paths:raise ValueError('No calibration shards supplied')
+ if method not in {'magcache','sencache'}:raise ValueError('Unknown calibration method')
+ expected=_profile_header(method,row,samples,range(len(samples)),manifest_path,exclusions)
+ count=len(samples);steps=row['num_inference_steps'];ordered={};records=[];common=None;times=None;video_hashes={};downloads={}
+ for path in paths:
+  path=Path(path).expanduser().resolve();data=json.loads(path.read_text())
+  for key in ('schema_version','method','config','created_by','is_model_training','excluded_prompt_files'):
+   if data.get(key)!=expected[key]:raise ValueError(f'{path}: incompatible {key}')
+  selection=data.get('selection',{})
+  for key in ('manifest_sha256','total_samples'):
+   if selection.get(key)!=expected['selection'][key]:raise ValueError(f'{path}: calibration selection mismatch')
+  indices=selection.get('sample_indices')
+  if not isinstance(indices,list) or not indices or any(type(i) is not int or not 0<=i<count for i in indices) or len(set(indices))!=len(indices):
+   raise ValueError(f'{path}: invalid sample indices')
+  header=_profile_header(method,row,samples,indices,manifest_path,exclusions)
+  for key in ('samples','sample_ids','prompt_sha256'):
+   if data.get(key)!=header[key]:raise ValueError(f'{path}: sample declaration mismatch')
+  if not _valid_sha256(data.get('checkpoint_fingerprint')):raise ValueError(f'{path}: invalid checkpoint fingerprint')
+  revisions=data.get('source_revisions')
+  if not isinstance(revisions,dict) or not revisions:raise ValueError(f'{path}: missing verified source revisions')
+  if not isinstance(data.get('aggregation'),str) or not data['aggregation']:raise ValueError(f'{path}: missing aggregation convention')
+  if method=='sencache' and not _valid_sha256(data.get('calibration_code_sha256')):raise ValueError(f'{path}: missing calibration code checksum')
+  provenance={k:data.get(k) for k in ('checkpoint_fingerprint','source_revisions','aggregation','calibration_code_sha256','geometry_note','estimator_note')}
+  if common is None:common=provenance
+  elif common!=provenance:raise ValueError(f'{path}: calibration provenance differs across shards')
+  wall=_number(data.get('calibration_wall_seconds'))
+  if method=='magcache':
+   raw=data.get('raw_ratios')
+   if not isinstance(raw,list) or len(raw)!=len(indices):raise ValueError(f'{path}: raw ratio sample count mismatch')
+   if any(not isinstance(v,list) or len(v)!=2*steps for v in raw):raise ValueError(f'{path}: raw ratio shape mismatch')
+   raw=[[_number(v,positive=True) for v in values] for values in raw]
+   _check_vector(data.get('mag_ratios'),_mean_columns(raw),'mag_ratios')
+  else:
+   actual_times=data.get('timesteps')
+   if not isinstance(actual_times,list) or len(actual_times)!=steps:raise ValueError(f'{path}: timestep shape mismatch')
+   actual_times=[_number(v) for v in actual_times]
+   if len(set(actual_times))!=steps:raise ValueError(f'{path}: duplicate timesteps')
+   if times is None:times=actual_times
+   elif times!=actual_times:raise ValueError(f'{path}: timestep grid differs across shards')
+   raw=data.get('raw_data')
+   if not isinstance(raw,list) or len(raw)!=len(indices):raise ValueError(f'{path}: raw sensitivity sample count mismatch')
+   if any(not isinstance(v,list) or len(v)!=steps for v in raw):raise ValueError(f'{path}: raw sensitivity shape mismatch')
+   clean=[]
+   for values in raw:
+    pairs=[]
+    for pair in values:
+     if not isinstance(pair,list) or len(pair)!=2:raise ValueError(f'{path}: raw sensitivity pair mismatch')
+     pair=[_number(v) for v in pair]
+     if pair==[0.0,0.0]:raise ValueError(f'{path}: zero sensitivity pair may be a failed calibration step')
+     pairs.append(pair)
+    clean.append(pairs)
+   raw=clean
+   for dimension,key in enumerate(('J_x_norm','J_t_norm')):
+    means=_mean_columns([[pair[dimension] for pair in values] for values in raw])
+    _check_vector(data.get(key),means,key)
+   hashes=data.get('sample_video_sha256',{})
+   if not isinstance(hashes,dict) or set(hashes)!=set(header['sample_ids']) or any(not _valid_sha256(v) for v in hashes.values()):
+    raise ValueError(f'{path}: missing video checksums')
+   for sample in header['samples']:
+    supplied=sample.get('video_sha256')
+    if supplied is not None and supplied!=hashes[sample['prompt_id']]:raise ValueError(f'{path}: video checksum disagrees with manifest')
+   video_hashes.update(hashes)
+   downloaded=data.get('video_downloads',{})
+   if not isinstance(downloaded,dict) or set(downloaded)-set(header['sample_ids']):raise ValueError(f'{path}: invalid download provenance')
+   downloads.update(downloaded)
+  for index,values in zip(indices,raw):
+   if index in ordered:raise ValueError(f'Duplicate calibration sample index {index}')
+   ordered[index]=values
+  records.append({'path':str(path),'sha256':sha256_file(path),'sample_indices':indices,'calibration_wall_seconds':wall})
+ if set(ordered)!=set(range(count)):raise ValueError(f'Missing calibration sample indices: {sorted(set(range(count))-set(ordered))}')
+ raw=[ordered[i] for i in range(count)]
+ result=expected|{k:v for k,v in common.items() if v is not None}
+ if method=='magcache':result.update(raw_ratios=raw,mag_ratios=_mean_columns(raw))
+ else:
+  if len(set(video_hashes.values()))!=count:raise ValueError('Different calibration samples contain identical video files')
+  result.update(raw_data=raw,timesteps=times,
+   J_x_norm=_mean_columns([[pair[0] for pair in values] for values in raw]),
+   J_t_norm=_mean_columns([[pair[1] for pair in values] for values in raw]),
+   sample_video_sha256=video_hashes,video_downloads=downloads)
+ result.update(calibration_wall_seconds=None,profile_kind='merged',shards=records,
+  calibration_time_accounting={'note':'Sum includes each shard preparation/model load; parallel elapsed wall time is not measured here.',
+   'sum_shard_wall_seconds':math.fsum(r['calibration_wall_seconds'] for r in records),
+   'max_shard_wall_seconds':max(r['calibration_wall_seconds'] for r in records),
+   'merge_wall_seconds':time.perf_counter()-started,'shard_count':len(records)})
+ return result
 
 class MagnitudeCollector:
  def __init__(self,model):
@@ -41,20 +249,61 @@ class MagnitudeCollector:
   self.ratios.append(ratio);self.previous[branch]=residual.clone()
  def close(self):self.a.remove();self.b.remove()
 
+def selected_video_frames(reader,total_frames,indices):
+ """Yield requested frames while decoding sequentially, with bounded memory.
+
+ This helper intentionally uses no NumPy/Torch so the decoding/count contract
+ can be checked in the offline launcher tests. Duplicated sample indices are
+ expanded by the caller after resizing each distinct source frame once.
+ """
+ if type(total_frames) is not int or total_frames<1:raise ValueError('Video contains no frames or an invalid frame count')
+ wanted=set(indices)
+ if not wanted or any(type(i) is not int or not 0<=i<total_frames for i in wanted):raise ValueError('Invalid sampled frame indices')
+ observed=0
+ for index,frame in enumerate(reader):
+  observed=index+1
+  if observed>total_frames:raise ValueError('Decoded video contains more frames than count_frames reported')
+  if index in wanted:yield index,frame
+ if observed!=total_frames:raise ValueError(f'Decoded frame count {observed} differs from count_frames {total_frames}')
+
 def load_video(path,row,device):
+ """Uniform sampling with the original float32 GPU resize/normalization.
+
+ Decode one frame at a time instead of holding the full-resolution video or
+ all sampled full-resolution frames in RAM. Only the target-sized float32
+ tensor and one decoded source frame need to be resident.
+ """
  import numpy as np
  import torch
  import torch.nn.functional as F
  path=Path(path)
- if path.suffix=='.npy':frames=np.load(path,allow_pickle=False)
- else:
-  import imageio.v3 as iio
-  frames=iio.imread(path)
- if frames.ndim!=4 or frames.shape[-1]!=3 or frames.dtype!=np.uint8:raise ValueError(f'{path}: expected uint8 T,H,W,3 RGB')
- indices=np.linspace(0,len(frames)-1,row['num_frames'],dtype=int)
- x=torch.from_numpy(frames[indices].copy()).to(device=device,dtype=torch.float32).permute(0,3,1,2)
- x=F.interpolate(x,size=(row['height'],row['width']),mode='bilinear',align_corners=False,antialias=True)
- return (x/127.5-1).permute(1,0,2,3)
+ reader=None
+ try:
+  if path.suffix.lower()=='.npy':
+   frames=np.load(path,allow_pickle=False,mmap_mode='r')
+   if frames.ndim!=4 or frames.shape[-1]!=3 or frames.dtype!=np.uint8:raise ValueError(f'{path}: expected uint8 T,H,W,3 RGB')
+   total_frames=len(frames)
+  else:
+   import imageio.v2 as iio
+   reader=iio.get_reader(str(path),format='FFMPEG')
+   total_frames=int(reader.count_frames())
+  if total_frames<1:raise ValueError(f'{path}: video contains no frames')
+  if type(row['num_frames']) is not int or row['num_frames']<1:raise ValueError('Requested frame count must be positive')
+  indices=np.linspace(0,total_frames-1,row['num_frames'],dtype=int).tolist()
+  positions={}
+  for output_index,frame_index in enumerate(indices):positions.setdefault(frame_index,[]).append(output_index)
+  output=torch.empty((row['num_frames'],3,row['height'],row['width']),device=device,dtype=torch.float32)
+  selected=selected_video_frames(reader,total_frames,indices) if reader is not None else ((i,frames[i]) for i in positions)
+  for frame_index,frame in selected:
+   if frame.ndim!=3 or frame.shape[-1]!=3 or frame.dtype!=np.uint8 or min(frame.shape[:2])<1:
+    raise ValueError(f'{path}: decoded frame {frame_index} is not uint8 H,W,3 RGB')
+   x=torch.from_numpy(frame.copy()).to(device=device,dtype=torch.float32).permute(2,0,1).unsqueeze(0)
+   x=F.interpolate(x,size=(row['height'],row['width']),mode='bilinear',align_corners=False,antialias=True)
+   x=x/127.5-1
+   for output_index in positions[frame_index]:output[output_index].copy_(x[0])
+  return output.permute(1,0,2,3)
+ finally:
+  if reader is not None:reader.close()
 
 def run_mag(backend,row,samples):
  import numpy as np
@@ -106,7 +355,7 @@ def run_sen(backend,row,samples):
   raw.append(sample_raw)
   del video,clean,context
  return aggregate_sen(np.asarray(raw),times)|{'calibration_code_sha256':digest,
-   'geometry_note':'Frames sampled uniformly; resize explicitly uses (height,width), correcting upstream ambiguous W/H naming',
+   'geometry_note':'Uniform np.linspace frame indices; bounded sequential video decoding (npy uses mmap); unchanged float32 per-frame GPU bilinear resize with antialias and (height,width), then x/127.5-1. Corrects upstream ambiguous W/H naming.',
    'estimator_note':'Unmodified official finite-difference functions; noisy calibration states independently drawn at each time, solver history carried across times as upstream'}
 
 def aggregate_sen(raw,timesteps):
@@ -127,30 +376,44 @@ def main():
  p.add_argument('--samples',required=True,type=Path,help='JSONL prompt_id,prompt,seed,split=calibration; Sen also video_path')
  p.add_argument('--output',required=True,type=Path);p.add_argument('--vendor-dir',type=Path,default=Path('vendor'))
  p.add_argument('--checkpoint-dir',type=Path);p.add_argument('--device',type=int,default=0)
- p.add_argument('--import-raw',type=Path,help='Convert upstream Sen npz raw_data+timesteps without running GPU')
+ operation=p.add_mutually_exclusive_group()
+ operation.add_argument('--import-raw',type=Path,help='Convert upstream Sen npz raw_data+timesteps without running GPU')
+ operation.add_argument('--sample-index',type=int,help='Process one zero-based sample index, e.g. SLURM_ARRAY_TASK_ID')
+ operation.add_argument('--merge-profiles',nargs='+',type=Path,help='Merge all sample shards on CPU; no model loading or GPU imports')
+ p.add_argument('--exclude-prompts',action='append',default=[],type=Path,help='Reject overlap with this development/test prompt file; repeat for every held-out set')
  p.add_argument('--checkpoint-fingerprint',help='Required when importing existing raw Sen data; must be verified exact weights SHA')
  p.add_argument('--dry-run',action='store_true');a=p.parse_args()
  config=json.loads(a.config.read_text());row=config.get('generation',config)
  if 'model_id' not in row and 'model_id' in config:row['model_id']=config['model_id']
  validate_row(dict(row,method='baseline',prompt='calibration validation',prompt_id='validation',run_id='validation',seed=0))
- samples=read_samples(a.samples,a.method)
+ all_samples=read_samples(a.samples,a.method)
+ exclusions=validate_exclusions(all_samples,a.exclude_prompts)
+ if a.sample_index is not None and not 0<=a.sample_index<len(all_samples):p.error('--sample-index is outside the calibration manifest')
+ indices=[a.sample_index] if a.sample_index is not None else list(range(len(all_samples)))
+ samples=[all_samples[i] for i in indices]
  if a.output.exists():raise FileExistsError('Refusing to replace calibration profile; choose new output path')
  if a.dry_run:
-  print(json.dumps({'status':'planned_only','method':a.method,'samples':len(samples),'config':config_signature(row)},indent=2));return
+  if a.merge_profiles:merge_profiles(a.merge_profiles,a.method,row,all_samples,a.samples,exclusions)
+  print(json.dumps({'status':'planned_only','method':a.method,'samples':len(samples),
+   'total_samples':len(all_samples),'sample_indices':indices,'merge_profiles':a.merge_profiles is not None,
+   'excluded_prompt_files':exclusions,'config':config_signature(row)},indent=2));return
+ if a.merge_profiles:
+  result=merge_profiles(a.merge_profiles,a.method,row,all_samples,a.samples,exclusions)
+  write_profile_atomic(a.output,result)
+  print(json.dumps({'status':'complete','output':str(a.output),'profile_kind':'merged',
+   'samples':len(all_samples),'calibration_time_accounting':result['calibration_time_accounting']},indent=2));return
  start=time.perf_counter()
- result={'schema_version':1,'method':a.method,'config':config_signature(row),'sample_ids':[s['prompt_id'] for s in samples],
-  'prompt_sha256':[hashlib.sha256(canonical_prompt(s['prompt']).encode()).hexdigest() for s in samples],
-  'samples':samples,'created_by':'cachebench.calibrate','is_model_training':False}
+ result=_profile_header(a.method,row,all_samples,indices,a.samples,exclusions)
+ result['profile_kind']='sample_shard' if a.sample_index is not None else 'complete'
  if a.method=='sencache' and not a.import_raw:
-  video_hashes={}
+  downloads={}
   for sample in samples:
-   digest=hashlib.sha256()
-   with Path(sample['video_path']).open('rb') as stream:
-    while chunk:=stream.read(8*1024*1024):digest.update(chunk)
-   video_hashes[sample['prompt_id']]=digest.hexdigest()
-  result['sample_video_sha256']=video_hashes
+   downloads[sample['prompt_id']]=fetch_calibration_video(sample)
+  result['video_downloads']=downloads
+  result['sample_video_sha256']={key:value['sha256'] for key,value in downloads.items()}
+  if len(set(result['sample_video_sha256'].values()))!=len(samples):raise ValueError('Different calibration samples contain identical video files')
  if a.import_raw:
-  if a.method!='sencache' or not a.checkpoint_fingerprint:p.error('--import-raw requires --method sencache and verified --checkpoint-fingerprint')
+  if a.method!='sencache' or not _valid_sha256(a.checkpoint_fingerprint):p.error('--import-raw requires --method sencache and verified SHA-256 --checkpoint-fingerprint')
   import numpy as np
   with np.load(a.import_raw,allow_pickle=False) as z:result.update(aggregate_sen(z['raw_data'],z['timesteps']))
   if len(result['raw_data'])!=len(samples):raise ValueError('Declared calibration videos must match raw samples count')
@@ -164,6 +427,6 @@ def main():
   result.update(run_mag(backend,row,samples) if a.method=='magcache' else run_sen(backend,row,samples))
   backend.sync();result['checkpoint_fingerprint']=backend.fingerprint;result['source_revisions']=backend.revisions
  result['calibration_wall_seconds']=time.perf_counter()-start
- a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(result,indent=2))
+ write_profile_atomic(a.output,result)
  print(json.dumps({'status':'complete','output':str(a.output),'calibration_wall_seconds':result['calibration_wall_seconds']},indent=2))
 if __name__=='__main__':main()
