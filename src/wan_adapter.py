@@ -8,6 +8,7 @@ cache reset, timing and optional decoding are shared project integration code.
 """
 from __future__ import annotations
 import ast, hashlib, importlib.util, json, logging, math, os, sys, tempfile, time, types
+from collections import Counter
 from pathlib import Path
 from .sources import FORWARDS, verify
 from .policies import config_signature,canonical_prompt
@@ -29,6 +30,106 @@ def extract_function(path,name,namespace):
  tree,digest=function_source(path,name)
  exec(compile(tree,str(path),'exec'),namespace)
  return namespace[name],digest
+
+def audit_shared_residual_contract(wan_path, cache_path, method):
+ """Fail closed if a pinned T2V forward changes the shared compute or HOW.
+
+ This is a structural check of the known source integration, not a general
+ Python verifier or a substitute for tensor/GPU parity tests. Source revision
+ verification remains mandatory. WHEN scores, thresholds, retention rules and
+ CFG decision coupling are deliberately left unchanged.
+ """
+ if method not in FORWARDS:raise ValueError('Unknown cache method')
+ def key(node):return ast.dump(node,include_attributes=False)
+ def statement(text):return ast.parse(text).body[0]
+ def one(values,label):
+  if len(values)!=1:raise ValueError(f'{method}: shared residual contract needs one {label}')
+  return values[0]
+ def assigns_name(node,name):
+  return isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id==name for t in node.targets)
+ def at(body,name,fragment):
+  return one([i for i,n in enumerate(body) if assigns_name(n,name) and fragment in ast.unparse(n)],fragment)
+ def forward(path,owner=None):
+  body=ast.parse(Path(path).read_text()).body
+  if owner:
+   body=one([n for n in body if isinstance(n,ast.ClassDef) and n.name==owner],owner).body
+  name='forward' if owner else method+'_forward'
+  return one([n for n in body if isinstance(n,ast.FunctionDef) and n.name==name],name)
+ base=forward(wan_path,'WanModel');cache=forward(cache_path)
+ if key(base.args)!=key(cache.args):raise ValueError(f'{method}: forward arguments differ from Wan')
+ shared=[]
+ for body in (base.body,cache.body):
+  start=at(body,'x','self.patch_embedding')
+  end=at(body,'kwargs','dict(')
+  device=at(body,'device','self.patch_embedding.weight.device')
+  # Device placement and optional y concatenation, then patch/time/text prep.
+  shared.append(body[device:device+3]+body[start:end+1])
+ if [key(n) for n in shared[0]]!=[key(n) for n in shared[1]]:
+  raise ValueError(f'{method}: common embeddings/context preparation differs from Wan')
+ output=[]
+ for body in (base.body,cache.body):
+  head=body[at(body,'x','self.head(')]
+  unpatch=body[at(body,'x','self.unpatchify(')]
+  result=one([n for n in body if isinstance(n,ast.Return)],'output return')
+  output.append([head,unpatch,result])
+ if [key(n) for n in output[0]]!=[key(n) for n in output[1]]:
+  raise ValueError(f'{method}: head/unpatchify/output differs from Wan')
+ block_body=one([n for n in base.body if isinstance(n,ast.For)],'Wan block loop').body
+ loops=[n for n in ast.walk(cache) if isinstance(n,ast.For)]
+ expected_loops=3 if method in {'teacache','seacache'} else 1
+ if len(loops)!=expected_loops:raise ValueError(f'{method}: unexpected full-block loop count')
+ for loop in loops:
+  direct=key(loop.iter)==key(ast.parse('self.blocks',mode='eval').body) and key(loop.target)==key(statement('for block in self.blocks:\n pass').target)
+  numbered=(key(loop.iter)==key(ast.parse('enumerate(self.blocks)',mode='eval').body)
+            and isinstance(loop.target,ast.Tuple) and len(loop.target.elts)==2
+            and all(isinstance(n,ast.Name) for n in loop.target.elts)
+            and loop.target.elts[1].id=='block')
+  if not (direct or numbered) or [key(n) for n in loop.body]!=[key(n) for n in block_body] or loop.orelse:
+   raise ValueError(f'{method}: full-block computation differs from Wan')
+ if method in {'teacache','seacache'}:
+  how=['ori_x = x.clone()']*2
+  for branch in ('even','odd'):
+   how += [f'x += self.previous_residual_{branch}',f'self.previous_residual_{branch} = x - ori_x']
+ elif method=='magcache':
+  how=['ori_x = x','residual_x = self.residual_cache[self.cnt % 2]',
+       'x = x + residual_x','residual_x = x - ori_x',
+       'self.residual_cache[self.cnt % 2] = residual_x']
+ else:
+  how=['cached_residual = self.cached_residual_cond if is_cond else self.cached_residual_uncond',
+       'x = x + cached_residual','ori_x_patched = x.clone()',
+       'new_residual = x - ori_x_patched',
+       'self.cached_residual_cond = new_residual.detach()',
+       'self.cached_residual_uncond = new_residual.detach()',
+       'self.cached_residual_cond = None','self.cached_residual_uncond = None']
+ expected_how=[statement(s) for s in how]
+ # Every write to x must be an unchanged Wan operation or plain residual add.
+ base_x={key(n) for n in ast.walk(base) if assigns_name(n,'x')}
+ allowed_x=base_x|{key(n) for n in expected_how if assigns_name(n,'x') or isinstance(n,ast.AugAssign)}
+ residual_names={'ori_x','ori_x_patched','residual_x','cached_residual','new_residual',
+                 'previous_residual_even','previous_residual_odd','residual_cache',
+                 'cached_residual_cond','cached_residual_uncond'}
+ def target_name(target):
+  if isinstance(target,ast.Subscript):return target_name(target.value)
+  if isinstance(target,ast.Attribute):return target.attr
+  if isinstance(target,ast.Name):return target.id
+  return None
+ observed_how=[]
+ for node in ast.walk(cache):
+  if not isinstance(node,(ast.Assign,ast.AugAssign,ast.AnnAssign)):continue
+  targets=node.targets if isinstance(node,ast.Assign) else [node.target]
+  names={target_name(t) for t in targets}
+  if 'x' in names and key(node) not in allowed_x:
+   raise ValueError(f'{method}: x write violates plain residual/common compute contract')
+  if names & residual_names or (isinstance(node,ast.AugAssign) and 'x' in names):
+   observed_how.append(node)
+  elif assigns_name(node,'x') and key(node) not in base_x:
+   observed_how.append(node)
+ if Counter(key(n) for n in observed_how)!=Counter(key(n) for n in expected_how):
+  raise ValueError(f'{method}: residual storage/reuse differs from plain h_current + cached_r')
+ def digest(nodes):return hashlib.sha256('\n'.join(key(n) for n in nodes).encode()).hexdigest()
+ return {'wan_forward_ast':digest([base]),
+         f'{method}_shared_compute_ast':digest(shared[0]+block_body+output[0]),
+         f'{method}_plain_residual_ast':digest(expected_how)}
 
 def read_calibration(path,row,checkpoint_fingerprint,method):
  if not path: raise ValueError(f'{method} requires a calibration file from cachebench.calibrate')
@@ -159,6 +260,8 @@ class NativeWanBackend:
    namespace.update(apply_sea_with_scheduler=sea_filter_hook(mod.apply_sea_with_scheduler,variant),rel_l1=mod.rel_l1)
    self.code_hashes['sea_util']=hashlib.sha256(path.read_bytes()).hexdigest()
   path,name=FORWARDS[method]
+  self.code_hashes.update(audit_shared_residual_contract(
+   self.vendor/'wan'/'wan'/'modules'/'model.py',self.vendor/method/path,method))
   fn,digest=extract_function(self.vendor/method/path,name,namespace)
   self.code_hashes[method]=digest
   return fn
