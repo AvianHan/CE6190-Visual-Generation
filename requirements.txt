@@ -1,0 +1,28 @@
+# Generation, paired-video metrics, plotting, and tests: one pinned dependency list.
+# Candidate environment; a real Wan GPU run is still required for validation.
+# For CUDA 12.4, install torch/torchvision from the matching wheel index first.
+# FlashAttention needs a separate build after torch is installed:
+# python -m pip install flash-attn==2.7.4.post1 --no-build-isolation
+# Official VBench uses its own pinned repository/environment; see CODEBASE_GUIDE.md.
+torch==2.6.0
+torchvision==0.21.0
+numpy==1.26.4
+diffusers==0.32.2
+transformers==4.49.0
+tokenizers==0.21.0
+accelerate==1.4.0
+opencv-python==4.11.0.86
+tqdm==4.67.1
+imageio==2.37.0
+imageio-ffmpeg==0.6.0
+easydict==1.13
+ftfy==6.3.1
+dashscope==1.22.1
+Pillow==11.1.0
+safetensors==0.5.3
+sentencepiece==0.2.0
+scipy==1.15.3
+scikit-image==0.25.2
+lpips==0.1.4
+matplotlib==3.10.3
+pytest==8.4.2

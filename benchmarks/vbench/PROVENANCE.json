@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/Vchitect/VBench",
+  "commit": "fd18b3d055cb0fc6f066ca90fe2c3c8cbb698490",
+  "upstream_path": "vbench/VBench_full_info.json",
+  "sha256": "5dd2de80ee43cda750b2b72ea7023657c0b90d3702041c7e4608c65dbe50dccd",
+  "records": 946,
+  "unique_exact_prompts": 944,
+  "dimensions": [
+    "aesthetic_quality",
+    "appearance_style",
+    "background_consistency",
+    "color",
+    "dynamic_degree",
+    "human_action",
+    "imaging_quality",
+    "motion_smoothness",
+    "multiple_objects",
+    "object_class",
+    "overall_consistency",
+    "scene",
+    "spatial_relationship",
+    "subject_consistency",
+    "temporal_flickering",
+    "temporal_style"
+  ],
+  "purpose": "T2V main evaluation prompt suite; generate our own videos; not training/calibration data",
+  "contents_modified": false
+}

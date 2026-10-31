@@ -1,0 +1,13 @@
+{
+  "scope": "CPU scalar/mock loop and experiment bookkeeping; no full Wan or GPU run",
+  "tests_run": 66,
+  "passed": 57,
+  "skipped": 9,
+  "failures": 0,
+  "errors": 0,
+  "skip_reasons": [
+    "requires torch and pinned official sources fetched via cachebench.sources",
+    "scikit-image unavailable; this is not an SSIM pass"
+  ],
+  "seacache_source_sha256": "20261dee4f612f1c327f428fd6d7d61cbf5fdb8e215a10f836ba8bc67cbefe9e"
+}

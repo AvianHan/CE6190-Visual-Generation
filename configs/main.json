@@ -1,0 +1,68 @@
+{
+  "experiment_id": "wan13b-81f-reference-settings",
+  "default_split": "test",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "temporal_flickering_25": true,
+  "generation": {
+    "model_id": "Wan2.1-T2V-1.3B",
+    "num_frames": 81,
+    "height": 480,
+    "width": 832,
+    "num_inference_steps": 50,
+    "guidance_scale": 6.0,
+    "flow_shift": 5.0,
+    "sample_solver": "unipc",
+    "dtype": "bfloat16",
+    "fps": 16,
+    "negative_prompt": "",
+    "attention_backend": "flash_attention_2",
+    "offload": false,
+    "warmup": 1,
+    "timing_repeats": 3,
+    "generation_backend": "seacache_wan"
+  },
+  "methods": [
+    {
+      "method": "baseline"
+    },
+    {
+      "method": "teacache",
+      "parameters": {
+        "threshold": 0.08
+      }
+    },
+    {
+      "method": "magcache",
+      "parameters": {
+        "threshold": 0.12,
+        "max_skip": 4,
+        "retention_ratio": 0.2,
+        "calibration_path": "calibration/magcache_81f.json"
+      }
+    },
+    {
+      "method": "seacache",
+      "parameters": {
+        "threshold": 0.2
+      }
+    },
+    {
+      "method": "sencache",
+      "parameters": {
+        "threshold": 2.0,
+        "threshold_start": 0.045,
+        "max_skip": 3,
+        "sencache_scale": "official_81f",
+        "calibration_path": "calibration/sencache_81f.json"
+      }
+    }
+  ],
+  "status": "reference_settings_only_not_equal_speed_or_tuned_optima",
+  "warning": "Use aggregate --freeze-config on independent validation before a matched-budget test."
+}

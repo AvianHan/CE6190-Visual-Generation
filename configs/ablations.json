@@ -1,0 +1,70 @@
+{
+  "experiment_id": "wan13b-controlled-ablations",
+  "default_split": "tune",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "generation": {
+    "model_id": "Wan2.1-T2V-1.3B",
+    "num_frames": 81,
+    "height": 480,
+    "width": 832,
+    "num_inference_steps": 50,
+    "guidance_scale": 6.0,
+    "flow_shift": 5.0,
+    "sample_solver": "unipc",
+    "dtype": "bfloat16",
+    "fps": 16,
+    "negative_prompt": "",
+    "attention_backend": "flash_attention_2",
+    "offload": false,
+    "warmup": 1,
+    "timing_repeats": 3,
+    "generation_backend": "seacache_wan"
+  },
+  "methods": [
+    {
+      "method": "baseline"
+    },
+    {
+      "method": "seacache",
+      "grid": {
+        "threshold": [
+          0.1,
+          0.2,
+          0.35
+        ],
+        "variant": [
+          "official",
+          "raw_proxy",
+          "no_gain_normalization"
+        ]
+      }
+    },
+    {
+      "method": "sencache",
+      "parameters": {
+        "threshold_start": 0.045,
+        "max_skip": 3,
+        "sencache_scale": "official_81f",
+        "calibration_path": "calibration/sencache_81f.json"
+      },
+      "grid": {
+        "threshold": [
+          0.5,
+          1,
+          2,
+          4
+        ],
+        "variant": [
+          "official",
+          "latent_only",
+          "time_only"
+        ]
+      }
+    }
+  ],
+  "status": "planned_configuration_not_measured_results"
+}

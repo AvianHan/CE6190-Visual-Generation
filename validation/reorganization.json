@@ -1,0 +1,100 @@
+{
+  "base": "User-supplied CE6190-Visual-Generation.zip",
+  "base_zip_sha256": "3a2714a21711d935fa9a9509d3efa3fd2e6b78dd8990a415cf31450a27c732d3",
+  "changes": "Reapply prior SeaCache/VBench update; fix six README image paths and append assignment; merge guides/dependencies; flatten src; preserve unrelated user files.",
+  "preserved": {
+    "readme_original_text": true,
+    "image_files_unchanged": [
+      "assets/SeaCache_Fig3.png",
+      "assets/Wan_Fig8.png",
+      "assets/Wan_Fig9.png",
+      "assets/Wan_Fig10.png",
+      "assets/SenCache_Fig2.png",
+      "assets/Sea_Sen_Comparison.png"
+    ],
+    "assignment_summary_exactly_appended": true,
+    "gitignore_license_examples_report_unchanged": true
+  },
+  "source_layout": {
+    "files": "src/*.py",
+    "installed_package": "cachebench",
+    "mapping": "pyproject.toml package-dir"
+  },
+  "dependency_validation": {
+    "requirements_count": 22,
+    "pin_conflicts": 0,
+    "wheel_metadata_matches_requirements": true
+  },
+  "packaging_validation": {
+    "isolated_editable_install": true,
+    "import_from_outside_repo": true,
+    "regular_wheel_modules": 10,
+    "cli_help_checks": 6
+  },
+  "tests": {
+    "run": 66,
+    "passed": 57,
+    "skipped": 9,
+    "failed": 0,
+    "errors": 0,
+    "scope": "CPU scalar/mock checks with actual pinned SeaCache loop; no GPU, full Wan, or benchmark run",
+    "skips": "8 require torch/full official source tree; 1 requires scikit-image"
+  },
+  "historical_records": "Other validation files describe their earlier versions/runs; stale original paths in those logs are intentionally retained.",
+  "packaging_exclusions": [
+    ".git/",
+    ".DS_Store",
+    "__MACOSX/",
+    "__pycache__/",
+    "*.pyc",
+    "build/",
+    "*.egg-info/"
+  ],
+  "changed_existing_files_before_checksum_update": [
+    "CODEBASE_GUIDE.md",
+    "README.md",
+    "configs/ablations.json",
+    "configs/correctness_smoke.json",
+    "configs/main.json",
+    "configs/reference_settings.json",
+    "configs/validation_grid.json",
+    "pyproject.toml",
+    "scripts/run_vbench.py",
+    "tests/test_experiment.py",
+    "tests/test_review.py"
+  ],
+  "removed_or_moved_files": [
+    "IMPLEMENTATION_GUIDE.md",
+    "requirements-eval.txt",
+    "requirements-gpu.txt",
+    "src/cachebench/__init__.py",
+    "src/cachebench/aggregate.py",
+    "src/cachebench/calibrate.py",
+    "src/cachebench/evaluate.py",
+    "src/cachebench/generate.py",
+    "src/cachebench/manifest.py",
+    "src/cachebench/policies.py",
+    "src/cachebench/sources.py",
+    "src/cachebench/wan_adapter.py"
+  ],
+  "added_files_before_this_validation_record": [
+    "THIRD_PARTY_NOTICES.md",
+    "benchmarks/vbench/LICENSE",
+    "benchmarks/vbench/PROVENANCE.json",
+    "benchmarks/vbench/VBench_full_info.json",
+    "requirements.txt",
+    "src/__init__.py",
+    "src/aggregate.py",
+    "src/calibrate.py",
+    "src/evaluate.py",
+    "src/generate.py",
+    "src/manifest.py",
+    "src/policies.py",
+    "src/seacache_base.py",
+    "src/sources.py",
+    "src/wan_adapter.py",
+    "tests/test_seacache_base.py",
+    "validation/seacache_base_test_log.txt",
+    "validation/seacache_base_validation.json"
+  ]
+}

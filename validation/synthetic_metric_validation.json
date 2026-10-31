@@ -1,0 +1,38 @@
+{
+  "data": "synthetic RGB arrays, not generated video",
+  "identical": {
+    "frames": 2,
+    "height": 64,
+    "width": 64,
+    "rgb_data_range": 255,
+    "reference_type": "same_seed_uncached_rgb_before_video_encoding",
+    "mse_rgb": 0.0,
+    "psnr_db": null,
+    "psnr_db_is_infinite": true,
+    "mean_frame_psnr_db": null,
+    "identical_frame_count": 2,
+    "ssim": 1.0,
+    "ssim_protocol": "RGB channel mean; Gaussian 11x11 sigma1.5; population covariance; frame mean",
+    "lpips": 0.0,
+    "lpips_protocol": "AlexNet v0.1 pretrained; RGB [-1,1]; original resolution; frame mean"
+  },
+  "changed": {
+    "frames": 2,
+    "height": 64,
+    "width": 64,
+    "rgb_data_range": 255,
+    "reference_type": "same_seed_uncached_rgb_before_video_encoding",
+    "mse_rgb": 97.0819091796875,
+    "psnr_db": 28.25942052436996,
+    "psnr_db_is_infinite": false,
+    "mean_frame_psnr_db": 28.25942950111208,
+    "identical_frame_count": 0,
+    "ssim": 0.9970618842702887,
+    "ssim_protocol": "RGB channel mean; Gaussian 11x11 sigma1.5; population covariance; frame mean",
+    "lpips": 0.0008050160831771791,
+    "lpips_protocol": "AlexNet v0.1 pretrained; RGB [-1,1]; original resolution; frame mean"
+  },
+  "torch": "2.6.0+cpu",
+  "numpy": "1.26.4",
+  "scipy": "1.15.3"
+}

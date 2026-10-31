@@ -1,0 +1,71 @@
+test_bootstrap_clusters_prompts_not_frames (test_experiment.AggregationTests.test_bootstrap_clusters_prompts_not_frames) ... ok
+test_pareto_correct_direction_and_ties (test_experiment.AggregationTests.test_pareto_correct_direction_and_ties) ... ok
+test_test_set_cannot_select_thresholds (test_experiment.AggregationTests.test_test_set_cannot_select_thresholds) ... ok
+test_resume_requires_complete_matching_files (test_experiment.LauncherTests.test_resume_requires_complete_matching_files) ... ok
+test_baseline_pair_ids_complete (test_experiment.ManifestTests.test_baseline_pair_ids_complete) ... ok
+test_duplicate_seeds_fail (test_experiment.ManifestTests.test_duplicate_seeds_fail) ... ok
+test_generation_backend_separates_task_identity (test_experiment.ManifestTests.test_generation_backend_separates_task_identity) ... ok
+test_generation_change_changes_pair_id (test_experiment.ManifestTests.test_generation_change_changes_pair_id) ... ok
+test_leakage_case_and_whitespace (test_experiment.ManifestTests.test_leakage_case_and_whitespace) ... ok
+test_split_deterministic_and_prompt_level (test_experiment.ManifestTests.test_split_deterministic_and_prompt_level) ... ok
+test_vbench_duplicate_prompts_merge_dimensions (test_experiment.ManifestTests.test_vbench_duplicate_prompts_merge_dimensions) ... ok
+test_rgba_rejected (test_experiment.MetricTests.test_rgba_rejected) ... ok
+test_shape_mismatch_is_not_resized (test_experiment.MetricTests.test_shape_mismatch_is_not_resized) ... ok
+test_ssim_identical_and_distorted (test_experiment.MetricTests.test_ssim_identical_and_distorted) ... skipped 'scikit-image unavailable; this is not an SSIM pass'
+test_uint8_cast_prevents_wraparound (test_experiment.MetricTests.test_uint8_cast_prevents_wraparound) ... ok
+test_wrong_dtype_fails (test_experiment.MetricTests.test_wrong_dtype_fails) ... ok
+test_cfg_residuals_are_separate (test_official_tensors.OfficialForwardTensorTests.test_cfg_residuals_are_separate) ... skipped 'requires torch and pinned official sources fetched via cachebench.sources'
+test_official_81f_threshold_scale (test_official_tensors.OfficialForwardTensorTests.test_official_81f_threshold_scale) ... skipped 'requires torch and pinned official sources fetched via cachebench.sources'
+test_repeated_video_resets_cache_state (test_official_tensors.OfficialForwardTensorTests.test_repeated_video_resets_cache_state) ... skipped 'requires torch and pinned official sources fetched via cachebench.sources'
+test_reuse_adds_old_residual_to_new_input_all_methods (test_official_tensors.OfficialForwardTensorTests.test_reuse_adds_old_residual_to_new_input_all_methods) ... skipped 'requires torch and pinned official sources fetched via cachebench.sources'
+test_sea_filter_tensor_finite_shape_and_mean_gain (test_official_tensors.OfficialForwardTensorTests.test_sea_filter_tensor_finite_shape_and_mean_gain) ... skipped 'requires torch and pinned official sources fetched via cachebench.sources'
+test_sen_conditional_decision_shared_and_k_respected (test_official_tensors.OfficialForwardTensorTests.test_sen_conditional_decision_shared_and_k_respected) ... skipped 'requires torch and pinned official sources fetched via cachebench.sources'
+test_tea_zero_threshold_is_not_a_no_cache_switch (test_official_tensors.OfficialForwardTensorTests.test_tea_zero_threshold_is_not_a_no_cache_switch) ... skipped 'requires torch and pinned official sources fetched via cachebench.sources'
+test_zero_threshold_computes_every_call_nonpolynomial (test_official_tensors.OfficialForwardTensorTests.test_zero_threshold_computes_every_call_nonpolynomial) ... skipped 'requires torch and pinned official sources fetched via cachebench.sources'
+test_accumulate_and_reset (test_policies.RuleTests.test_accumulate_and_reset) ... ok
+test_bad_values_rejected (test_policies.RuleTests.test_bad_values_rejected) ... ok
+test_dimension_contract (test_policies.RuleTests.test_dimension_contract) ... ok
+test_mag_max_skip (test_policies.RuleTests.test_mag_max_skip) ... ok
+test_mag_product_and_sum (test_policies.RuleTests.test_mag_product_and_sum) ... ok
+test_polynomial_matches_known (test_policies.RuleTests.test_polynomial_matches_known) ... ok
+test_sen_raw_conversion (test_policies.RuleTests.test_sen_raw_conversion) ... ok
+test_sen_raw_failed_zero_rejected (test_policies.RuleTests.test_sen_raw_failed_zero_rejected) ... ok
+test_sensitivity_last_reference_units (test_policies.RuleTests.test_sensitivity_last_reference_units) ... ok
+test_threshold_equality_refreshes (test_policies.RuleTests.test_threshold_equality_refreshes) ... ok
+test_method_variant_validation (test_policies.VariantTests.test_method_variant_validation) ... ok
+test_sea_hook_semantics (test_policies.VariantTests.test_sea_hook_semantics) ... ok
+test_sensitivity_ablations_do_not_mutate_profile (test_policies.VariantTests.test_sensitivity_ablations_do_not_mutate_profile) ... ok
+test_hardware_must_match_across_policies (test_review.AggregationReview.test_hardware_must_match_across_policies) ... ok
+test_tune_and_test_cannot_be_pooled (test_review.AggregationReview.test_tune_and_test_cannot_be_pooled) ... ok
+test_ablation_variant_is_part_of_policy_identity (test_review.NumericalReview.test_ablation_variant_is_part_of_policy_identity) ... ok
+test_calibration_signature_covers_negative_prompt (test_review.NumericalReview.test_calibration_signature_covers_negative_prompt) ... ok
+test_calibration_signature_separates_generation_backend (test_review.NumericalReview.test_calibration_signature_separates_generation_backend) ... ok
+test_identical_video_psnr_is_explicit_infinity (test_review.NumericalReview.test_identical_video_psnr_is_explicit_infinity) ... ok
+test_nonfinite_thresholds_rejected (test_review.NumericalReview.test_nonfinite_thresholds_rejected) ... ok
+test_psnr_protocol_separates_global_and_frame_mean (test_review.NumericalReview.test_psnr_protocol_separates_global_and_frame_mean) ... ok
+test_rgb_psnr_uses_uint8_range_without_overflow (test_review.NumericalReview.test_rgb_psnr_uses_uint8_range_without_overflow) ... ok
+test_scale_mode_is_part_of_policy_identity (test_review.NumericalReview.test_scale_mode_is_part_of_policy_identity) ... ok
+test_unsupported_generation_backend_rejected (test_review.NumericalReview.test_unsupported_generation_backend_rejected) ... ok
+test_valid_manifest_row_accepted (test_review.NumericalReview.test_valid_manifest_row_accepted) ... ok
+test_checkpoint_mismatch_rejected (test_review.ProvenanceReview.test_checkpoint_mismatch_rejected) ... ok
+test_fidelity_default_excludes_extra_flickering_candidates (test_review.ProvenanceReview.test_fidelity_default_excludes_extra_flickering_candidates) ... ok
+test_gpu_mismatch_rejected (test_review.ProvenanceReview.test_gpu_mismatch_rejected) ... ok
+test_method_metadata_mismatch_rejected (test_review.ProvenanceReview.test_method_metadata_mismatch_rejected) ... ok
+test_policy_metadata_mismatch_rejected (test_review.ProvenanceReview.test_policy_metadata_mismatch_rejected) ... ok
+test_prompt_metadata_mismatch_rejected (test_review.ProvenanceReview.test_prompt_metadata_mismatch_rejected) ... ok
+test_unmodified_pair_accepted (test_review.ProvenanceReview.test_unmodified_pair_accepted) ... ok
+test_vbench_staging_rejects_wrong_actual_policy (test_review.ProvenanceReview.test_vbench_staging_rejects_wrong_actual_policy) ... ok
+test_duplicate_function_is_rejected (test_seacache_base.ExtractionRejectionTests.test_duplicate_function_is_rejected) ... ok
+test_missing_function_is_rejected (test_seacache_base.ExtractionRejectionTests.test_missing_function_is_rejected) ... ok
+test_missing_loop_is_rejected (test_seacache_base.ExtractionRejectionTests.test_missing_loop_is_rejected) ... ok
+test_multiple_matching_loops_are_rejected (test_seacache_base.ExtractionRejectionTests.test_multiple_matching_loops_are_rejected) ... ok
+test_backend_decode_false_preserves_calibration_observer (test_seacache_base.OriginalSeaCacheLoopTests.test_backend_decode_false_preserves_calibration_observer) ... ok
+test_hashes_identify_actual_source_function_and_unmodified_loop (test_seacache_base.OriginalSeaCacheLoopTests.test_hashes_identify_actual_source_function_and_unmodified_loop) ... ok
+test_module_cli_and_imports_are_not_executed (test_seacache_base.OriginalSeaCacheLoopTests.test_module_cli_and_imports_are_not_executed) ... ok
+test_observer_receives_preupdate_latent_and_guided_prediction (test_seacache_base.OriginalSeaCacheLoopTests.test_observer_receives_preupdate_latent_and_guided_prediction) ... ok
+test_real_loop_orders_cfg_and_updates_current_latent (test_seacache_base.OriginalSeaCacheLoopTests.test_real_loop_orders_cfg_and_updates_current_latent) ... ok
+
+----------------------------------------------------------------------
+Ran 66 tests in 0.270s
+
+OK (skipped=9)
