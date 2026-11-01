@@ -493,5 +493,188 @@ class QueueTests(unittest.TestCase):
         self.assertNotIn("scheduler_error", state)
 
 
+    def storage_ready_fixture(self, partitions=("l40sp", "h200p")):
+        run, plan, state, rows, checkout = self.rolling_fixture(partitions)
+        self.passed_parent(run)
+        for method in ("magcache", "sencache"):
+            self.passed_calibration(run, method)
+        if "h200p" in partitions:
+            for stage in ("smoke", "magcache", "sencache"):
+                self.passed_hardware(run, stage)
+        return run, plan, state, rows, checkout
+
+    def test_prepare_with_less_than_full_grid_space_keeps_entire_experiment(self):
+        run, _, _, _, checkout = self.rolling_fixture(("l40sp", "h200p"))
+        with patch.object(self.q, "query_qos", return_value={"max_submit": 60, "max_wall_seconds": None}), \
+                patch.object(self.q, "partition_time", return_value={"time": "3-00:00:00", "seconds": 259200}), \
+                patch.object(self.q.shutil, "disk_usage", return_value=types.SimpleNamespace(free=1024**3)):
+            plan = self.q.prepare_plan(run, ["l40sp", "h200p"], checkout)
+        self.assertEqual(plan["rows_per_partition"], 2880)
+        self.assertEqual(plan["partitions"], ["l40sp", "h200p"])
+        self.assertGreater(plan["remaining_raw_frames_gib"], 500)
+
+    def test_storage_capacity_is_shared_by_both_hardware_grids(self):
+        run, plan, state, rows, _ = self.storage_ready_fixture()
+        allowance = self.q.output_bytes(rows[0])
+        for tasks in state["tasks"].values():
+            for task in tasks.values():
+                if task["method"] != "baseline":
+                    task["status"] = "complete"
+        commands, execute = self.slurm_recorder()
+        with patch.object(self.q, "query_qos", return_value={"max_submit": 60, "max_wall_seconds": None}), \
+                patch.object(self.q, "query_queue", return_value=[]), \
+                patch.object(self.q.shutil, "disk_usage", return_value=types.SimpleNamespace(free=3 * allowance)), \
+                patch.object(self.q.subprocess, "run", side_effect=execute), \
+                patch.dict(os.environ, {"SLURM_JOB_ID": ""}):
+            state = self.q.tick(run, state, plan, hardware=self.h)
+        submitted = [task for tasks in state["tasks"].values() for task in tasks.values()
+                     if task["status"] == "submitted"]
+        self.assertEqual(len(submitted), 3, "Separate hardware grids must not each spend the same filesystem bytes")
+        self.assertTrue(all(any(task["status"] == "submitted" for task in tasks.values())
+                            for tasks in state["tasks"].values()))
+        self.assertEqual(sum(int(command[command.index("--array") + 1].split("-")[1]) + 1
+                             for command in commands), 3)
+        self.assertEqual(len(state["storage"]["filesystems"]), 1)
+        self.assertTrue(all("%" not in command[command.index("--array") + 1] for command in commands))
+
+    def test_accepted_receipt_is_reserved_before_new_storage_admission(self):
+        run, plan, state, rows, _ = self.storage_ready_fixture()
+        identifier = rows[0]["run_id"]
+        allowance = self.q.output_bytes(rows[0])
+        receipt = run / "rolling/batches/crash-before-state-save/receipt.json"
+        write_json(receipt, {"status": "accepted", "job_id": "190700", "identity": {
+            "partition": "h200p", "method": rows[0]["method"], "run_ids": [identifier]}})
+        active = [{"job_id": "190700_0", "qos": "highpriority", "state": "PENDING",
+                   "name": "ce6190-baseline", "reason": "Priority"}]
+        commands, execute = self.slurm_recorder()
+        with patch.object(self.q, "query_qos", return_value={"max_submit": 60, "max_wall_seconds": None}), \
+                patch.object(self.q, "query_queue", return_value=active), \
+                patch.object(self.q.shutil, "disk_usage", return_value=types.SimpleNamespace(free=allowance)), \
+                patch.object(self.q.subprocess, "run", side_effect=execute), \
+                patch.dict(os.environ, {"SLURM_JOB_ID": ""}):
+            state = self.q.tick(run, state, plan, hardware=self.h)
+            state = self.q.tick(run, state, plan, hardware=self.h)
+        self.assertEqual(commands, [])
+        self.assertEqual(state["tasks"]["h200p"][identifier]["job_id"], "190700_0")
+        self.assertEqual(state["tasks"]["h200p"][identifier]["status"], "submitted")
+        self.assertEqual(state["status"], "waiting_storage")
+        self.assertEqual(state["storage"]["filesystems"][0]["generation_reserved_bytes"], allowance)
+
+    def test_waiting_storage_resumes_without_deleting_frames_or_duplicate_jobs(self):
+        run, plan, state, rows, _ = self.storage_ready_fixture(("l40sp",))
+        pending = rows[0]["run_id"]
+        completed = rows[1]["run_id"]
+        for identifier, task in state["tasks"]["l40sp"].items():
+            if identifier != pending:
+                task["status"] = "complete"
+        saved = run / "development_l40sp/results" / completed / "frames.npy"
+        saved.parent.mkdir(parents=True)
+        saved.write_bytes(b"original lossless frames retained for comparison")
+        allowance = self.q.output_bytes(rows[0])
+        active = []
+        commands, execute = self.slurm_recorder()
+        with patch.object(self.q, "query_qos", return_value={"max_submit": 60, "max_wall_seconds": None}), \
+                patch.object(self.q, "query_queue", return_value=active), \
+                patch.object(self.q.shutil, "disk_usage", return_value=types.SimpleNamespace(free=allowance - 1)) as disk, \
+                patch.object(self.q.subprocess, "run", side_effect=execute), \
+                patch.dict(os.environ, {"SLURM_JOB_ID": ""}):
+            state = self.q.tick(run, state, plan, hardware=self.h)
+            self.assertEqual(state["status"], "waiting_storage")
+            self.assertNotIn(state["status"], self.q.TERMINAL)
+            self.assertEqual(commands, [])
+            self.assertEqual(state["tasks"]["l40sp"][pending]["status"], "unsubmitted")
+            disk.return_value = types.SimpleNamespace(free=allowance)
+            state = self.q.tick(run, state, plan, hardware=self.h)
+            self.assertEqual(len(commands), 1)
+            task = state["tasks"]["l40sp"][pending]
+            active.append({"job_id": task["job_id"], "qos": "highpriority", "state": "RUNNING",
+                           "name": "ce6190-baseline", "reason": "None"})
+            state = self.q.tick(run, state, plan, hardware=self.h)
+        self.assertEqual(len(commands), 1)
+        self.assertEqual(saved.read_bytes(), b"original lossless frames retained for comparison")
+        self.assertEqual(state["tasks"]["l40sp"][pending]["status"], "submitted")
+
+    def test_storage_reserves_running_and_pending_but_not_finished_outputs_twice(self):
+        run, plan, state, rows, _ = self.storage_ready_fixture()
+        identifiers = [row["run_id"] for row in rows[:3]]
+        for tasks in state["tasks"].values():
+            for task in tasks.values():
+                task["status"] = "complete"
+        state["tasks"]["l40sp"][identifiers[0]].update(status="submitted", job_id="190800_0")
+        state["tasks"]["h200p"][identifiers[1]].update(status="submitted", job_id="190800_1")
+        state["tasks"]["h200p"][identifiers[2]].update(status="failed", error="previous failure")
+        frame = self.h.runtime_path(run, "h200p") / "development_h200p/results" / identifiers[2] / "frames.npy"
+        frame.parent.mkdir(parents=True)
+        frame.write_bytes(b"partial output already counted in actual filesystem usage")
+        allowance = self.q.output_bytes(rows[0])
+        with patch.object(self.q.shutil, "disk_usage", return_value=types.SimpleNamespace(free=5 * allowance)):
+            storage = self.q.storage_snapshot(run, plan, state, {row["run_id"]: row for row in rows}, self.h)
+        volume = storage["filesystems"][0]
+        self.assertEqual(volume["generation_reserved_bytes"], 2 * allowance)
+        self.assertEqual(volume["available_bytes"], 3 * allowance)
+        self.assertEqual(frame.read_bytes(), b"partial output already counted in actual filesystem usage")
+        self.assertEqual(storage["scope"], "filesystem_free_space_not_user_or_project_quota")
+
+    def test_space_consumed_between_batches_is_rechecked_before_sbatch(self):
+        run, plan, state, rows, _ = self.storage_ready_fixture()
+        for tasks in state["tasks"].values():
+            for task in tasks.values():
+                if task["method"] != "baseline":
+                    task["status"] = "complete"
+        allowance = self.q.output_bytes(rows[0])
+        disk_space = types.SimpleNamespace(free=3 * allowance)
+        commands, execute = self.slurm_recorder()
+        def submit_then_external_write(command, **kwargs):
+            result = execute(command, **kwargs)
+            if command[0] == "sbatch" and "--array" in command:
+                # Another writer consumes one output allowance after the chooser
+                # has selected both hardware groups, before the second sbatch.
+                disk_space.free = 2 * allowance
+            return result
+        with patch.object(self.q, "query_qos", return_value={"max_submit": 60, "max_wall_seconds": None}), \
+                patch.object(self.q, "query_queue", return_value=[]), \
+                patch.object(self.q.shutil, "disk_usage", return_value=disk_space), \
+                patch.object(self.q.subprocess, "run", side_effect=submit_then_external_write), \
+                patch.dict(os.environ, {"SLURM_JOB_ID": ""}):
+            state = self.q.tick(run, state, plan, hardware=self.h)
+        self.assertEqual(len(commands), 1)
+        self.assertEqual(sum(task["status"] == "submitted" for tasks in state["tasks"].values()
+                             for task in tasks.values()), 2)
+        self.assertTrue(all(task["status"] == "unsubmitted" for task in state["tasks"]["h200p"].values()
+                            if task["method"] == "baseline"))
+        self.assertEqual(state["status"], "waiting_storage")
+
+    def test_hardware_check_output_allowance_is_preserved_for_its_pairs(self):
+        run, plan, state, rows, _ = self.rolling_fixture(("l40sp", "h200p"))
+        self.passed_parent(run)
+        for method in ("magcache", "sencache"):
+            self.passed_calibration(run, method)
+        allowance = self.q.output_bytes(rows[0])
+        commands, execute = self.slurm_recorder()
+        with patch.object(self.q, "query_qos", return_value={"max_submit": 60, "max_wall_seconds": None}), \
+                patch.object(self.q, "query_queue", return_value=[]), \
+                patch.object(self.q.shutil, "disk_usage", return_value=types.SimpleNamespace(free=5 * allowance)), \
+                patch.object(self.q.subprocess, "run", side_effect=execute), \
+                patch.dict(os.environ, {"SLURM_JOB_ID": ""}):
+            state = self.q.tick(run, state, plan, hardware=self.h)
+        self.assertEqual(commands, [])
+        self.assertEqual(state["storage"]["filesystems"][0]["check_reserved_bytes"], 6 * allowance)
+        self.assertEqual(state["storage"]["filesystems"][0]["available_bytes"], 0)
+        self.assertEqual(state["status"], "waiting_storage")
+
+    def test_status_before_preparation_returns_diagnostic_json(self):
+        run, _, _ = self.run_fixture()
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output), \
+                patch.object(self.q.shutil, "disk_usage", return_value=types.SimpleNamespace(free=123 * 1024**3)):
+            self.q.status(argparse.Namespace(run_dir=run))
+        result = json.loads(output.getvalue())
+        self.assertEqual(result["status"], "not_prepared")
+        self.assertEqual(result["run_dir"], str(run))
+        self.assertEqual(result["filesystem_free_gib"], 123)
+        self.assertTrue(result["note"])
+
+
+
 if __name__ == "__main__":
     unittest.main()

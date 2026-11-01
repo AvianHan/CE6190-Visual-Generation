@@ -156,6 +156,86 @@ def quota_headroom(limit, queue):
     return max(0, limit - len(queue))
 
 
+def output_bytes(row):
+    """One retained uint8 video, NPY header, plus estimated MP4/trace headroom.
+
+    generate.py saves only the final timing repeat. The 15% allowance is an
+    estimate, not a filesystem reservation or a guarantee against other writers.
+    """
+    raw = 3
+    for name in ("num_frames", "height", "width"):
+        value = row[name]
+        if type(value) is not int or value < 1:
+            raise ValueError(f"Invalid output geometry: {name}={value!r}")
+        raw *= value
+    return ((raw + 1024) * 115 + 99) // 100
+
+
+def existing_parent(path):
+    path = Path(path).resolve()
+    while not path.exists():
+        path = path.parent
+    return path
+
+
+def storage_snapshot(run_dir, plan, state, by_id, helper):
+    """Budget future writes across hardware grids sharing a filesystem.
+
+    Submitted tasks keep their full allowance until completion, even if some
+    output is already on disk. This intentionally errs toward over-reservation.
+    Unfinished smoke/parity pairs also retain room, so generation cannot consume
+    the space needed by those checks. No output is deleted or recompressed.
+    """
+    filesystems = {}; partition_devices = {}; check_devices = {}
+    def volume_for(path):
+        anchor = existing_parent(path); device = str(anchor.stat().st_dev)
+        free = shutil.disk_usage(anchor).free
+        volume = filesystems.setdefault(device, {"device": device, "paths": [],
+            "free_bytes": free, "generation_reserved_bytes": 0, "check_reserved_bytes": 0})
+        volume["free_bytes"] = min(volume["free_bytes"], free)
+        if str(path) not in volume["paths"]: volume["paths"].append(str(path))
+        return device, volume
+    geometry = read_json(Path(run_dir) / "code/configs/correctness_smoke.json")["generation"]
+    pair_bytes = 2 * output_bytes(geometry)
+    for partition in plan["partitions"]:
+        runtime = helper.runtime_path(run_dir, partition)
+        destination = runtime / ("development_" + partition) / "results"
+        device, volume = volume_for(destination)
+        partition_devices[partition] = device
+        volume["generation_reserved_bytes"] += sum(output_bytes(by_id[identifier])
+            for identifier, task in state["tasks"][partition].items() if task["status"] == "submitted")
+        check_device, check_volume = volume_for(runtime)
+        check_devices[partition] = check_device
+        # These three existing starter routines each save a baseline/method pair.
+        for stage in ("smoke", "magcache", "sencache"):
+            path = runtime / ("smoke.json" if stage == "smoke" else f"calibration/{stage}/check.json")
+            try: phase = read_json(path, {}).get("status")
+            except json.JSONDecodeError:
+                # Original starter phase JSON is written directly; a transient
+                # partial write must retain its allowance, not stop the queue.
+                phase = None
+            prefix = "parent:" if partition == plan["original_plan"]["gpu_partition"] else partition + ":"
+            failure_keys = {"parent:env", prefix + "smoke", prefix + stage}
+            if stage != "smoke": failure_keys.update({"parent:smoke", "parent:" + stage})
+            blocked = any(key in state.get("failed_prerequisites", {}) for key in failure_keys)
+            if phase not in {"passed", "failed", "cancelled", "blocked"} and not blocked:
+                check_volume["check_reserved_bytes"] += pair_bytes
+    for volume in filesystems.values():
+        volume["available_bytes"] = max(0, volume["free_bytes"] - volume["generation_reserved_bytes"] - volume["check_reserved_bytes"])
+        volume["free_gib"] = volume["free_bytes"] / 2**30
+        volume["reserved_gib"] = (volume["generation_reserved_bytes"] + volume["check_reserved_bytes"]) / 2**30
+        volume["available_gib"] = volume["available_bytes"] / 2**30
+    return {"scope": "filesystem_free_space_not_user_or_project_quota",
+            "whole_grid_remaining_raw_gib_at_start": plan.get("remaining_raw_frames_gib"),
+            "filesystems": list(filesystems.values()), "partition_devices": partition_devices,
+            "check_devices": check_devices,
+            "note": "Estimates retain all raw frames; calibration downloads, environment writes and other users can consume additional space."}
+
+
+def storage_available(snapshot):
+    return {volume["device"]: volume["available_bytes"] for volume in snapshot["filesystems"]}
+
+
 def partition_time(partition, qos, qos_limits):
     output = query(["scontrol", "-o", "show", "partition", partition])
     fields = dict(token.split("=", 1) for token in output.split() if "=" in token)
@@ -255,8 +335,7 @@ def prepare_plan(run_dir, partitions, repo):
             except (OSError, ValueError): completed = False
             if not completed or not (directory / "frames.npy").is_file():
                 remaining_bytes += row["num_frames"] * row["height"] * row["width"] * 3
-    if shutil.disk_usage(run_dir).free < remaining_bytes * 1.15:
-        raise ValueError(f"The selected hardware grids still need about {remaining_bytes / 2**30:.1f} GiB raw frames plus 15% video/log headroom")
+    free_bytes = shutil.disk_usage(run_dir).free
     limits = query_qos(original["qos"])
     policy = {partition: partition_time(partition, original["qos"], limits)
               for partition in dict.fromkeys(["cpup", *partitions])}
@@ -266,6 +345,8 @@ def prepare_plan(run_dir, partitions, repo):
             "controller_partition": "cpup", "partition_policy": policy,
             "original_plan": original, "poll_seconds": POLL_SECONDS,
             "remaining_raw_frames_gib": remaining_bytes / 2**30,
+            "filesystem_free_gib_at_start": free_bytes / 2**30,
+            "storage_policy": "rolling admission; reserve unfinished writes, retain every raw frame; wait and retry if storage is insufficient",
             "control_slots": "one running CPU controller plus one afterany successor; neither requests GPU",
             "script_hashes": {name: file_hash(repo / "scripts" / name)
                               for name in ("queue_orion.py", "orion_hardware.py")}}
@@ -525,6 +606,10 @@ def tick(run_dir, state, plan, hardware=None):
     if not unfinished:
         failed = any(task["status"] != "complete" for tasks in state["tasks"].values() for task in tasks.values())
         state["status"] = "complete_with_failures" if failed else "complete"; return state
+    # Receipt recovery above must precede budgeting: accepted but unrecorded
+    # jobs still own their future output allowance.
+    state["storage"] = storage_snapshot(run_dir, plan, state, by_id, helper)
+    storage_limited = False
     headroom = ensure_successor(run_dir, plan, queue, headroom)
     for specification in helper.pending_checks(run_dir, plan["partitions"]):
         key = specification["partition"] + ":" + specification["stage"]
@@ -535,6 +620,11 @@ def tick(run_dir, state, plan, hardware=None):
         if old and old.get("job_id"):
             state["checks"][key] = old; continue
         if headroom < 1: break
+        state["storage"] = storage_snapshot(run_dir, plan, state, by_id, helper)
+        check_device = state["storage"]["check_devices"][specification["partition"]]
+        volume = next(item for item in state["storage"]["filesystems"] if item["device"] == check_device)
+        if volume["free_bytes"] < volume["generation_reserved_bytes"] + volume["check_reserved_bytes"]:
+            storage_limited = True; continue
         identity = {k: specification[k] for k in ("partition", "stage", "runtime_dir", "state_file")}
         result = submit_once(receipt, check_command(run_dir, plan, specification), identity)
         state["checks"][key] = result
@@ -555,17 +645,35 @@ def tick(run_dir, state, plan, hardware=None):
                                if task["method"] == method and task["status"] == "unsubmitted"]
                     if pending: available[(partition, method)] = pending
         keys = list(available); chosen = defaultdict(list)
+        budget = storage_available(state["storage"])
         if keys:
             cursor = state["cursor"] % len(keys)
             while headroom and available:
                 key = keys[cursor % len(keys)]; cursor += 1
                 if key not in available: continue
+                device = state["storage"]["partition_devices"][key[0]]
+                needed = output_bytes(by_id[available[key][0]])
+                if needed > budget[device]:
+                    storage_limited = True; del available[key]; continue
+                budget[device] -= needed
                 chosen[key].append(available[key].pop(0)); headroom -= 1
                 if not available[key]: del available[key]
             state["cursor"] = cursor
         for (partition, method), identifiers in chosen.items():
             for offset in range(0, len(identifiers), maximum):
-                selected = identifiers[offset:offset + maximum]; token = uuid.uuid4().hex
+                # Re-read free space before each sbatch, including reservations
+                # for batches accepted earlier in this same tick.
+                state["storage"] = storage_snapshot(run_dir, plan, state, by_id, helper)
+                device = state["storage"]["partition_devices"][partition]
+                capacity = storage_available(state["storage"])[device]
+                selected = []
+                for identifier in identifiers[offset:offset + maximum]:
+                    needed = output_bytes(by_id[identifier])
+                    if needed > capacity:
+                        storage_limited = True; break
+                    selected.append(identifier); capacity -= needed
+                if not selected: continue
+                token = uuid.uuid4().hex
                 directory = run_dir / "rolling/batches" / token; directory.mkdir(parents=True)
                 batch = directory / "manifest.jsonl"
                 batch.write_text("".join(json.dumps(by_id[x], sort_keys=True) + "\n" for x in selected))
@@ -579,7 +687,8 @@ def tick(run_dir, state, plan, hardware=None):
                     state["tasks"][partition][identifier].update(status="submitted", job_id=result["job_id"] + "_" + str(index), batch=str(directory / "receipt.json"))
                 state["batches"].append(str(directory / "receipt.json"))
                 atomic_json(run_dir / "rolling/state.json", state)
-    state["status"] = "running"; return state
+    state["storage"] = storage_snapshot(run_dir, plan, state, by_id, helper)
+    state["status"] = "waiting_storage" if storage_limited else "running"; return state
 
 
 def run_controller(args):
@@ -616,12 +725,16 @@ def summary(plan, state):
               for partition, tasks in state["tasks"].items()}, "error": state.get("error"),
             "updated_at": state.get("updated_at"), "scheduler_error": state.get("scheduler_error"),
             "failed_prerequisites": state.get("failed_prerequisites", {}),
+            "storage": state.get("storage"),
             "no_extra_gpu_concurrency_cap": True}
 
 
 def status(args):
     run_dir = args.run_dir.expanduser().resolve(); plan = load_plan(run_dir)
-    if not plan: raise ValueError("No rolling queue has been prepared for this run")
+    if not plan:
+        print(json.dumps({"status": "not_prepared", "run_dir": str(run_dir),
+              "filesystem_free_gib": shutil.disk_usage(existing_parent(run_dir)).free / 2**30,
+              "note": "No rolling plan exists: start stopped before preparation completed. Existing environment, smoke and calibration jobs are unaffected; rerun start after correcting its reported error."}, indent=2)); return
     state = read_json(run_dir / "rolling/state.json")
     result = summary(plan, state)
     result["controllers"] = [read_json(path) for path in sorted((run_dir / "rolling/controllers").glob("*.json"))]
