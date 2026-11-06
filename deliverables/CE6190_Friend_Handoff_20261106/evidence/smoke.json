@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "tasks": [
+    {
+      "method": "baseline",
+      "run_id": "977e7ca5475db1bfcd93",
+      "generation_seconds": 331.4767579110339,
+      "peak_memory_gb": 25.863445281982422
+    },
+    {
+      "method": "teacache",
+      "run_id": "1fa88c195e7fc3f6941b",
+      "generation_seconds": 264.02289781707805,
+      "peak_memory_gb": 26.238319396972656
+    },
+    {
+      "method": "seacache",
+      "run_id": "b75be72fdc1a38feef3a",
+      "generation_seconds": 266.82055199402384,
+      "peak_memory_gb": 26.613323211669922
+    },
+    {
+      "method": "magcache",
+      "run_id": "b5eaec03817a7cb47839",
+      "generation_seconds": 226.33578243397642,
+      "peak_memory_gb": 26.238216400146484
+    },
+    {
+      "method": "sencache",
+      "run_id": "0f60b10a20b518808cc9",
+      "generation_seconds": 198.13909463700838,
+      "peak_memory_gb": 25.863393783569336
+    }
+  ]
+}

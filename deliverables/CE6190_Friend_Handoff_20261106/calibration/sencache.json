@@ -1,0 +1,2242 @@
+{
+  "schema_version": 1,
+  "method": "sencache",
+  "config": {
+    "model_id": "Wan2.1-T2V-1.3B",
+    "height": 480,
+    "width": 832,
+    "num_frames": 81,
+    "num_inference_steps": 50,
+    "guidance_scale": 5.0,
+    "flow_shift": 5.0,
+    "dtype": "bfloat16",
+    "sample_solver": "unipc",
+    "negative_prompt": null,
+    "attention_backend": "flash_attention_2",
+    "generation_backend": "seacache_wan"
+  },
+  "sample_ids": [
+    "calib_commons8_00_dog",
+    "calib_commons8_01_waterfall",
+    "calib_commons8_02_traffic",
+    "calib_commons8_03_train",
+    "calib_commons8_04_boat",
+    "calib_commons8_05_waves",
+    "calib_commons8_06_leaves",
+    "calib_commons8_07_peafowl"
+  ],
+  "prompt_sha256": [
+    "0119ac7dd6bad10d01050e6ab7e9e8634d4144a3b3cfe735de07a76963af6b26",
+    "b5c0d67e0cbb80f3b0ce6c951c79d2047cf67c765af112121046ddfc98eeda5a",
+    "ec70f8004cfeee72a66b5fca396c371078a64fdcb406724d2c51b4b66c394d71",
+    "229e3ae8234f7988c3d70e30e16243ee0bc147afc56c802f77d1e25fd30c7008",
+    "21c58380ce6573d6246a835ee55d185e9887dbf70bbc593516c13f17e76ed028",
+    "c8533a0f215a0d3e8dfcf634bd8cfc1864a1e7ab1ee688019914dc9a2ee3bf4d",
+    "d13505cf9e4637db0aea4885211eb2fdee6201313d096ddb9b3d990b9e4fd15d",
+    "347f90ae16956140f062ce31fccd1f5e75530903dc56aa4a282520b11192a002"
+  ],
+  "samples": [
+    {
+      "author": "OakleyOriginals",
+      "author_url": "https://www.flickr.com/photos/oakleyoriginals/",
+      "bytes": 30376108,
+      "calibration_note": "Project-selected real videos; not the original SenCache MixKit set. Captions and author/license attribution are retained for audit.",
+      "caption_basis": "five_sampled_frames_visually_checked",
+      "changes_for_calibration": "Runtime selects frames and resizes; no source video alterations are bundled.",
+      "dataset_id": "ce6190-project-commons8-v1",
+      "license": "CC-BY-2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "original_paper_calibration_set": false,
+      "preparation_download_status": "downloaded",
+      "prompt": "A black dog wades through a creek and swims away from the camera.",
+      "prompt_id": "calib_commons8_00_dog",
+      "seed": 619000,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Summer_Dog_-_video.webm",
+      "source_reported_duration_seconds": 11,
+      "source_reported_height": 1080,
+      "source_reported_width": 1920,
+      "source_title": "Summer Dog - video.webm",
+      "split": "calibration",
+      "video_path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0000.webm",
+      "video_sha256": "35b63426b2bbb756cf6c24574abc21f5f43243e52d683c02d60c6532808f4dc9",
+      "video_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Summer_Dog_-_video.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "visual_qa": "passed_sampled_contact_sheet"
+    },
+    {
+      "author": "YouTube user Editor",
+      "author_url": "https://www.youtube.com/user/Editor",
+      "bytes": 18429839,
+      "calibration_note": "Project-selected real videos; not the original SenCache MixKit set. Captions and author/license attribution are retained for audit.",
+      "caption_basis": "five_sampled_frames_visually_checked",
+      "changes_for_calibration": "Runtime selects frames and resizes; no source video alterations are bundled.",
+      "dataset_id": "ce6190-project-commons8-v1",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "original_paper_calibration_set": false,
+      "preparation_download_status": "downloaded",
+      "prompt": "A small waterfall flows between rocks surrounded by green and red plants.",
+      "prompt_id": "calib_commons8_01_waterfall",
+      "seed": 619001,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Small_waterfall.webm",
+      "source_reported_duration_seconds": 25,
+      "source_reported_height": 1080,
+      "source_reported_width": 1920,
+      "source_title": "Small waterfall.webm",
+      "split": "calibration",
+      "video_path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0001.webm",
+      "video_sha256": "5284b829ee6d1f52eefece0582a3068c0fb2b3f78c0e05590fd1d4983596a091",
+      "video_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Small_waterfall.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "visual_qa": "passed_sampled_contact_sheet"
+    },
+    {
+      "author": "YouTube user Editor",
+      "author_url": "https://www.youtube.com/user/Editor",
+      "bytes": null,
+      "calibration_note": "Project-selected real videos; not the original SenCache MixKit set. Captions and author/license attribution are retained for audit.",
+      "caption_basis": "source_description_not_yet_visually_verified",
+      "changes_for_calibration": "Runtime selects frames and resizes; no source video alterations are bundled.",
+      "dataset_id": "ce6190-project-commons8-v1",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "original_paper_calibration_set": false,
+      "preparation_download_status": "not_downloaded",
+      "prompt": "Vehicles travel along a street in San Francisco.",
+      "prompt_id": "calib_commons8_02_traffic",
+      "seed": 619002,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Street_traffic.webm",
+      "source_reported_duration_seconds": 35,
+      "source_reported_height": 1080,
+      "source_reported_width": 1920,
+      "source_title": "Street traffic.webm",
+      "split": "calibration",
+      "video_path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0002.webm",
+      "video_sha256": null,
+      "video_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Street_traffic.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "visual_qa": "not_yet_inspected"
+    },
+    {
+      "author": "Nesnad",
+      "author_url": "https://commons.wikimedia.org/wiki/User:Nesnad",
+      "bytes": null,
+      "calibration_note": "Project-selected real videos; not the original SenCache MixKit set. Captions and author/license attribution are retained for audit.",
+      "caption_basis": "source_description_not_yet_visually_verified",
+      "changes_for_calibration": "Runtime selects frames and resizes; no source video alterations are bundled.",
+      "dataset_id": "ce6190-project-commons8-v1",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "original_paper_calibration_set": false,
+      "preparation_download_status": "not_downloaded",
+      "prompt": "A train travels on the Kotoden Kotohira railway line.",
+      "prompt_id": "calib_commons8_03_train",
+      "seed": 619003,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Train_on_the_Kotoden_Kotohira_Line_near_Ritsurin-Koen_Station_-_2021_April_1.webm",
+      "source_reported_duration_seconds": 15,
+      "source_reported_height": 1080,
+      "source_reported_width": 1920,
+      "source_title": "Train on the Kotoden Kotohira Line near Ritsurin-Koen Station - 2021 April 1.webm",
+      "split": "calibration",
+      "video_path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0003.webm",
+      "video_sha256": null,
+      "video_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Train_on_the_Kotoden_Kotohira_Line_near_Ritsurin-Koen_Station_-_2021_April_1.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "visual_qa": "not_yet_inspected"
+    },
+    {
+      "author": "Alphama",
+      "author_url": "https://commons.wikimedia.org/wiki/User:Alphama",
+      "bytes": 10066911,
+      "calibration_note": "Project-selected real videos; not the original SenCache MixKit set. Captions and author/license attribution are retained for audit.",
+      "caption_basis": "five_sampled_frames_visually_checked",
+      "changes_for_calibration": "Runtime selects frames and resizes; no source video alterations are bundled.",
+      "dataset_id": "ce6190-project-commons8-v1",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "original_paper_calibration_set": false,
+      "preparation_download_status": "downloaded",
+      "prompt": "From a moving boat, the camera looks across a lake toward green hills.",
+      "prompt_id": "calib_commons8_04_boat",
+      "seed": 619004,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sailing_over_Ta_Dung_Lake.webm",
+      "source_reported_duration_seconds": 45,
+      "source_reported_height": 480,
+      "source_reported_width": 856,
+      "source_title": "Sailing over Ta Dung Lake.webm",
+      "split": "calibration",
+      "video_path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0004.webm",
+      "video_sha256": "5db925128f3164f231ec6ca25c1fe651763f51c27999a37f6e071cddcc5b90b5",
+      "video_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Sailing_over_Ta_Dung_Lake.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "visual_qa": "passed_sampled_contact_sheet"
+    },
+    {
+      "author": "Sea Cow",
+      "author_url": "https://commons.wikimedia.org/wiki/User:Sea_Cow",
+      "bytes": 162449321,
+      "calibration_note": "Project-selected real videos; not the original SenCache MixKit set. Captions and author/license attribution are retained for audit.",
+      "caption_basis": "five_sampled_frames_visually_checked",
+      "changes_for_calibration": "Runtime selects frames and resizes; no source video alterations are bundled.",
+      "dataset_id": "ce6190-project-commons8-v1",
+      "license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "original_paper_calibration_set": false,
+      "preparation_download_status": "downloaded",
+      "prompt": "Ocean waves break on a dark beach beneath a cloudy sky.",
+      "prompt_id": "calib_commons8_05_waves",
+      "seed": 619005,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Rialto_Beach_Waves_2022.webm",
+      "source_reported_duration_seconds": 39,
+      "source_reported_height": 2160,
+      "source_reported_width": 3840,
+      "source_title": "Rialto Beach Waves 2022.webm",
+      "split": "calibration",
+      "video_path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0005.webm",
+      "video_sha256": "627ddf7100b9d45f345b6e44e2a0d310a804469daa9c0a933c45ed27747d8551",
+      "video_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Rialto_Beach_Waves_2022.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "visual_qa": "passed_sampled_contact_sheet"
+    },
+    {
+      "author": "Joaquim Baeta (Spontaneous Symmetry)",
+      "author_url": "https://commons.wikimedia.org/wiki/User:Spontaneous_Symmetry",
+      "bytes": null,
+      "calibration_note": "Project-selected real videos; not the original SenCache MixKit set. Captions and author/license attribution are retained for audit.",
+      "caption_basis": "source_description_not_yet_visually_verified",
+      "changes_for_calibration": "Runtime selects frames and resizes; no source video alterations are bundled.",
+      "dataset_id": "ce6190-project-commons8-v1",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "original_paper_calibration_set": false,
+      "preparation_download_status": "not_downloaded",
+      "prompt": "A close-up shows leaves moving in a summer breeze.",
+      "prompt_id": "calib_commons8_06_leaves",
+      "seed": 619006,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Leaves_in_summer.webm",
+      "source_reported_duration_seconds": 75,
+      "source_reported_height": 1080,
+      "source_reported_width": 1920,
+      "source_title": "Leaves in summer.webm",
+      "split": "calibration",
+      "video_path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0006.webm",
+      "video_sha256": null,
+      "video_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Leaves_in_summer.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "visual_qa": "not_yet_inspected"
+    },
+    {
+      "author": "The Sophocrat",
+      "author_url": "https://commons.wikimedia.org/wiki/User:The_Sophocrat",
+      "bytes": null,
+      "calibration_note": "Project-selected real videos; not the original SenCache MixKit set. Captions and author/license attribution are retained for audit.",
+      "caption_basis": "source_description_not_yet_visually_verified",
+      "changes_for_calibration": "Runtime selects frames and resizes; no source video alterations are bundled.",
+      "dataset_id": "ce6190-project-commons8-v1",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "original_paper_calibration_set": false,
+      "preparation_download_status": "not_downloaded",
+      "prompt": "A white peafowl walks among other peafowl.",
+      "prompt_id": "calib_commons8_07_peafowl",
+      "seed": 619007,
+      "source_page": "https://commons.wikimedia.org/wiki/File:A_white_peafowl_walking.webm",
+      "source_reported_duration_seconds": 15,
+      "source_reported_height": 1080,
+      "source_reported_width": 1920,
+      "source_title": "A white peafowl walking.webm",
+      "split": "calibration",
+      "video_path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0007.webm",
+      "video_sha256": null,
+      "video_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/A_white_peafowl_walking.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "visual_qa": "not_yet_inspected"
+    }
+  ],
+  "created_by": "cachebench.calibrate",
+  "is_model_training": false,
+  "selection": {
+    "manifest_path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/samples.jsonl",
+    "manifest_sha256": "3cccc8311f4cc99888a330ac817388041fbcfe1b625ecd6ea0b207e28aab130f",
+    "total_samples": 8,
+    "sample_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "excluded_prompt_files": [
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/code/configs/development_prompts.jsonl",
+      "sha256": "63f714200e375d58f93e834de7e8acddbe78e80a437f0e4b8df39cfe8907d889",
+      "prompts": 64
+    },
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/code/benchmarks/vbench/VBench_full_info.json",
+      "sha256": "5dd2de80ee43cda750b2b72ea7023657c0b90d3702041c7e4608c65dbe50dccd",
+      "prompts": 944
+    },
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/code/configs/smoke_prompts.jsonl",
+      "sha256": "dd8415e42b109c67c63f8d2e257c46617bdd9fd1c1fe13bbf0cb03e4807ce581",
+      "prompts": 1
+    }
+  ],
+  "checkpoint_fingerprint": "b6725fb6e8b1b4869a82655cb9e9eec6730f51199ed91f7e7230be01cbd4eba4",
+  "source_revisions": {
+    "wan": {
+      "url": "https://github.com/Wan-Video/Wan2.1.git",
+      "commit": "9737cba9c1c3c4d04b33fcad41c111989865d315"
+    },
+    "teacache": {
+      "url": "https://github.com/ali-vilab/TeaCache.git",
+      "commit": "7c10efc4702c6b619f47805f7abe4a7a08085aa0"
+    },
+    "magcache": {
+      "url": "https://github.com/Zehong-Ma/MagCache.git",
+      "commit": "df81cb181776c2c61477c08e1d21f87fda1cd938"
+    },
+    "seacache": {
+      "url": "https://github.com/jiwoogit/SeaCache.git",
+      "commit": "8dcf49097fcd37e39774fe7409cb3b9e0fdb4fe2"
+    },
+    "sencache": {
+      "url": "https://github.com/vita-epfl/SenCache.git",
+      "commit": "3fb96a41511ede1e38f3555c863b1cb7cddfe567"
+    }
+  },
+  "aggregation": "arithmetic mean across videos; an explicit project convention because upstream converter is absent",
+  "calibration_code_sha256": "e20ea7ce5b4b391d8b71734a1f986b461b15df4975345eeaa2b0932bf321c6d5",
+  "geometry_note": "Uniform np.linspace frame indices; bounded sequential video decoding (npy uses mmap); unchanged float32 per-frame GPU bilinear resize with antialias and (height,width), then x/127.5-1. Corrects upstream ambiguous W/H naming.",
+  "estimator_note": "Unmodified official finite-difference functions; noisy calibration states independently drawn at each time, solver history carried across times as upstream",
+  "raw_data": [
+    [
+      [
+        38.52807812950617,
+        15.439629554748535
+      ],
+      [
+        1.0253657384286003,
+        14.073637962341309
+      ],
+      [
+        1.0175200055681897,
+        21.46526336669922
+      ],
+      [
+        1.0220115210819483,
+        15.438375473022461
+      ],
+      [
+        1.0270239407036912,
+        13.7146577835083
+      ],
+      [
+        1.0315596323550522,
+        8.764578819274902
+      ],
+      [
+        1.0348570574839084,
+        7.186215400695801
+      ],
+      [
+        1.0411708745221677,
+        6.1594696044921875
+      ],
+      [
+        1.0500086990258022,
+        4.679348945617676
+      ],
+      [
+        1.0552279119524148,
+        4.411977291107178
+      ],
+      [
+        1.0594830435910407,
+        3.443568706512451
+      ],
+      [
+        1.0658473733870637,
+        3.280811071395874
+      ],
+      [
+        1.071221817863784,
+        3.3766634464263916
+      ],
+      [
+        1.076606163026564,
+        2.7424323558807373
+      ],
+      [
+        1.0824860554031035,
+        2.5744473934173584
+      ],
+      [
+        1.090587613740389,
+        2.315291404724121
+      ],
+      [
+        1.0973153697399336,
+        2.2637999057769775
+      ],
+      [
+        1.1070599191247752,
+        2.060060501098633
+      ],
+      [
+        1.1141523661965589,
+        1.8609901666641235
+      ],
+      [
+        1.124424454313166,
+        1.9196385145187378
+      ],
+      [
+        1.133303322795033,
+        1.832674503326416
+      ],
+      [
+        1.1447714329219987,
+        1.7166178226470947
+      ],
+      [
+        1.1560249014725854,
+        1.7415013313293457
+      ],
+      [
+        1.16895642117993,
+        1.682536244392395
+      ],
+      [
+        1.1825186113449124,
+        1.6365717649459839
+      ],
+      [
+        1.1966145162511221,
+        1.6497987508773804
+      ],
+      [
+        1.2121955539823401,
+        1.6427150964736938
+      ],
+      [
+        1.229106810863551,
+        1.516592264175415
+      ],
+      [
+        1.2477730079103313,
+        1.6375499963760376
+      ],
+      [
+        1.267501957281301,
+        1.748853087425232
+      ],
+      [
+        1.2913759843374348,
+        1.555533766746521
+      ],
+      [
+        1.3153534053640752,
+        1.6419543027877808
+      ],
+      [
+        1.3418812284224986,
+        1.6356470584869385
+      ],
+      [
+        1.372769268462978,
+        1.6667029857635498
+      ],
+      [
+        1.4075637488571846,
+        1.6898177862167358
+      ],
+      [
+        1.4456326299693052,
+        1.7144145965576172
+      ],
+      [
+        1.4900783750986095,
+        1.8260498046875
+      ],
+      [
+        1.5418226378536004,
+        1.8575007915496826
+      ],
+      [
+        1.6000624828606043,
+        1.9331080913543701
+      ],
+      [
+        1.6703328496157914,
+        2.0277483463287354
+      ],
+      [
+        1.7520296367918862,
+        2.185164451599121
+      ],
+      [
+        1.852750753941902,
+        2.3424808979034424
+      ],
+      [
+        1.9734749567244645,
+        2.5315051078796387
+      ],
+      [
+        2.126736398078004,
+        2.8813819885253906
+      ],
+      [
+        2.324203023148356,
+        3.332287073135376
+      ],
+      [
+        2.5922487832808474,
+        3.9447264671325684
+      ],
+      [
+        2.9730493329457914,
+        4.666532516479492
+      ],
+      [
+        3.5386404114614805,
+        5.62594747543335
+      ],
+      [
+        4.406303509519145,
+        7.085617542266846
+      ],
+      [
+        4.8158401665991475,
+        8.214933395385742
+      ]
+    ],
+    [
+      [
+        25.204127222801585,
+        17.08249282836914
+      ],
+      [
+        1.0308623511136115,
+        14.106827735900879
+      ],
+      [
+        1.0202482903691772,
+        23.985118865966797
+      ],
+      [
+        1.0268854490152641,
+        18.252765655517578
+      ],
+      [
+        1.0278671566678814,
+        12.909987449645996
+      ],
+      [
+        1.038880381755399,
+        10.390469551086426
+      ],
+      [
+        1.0441152942646132,
+        8.380908012390137
+      ],
+      [
+        1.0471570543965247,
+        6.957320213317871
+      ],
+      [
+        1.0515026317419343,
+        5.339538097381592
+      ],
+      [
+        1.0582825280407255,
+        5.097488880157471
+      ],
+      [
+        1.0601675569396056,
+        4.44823694229126
+      ],
+      [
+        1.0700266209077782,
+        3.8661580085754395
+      ],
+      [
+        1.073740726610319,
+        3.4690773487091064
+      ],
+      [
+        1.0823032100443402,
+        3.2427213191986084
+      ],
+      [
+        1.0884786587589894,
+        2.748857021331787
+      ],
+      [
+        1.0952425641460946,
+        2.814671516418457
+      ],
+      [
+        1.1030562173892424,
+        2.4087038040161133
+      ],
+      [
+        1.1111140597580265,
+        2.264317274093628
+      ],
+      [
+        1.1194177633106133,
+        2.071336030960083
+      ],
+      [
+        1.129938411644957,
+        1.940679907798767
+      ],
+      [
+        1.138483266681613,
+        1.837857961654663
+      ],
+      [
+        1.1488038338241675,
+        1.7989261150360107
+      ],
+      [
+        1.160470872880738,
+        1.7287530899047852
+      ],
+      [
+        1.1737491277294723,
+        1.6927310228347778
+      ],
+      [
+        1.1876934500547132,
+        1.6292775869369507
+      ],
+      [
+        1.202444687595748,
+        1.7160804271697998
+      ],
+      [
+        1.217355623807852,
+        1.5417284965515137
+      ],
+      [
+        1.2350640337073429,
+        1.585330605506897
+      ],
+      [
+        1.254335760092186,
+        1.5511482954025269
+      ],
+      [
+        1.2754185139779837,
+        1.5713046789169312
+      ],
+      [
+        1.2986258076840467,
+        1.566987156867981
+      ],
+      [
+        1.3240627108536807,
+        1.5420480966567993
+      ],
+      [
+        1.3524941516986733,
+        1.6006208658218384
+      ],
+      [
+        1.3835911811721486,
+        1.5888420343399048
+      ],
+      [
+        1.419899734317857,
+        1.6698166131973267
+      ],
+      [
+        1.4596343072399267,
+        1.7018431425094604
+      ],
+      [
+        1.5070917844031533,
+        1.7373031377792358
+      ],
+      [
+        1.5605071629723106,
+        1.8280315399169922
+      ],
+      [
+        1.622418819341616,
+        1.9139198064804077
+      ],
+      [
+        1.695230900761375,
+        2.0257272720336914
+      ],
+      [
+        1.7820542450822798,
+        2.179641008377075
+      ],
+      [
+        1.8879326639837268,
+        2.336012363433838
+      ],
+      [
+        2.0165734235945765,
+        2.563340425491333
+      ],
+      [
+        2.183723470000396,
+        2.8167054653167725
+      ],
+      [
+        2.4003455449165685,
+        3.1794960498809814
+      ],
+      [
+        2.7011744461220726,
+        3.7942299842834473
+      ],
+      [
+        3.1384689135205575,
+        4.656428337097168
+      ],
+      [
+        3.82617533745847,
+        5.985110759735107
+      ],
+      [
+        5.008600211882669,
+        7.962513446807861
+      ],
+      [
+        6.438891965119769,
+        10.073664665222168
+      ]
+    ],
+    [
+      [
+        31.42996282573265,
+        17.933387756347656
+      ],
+      [
+        1.0203932806437928,
+        18.547094345092773
+      ],
+      [
+        1.0181249144366824,
+        13.006758689880371
+      ],
+      [
+        1.0319361930478763,
+        12.534440040588379
+      ],
+      [
+        1.0436029688963362,
+        9.17448902130127
+      ],
+      [
+        1.043767568918292,
+        9.064078330993652
+      ],
+      [
+        1.0446816881476164,
+        6.955715656280518
+      ],
+      [
+        1.0522042385962695,
+        6.184929847717285
+      ],
+      [
+        1.0581845028195889,
+        6.21904993057251
+      ],
+      [
+        1.0580338270605505,
+        5.1249613761901855
+      ],
+      [
+        1.0657569231618764,
+        4.4192705154418945
+      ],
+      [
+        1.0749816672978563,
+        6.267115116119385
+      ],
+      [
+        1.080971936085203,
+        3.9306204319000244
+      ],
+      [
+        1.0878350286799487,
+        4.528480529785156
+      ],
+      [
+        1.0937561250813617,
+        3.4394378662109375
+      ],
+      [
+        1.0990107658503374,
+        3.7804436683654785
+      ],
+      [
+        1.1082566321730951,
+        3.4938907623291016
+      ],
+      [
+        1.115139031980195,
+        3.2812297344207764
+      ],
+      [
+        1.1255919913909358,
+        3.175025701522827
+      ],
+      [
+        1.1330691332155227,
+        3.11494779586792
+      ],
+      [
+        1.142588830042352,
+        2.7988851070404053
+      ],
+      [
+        1.1534239263403498,
+        2.77689528465271
+      ],
+      [
+        1.163386997620696,
+        2.721074342727661
+      ],
+      [
+        1.1761076612542591,
+        2.6727511882781982
+      ],
+      [
+        1.1901851781821804,
+        2.561121702194214
+      ],
+      [
+        1.202163189291941,
+        2.5003018379211426
+      ],
+      [
+        1.2192198731812827,
+        2.4299192428588867
+      ],
+      [
+        1.2347956103908937,
+        2.4470674991607666
+      ],
+      [
+        1.2537260489267648,
+        2.3347132205963135
+      ],
+      [
+        1.2741031479113194,
+        2.2241456508636475
+      ],
+      [
+        1.2958370014816427,
+        2.290353775024414
+      ],
+      [
+        1.321094586705463,
+        2.263171434402466
+      ],
+      [
+        1.347368816758524,
+        2.229137420654297
+      ],
+      [
+        1.3787194686334818,
+        2.1667418479919434
+      ],
+      [
+        1.4117209192820586,
+        2.2601051330566406
+      ],
+      [
+        1.44988971531071,
+        2.2439029216766357
+      ],
+      [
+        1.4947073697718076,
+        2.2238383293151855
+      ],
+      [
+        1.54492365778675,
+        2.290670871734619
+      ],
+      [
+        1.604657579510797,
+        2.3926844596862793
+      ],
+      [
+        1.6732609820819744,
+        2.403733253479004
+      ],
+      [
+        1.7556678003145751,
+        2.5265252590179443
+      ],
+      [
+        1.8574961079489214,
+        2.659998893737793
+      ],
+      [
+        1.9792200712369132,
+        2.827401638031006
+      ],
+      [
+        2.136311179384531,
+        3.082078218460083
+      ],
+      [
+        2.3400191202735012,
+        3.460021495819092
+      ],
+      [
+        2.622043711533151,
+        3.9633471965789795
+      ],
+      [
+        3.022459726746253,
+        4.671545028686523
+      ],
+      [
+        3.645072082325876,
+        5.7315168380737305
+      ],
+      [
+        4.669624969273604,
+        7.444118976593018
+      ],
+      [
+        5.383443923808468,
+        9.235947608947754
+      ]
+    ],
+    [
+      [
+        16.89598054680221,
+        25.719118118286133
+      ],
+      [
+        1.019707771558141,
+        22.850854873657227
+      ],
+      [
+        1.0300045802727424,
+        20.689529418945312
+      ],
+      [
+        1.031561471445213,
+        15.38350772857666
+      ],
+      [
+        1.0415680575178674,
+        14.301061630249023
+      ],
+      [
+        1.045170924354287,
+        8.253097534179688
+      ],
+      [
+        1.043266736113841,
+        7.651020526885986
+      ],
+      [
+        1.0549728897790882,
+        7.508672714233398
+      ],
+      [
+        1.0576946988026934,
+        6.083221435546875
+      ],
+      [
+        1.0625617617568643,
+        5.435133934020996
+      ],
+      [
+        1.071062550585189,
+        4.647735118865967
+      ],
+      [
+        1.0747782447468817,
+        4.167164325714111
+      ],
+      [
+        1.0801086323039852,
+        3.926356077194214
+      ],
+      [
+        1.0867123621663788,
+        3.9796011447906494
+      ],
+      [
+        1.0967884225778428,
+        3.4254980087280273
+      ],
+      [
+        1.1006765832306327,
+        3.066025495529175
+      ],
+      [
+        1.1095927736034445,
+        2.884045124053955
+      ],
+      [
+        1.117212283636916,
+        2.844953775405884
+      ],
+      [
+        1.1267471272482188,
+        2.7410671710968018
+      ],
+      [
+        1.1355350660738193,
+        2.658287525177002
+      ],
+      [
+        1.1443827384162948,
+        2.498314142227173
+      ],
+      [
+        1.1559531623722759,
+        2.5858213901519775
+      ],
+      [
+        1.1675758261185714,
+        2.422166109085083
+      ],
+      [
+        1.179161160155181,
+        2.427858352661133
+      ],
+      [
+        1.1922635538486086,
+        2.233999729156494
+      ],
+      [
+        1.2064005240446072,
+        2.2798991203308105
+      ],
+      [
+        1.2221577152606398,
+        2.092388868331909
+      ],
+      [
+        1.2397342581008668,
+        2.1535074710845947
+      ],
+      [
+        1.257781496830952,
+        2.124627113342285
+      ],
+      [
+        1.2782476985070519,
+        2.1130640506744385
+      ],
+      [
+        1.3009199508146039,
+        2.0613203048706055
+      ],
+      [
+        1.325503104732387,
+        2.0461297035217285
+      ],
+      [
+        1.3531924058076845,
+        2.090212821960449
+      ],
+      [
+        1.383994016291996,
+        2.036550521850586
+      ],
+      [
+        1.419347939691711,
+        2.1404378414154053
+      ],
+      [
+        1.4584570176316798,
+        2.0566601753234863
+      ],
+      [
+        1.5036987340402213,
+        2.1480510234832764
+      ],
+      [
+        1.556159241547796,
+        2.1825287342071533
+      ],
+      [
+        1.616847287773964,
+        2.2367687225341797
+      ],
+      [
+        1.6885817893694508,
+        2.2849998474121094
+      ],
+      [
+        1.7729889696820988,
+        2.3684754371643066
+      ],
+      [
+        1.8771068886465856,
+        2.5289084911346436
+      ],
+      [
+        2.0042453653748082,
+        2.686634063720703
+      ],
+      [
+        2.165700629252031,
+        2.9043571949005127
+      ],
+      [
+        2.377556812317307,
+        3.334120273590088
+      ],
+      [
+        2.6670837344718796,
+        3.8624203205108643
+      ],
+      [
+        3.075191182097253,
+        4.609194755554199
+      ],
+      [
+        3.701890938978058,
+        5.717956066131592
+      ],
+      [
+        4.676733199777968,
+        7.437472820281982
+      ],
+      [
+        5.066161549484908,
+        9.328126907348633
+      ]
+    ],
+    [
+      [
+        41.38433760367616,
+        27.690298080444336
+      ],
+      [
+        1.0346987602389612,
+        32.46452331542969
+      ],
+      [
+        1.0354622485261298,
+        23.2763614654541
+      ],
+      [
+        1.0331014976736006,
+        17.643957138061523
+      ],
+      [
+        1.0361455941363675,
+        12.788593292236328
+      ],
+      [
+        1.0382494804182871,
+        11.35040283203125
+      ],
+      [
+        1.0458052390572796,
+        8.679466247558594
+      ],
+      [
+        1.047207228740586,
+        7.772388458251953
+      ],
+      [
+        1.0509044916560233,
+        5.766391277313232
+      ],
+      [
+        1.0579437611794653,
+        5.375155925750732
+      ],
+      [
+        1.0600086876083752,
+        4.28656530380249
+      ],
+      [
+        1.0682137360949004,
+        3.968783140182495
+      ],
+      [
+        1.0744355197604258,
+        3.481476306915283
+      ],
+      [
+        1.0818300769600406,
+        3.244910478591919
+      ],
+      [
+        1.0881604047960474,
+        2.980224132537842
+      ],
+      [
+        1.0956923296818475,
+        2.886676788330078
+      ],
+      [
+        1.1026912345440896,
+        2.592172861099243
+      ],
+      [
+        1.1121480030956927,
+        2.4052181243896484
+      ],
+      [
+        1.1196393248144958,
+        2.308032512664795
+      ],
+      [
+        1.1290914894006379,
+        2.2275390625
+      ],
+      [
+        1.139356162469486,
+        2.1512908935546875
+      ],
+      [
+        1.1495060156531232,
+        2.0405828952789307
+      ],
+      [
+        1.1618094637425231,
+        1.9847980737686157
+      ],
+      [
+        1.1743149947281508,
+        1.9170289039611816
+      ],
+      [
+        1.188206705142248,
+        1.9329086542129517
+      ],
+      [
+        1.201788768198012,
+        1.756880521774292
+      ],
+      [
+        1.2192528030096106,
+        1.7111717462539673
+      ],
+      [
+        1.2364882042951293,
+        1.7738587856292725
+      ],
+      [
+        1.255691900036291,
+        1.7519210577011108
+      ],
+      [
+        1.2770378954253614,
+        1.7066715955734253
+      ],
+      [
+        1.299898134218554,
+        1.7907241582870483
+      ],
+      [
+        1.3255691618012995,
+        1.7339446544647217
+      ],
+      [
+        1.3540612059179895,
+        1.7175322771072388
+      ],
+      [
+        1.3859247424138714,
+        1.8248282670974731
+      ],
+      [
+        1.4211929491119248,
+        1.8541814088821411
+      ],
+      [
+        1.462329333300896,
+        1.8420990705490112
+      ],
+      [
+        1.508310035362497,
+        1.9474914073944092
+      ],
+      [
+        1.5625686218269106,
+        1.9352500438690186
+      ],
+      [
+        1.6227024248426059,
+        2.13364315032959
+      ],
+      [
+        1.6960612293088433,
+        2.232813596725464
+      ],
+      [
+        1.7815106232753743,
+        2.4303362369537354
+      ],
+      [
+        1.8867463146294992,
+        2.5903782844543457
+      ],
+      [
+        2.0145691500127305,
+        2.836380958557129
+      ],
+      [
+        2.178172415008357,
+        3.0570003986358643
+      ],
+      [
+        2.3919131853325575,
+        3.475452423095703
+      ],
+      [
+        2.682973444917653,
+        4.072396278381348
+      ],
+      [
+        3.096509297562238,
+        4.8253092765808105
+      ],
+      [
+        3.7137517393769395,
+        5.940855026245117
+      ],
+      [
+        4.634858393680592,
+        7.621144771575928
+      ],
+      [
+        4.836890530267923,
+        9.562453269958496
+      ]
+    ],
+    [
+      [
+        38.70360422736899,
+        41.80288314819336
+      ],
+      [
+        1.0289943376458235,
+        23.491403579711914
+      ],
+      [
+        1.0287784080829576,
+        25.343164443969727
+      ],
+      [
+        1.0237530850088365,
+        16.612356185913086
+      ],
+      [
+        1.0242969532121868,
+        14.662715911865234
+      ],
+      [
+        1.028645099464655,
+        11.155383110046387
+      ],
+      [
+        1.032096533752053,
+        8.311382293701172
+      ],
+      [
+        1.039757483054036,
+        7.00624942779541
+      ],
+      [
+        1.0451335258273733,
+        5.673917770385742
+      ],
+      [
+        1.0484756281691716,
+        4.903412818908691
+      ],
+      [
+        1.0554973356631334,
+        3.9858319759368896
+      ],
+      [
+        1.0614368937630596,
+        3.6573486328125
+      ],
+      [
+        1.0665297686180106,
+        3.173555850982666
+      ],
+      [
+        1.0734922707402916,
+        2.7864694595336914
+      ],
+      [
+        1.0806556547068675,
+        2.7372477054595947
+      ],
+      [
+        1.0884868031979187,
+        2.314089775085449
+      ],
+      [
+        1.0973680834499706,
+        2.114260673522949
+      ],
+      [
+        1.106059108033136,
+        1.902260184288025
+      ],
+      [
+        1.1153752027826633,
+        1.8916091918945312
+      ],
+      [
+        1.1244189985279391,
+        1.7098218202590942
+      ],
+      [
+        1.135461951826,
+        1.7450308799743652
+      ],
+      [
+        1.1463615695607,
+        1.5177923440933228
+      ],
+      [
+        1.159034175801021,
+        1.5087826251983643
+      ],
+      [
+        1.1724456709394093,
+        1.464748740196228
+      ],
+      [
+        1.186736349158128,
+        1.3769513368606567
+      ],
+      [
+        1.2021248911030225,
+        1.350887656211853
+      ],
+      [
+        1.2190259357751645,
+        1.3248918056488037
+      ],
+      [
+        1.2367838250227519,
+        1.3326835632324219
+      ],
+      [
+        1.2564316410323002,
+        1.338887095451355
+      ],
+      [
+        1.2782809701599978,
+        1.3437544107437134
+      ],
+      [
+        1.3019895580304908,
+        1.3458987474441528
+      ],
+      [
+        1.3283338903409765,
+        1.3542587757110596
+      ],
+      [
+        1.3575339580834274,
+        1.3968392610549927
+      ],
+      [
+        1.390488513254556,
+        1.3755158185958862
+      ],
+      [
+        1.4275571890217242,
+        1.4547454118728638
+      ],
+      [
+        1.4691318542987977,
+        1.4895333051681519
+      ],
+      [
+        1.5165615447300522,
+        1.5735689401626587
+      ],
+      [
+        1.5720291983160333,
+        1.6307755708694458
+      ],
+      [
+        1.6359219560021816,
+        1.7716259956359863
+      ],
+      [
+        1.7113662214373528,
+        1.9828193187713623
+      ],
+      [
+        1.8018292330071435,
+        2.0236704349517822
+      ],
+      [
+        1.912088865838621,
+        2.238116979598999
+      ],
+      [
+        2.0473883090770277,
+        2.474477767944336
+      ],
+      [
+        2.2211759986835067,
+        2.793840169906616
+      ],
+      [
+        2.4485113115229638,
+        3.2780508995056152
+      ],
+      [
+        2.7659890367954714,
+        3.951099395751953
+      ],
+      [
+        3.2249667538336015,
+        4.946721076965332
+      ],
+      [
+        3.950031780309911,
+        6.424210071563721
+      ],
+      [
+        5.182650466760398,
+        8.544597625732422
+      ],
+      [
+        6.965201701876281,
+        11.321951866149902
+      ]
+    ],
+    [
+      [
+        33.14775367318998,
+        23.77370834350586
+      ],
+      [
+        1.0244559902541646,
+        38.35024642944336
+      ],
+      [
+        1.016102261729044,
+        29.337556838989258
+      ],
+      [
+        1.0249576417051907,
+        24.231637954711914
+      ],
+      [
+        1.0251570422239697,
+        17.73307991027832
+      ],
+      [
+        1.0274271815873002,
+        14.033117294311523
+      ],
+      [
+        1.0363551255854613,
+        11.924610137939453
+      ],
+      [
+        1.043616397237572,
+        10.802081108093262
+      ],
+      [
+        1.0499346146272208,
+        8.645137786865234
+      ],
+      [
+        1.0643971473735385,
+        8.302166938781738
+      ],
+      [
+        1.074615557333338,
+        7.274602890014648
+      ],
+      [
+        1.0772782879582221,
+        6.265886306762695
+      ],
+      [
+        1.0942944468402607,
+        6.735453128814697
+      ],
+      [
+        1.1023099465719761,
+        6.796668529510498
+      ],
+      [
+        1.1139108142316103,
+        5.840710639953613
+      ],
+      [
+        1.1182773889971103,
+        6.145176410675049
+      ],
+      [
+        1.1282325590263333,
+        5.488288402557373
+      ],
+      [
+        1.135545482585599,
+        5.079431533813477
+      ],
+      [
+        1.1425152076602012,
+        5.590061664581299
+      ],
+      [
+        1.1504119110064015,
+        5.0550618171691895
+      ],
+      [
+        1.1583160345242378,
+        4.708568572998047
+      ],
+      [
+        1.1674566627578604,
+        4.301711082458496
+      ],
+      [
+        1.1775091800327435,
+        4.269016742706299
+      ],
+      [
+        1.1881594011454883,
+        4.0401458740234375
+      ],
+      [
+        1.201088369315423,
+        4.106488227844238
+      ],
+      [
+        1.2146904420522664,
+        3.9385986328125
+      ],
+      [
+        1.2282179796656683,
+        3.7176520824432373
+      ],
+      [
+        1.2446271038627423,
+        3.6337122917175293
+      ],
+      [
+        1.2628451804817253,
+        3.4908339977264404
+      ],
+      [
+        1.282577274381685,
+        3.4598376750946045
+      ],
+      [
+        1.3042592332408078,
+        3.39398193359375
+      ],
+      [
+        1.328892198905714,
+        3.3464369773864746
+      ],
+      [
+        1.3549401431848904,
+        3.2595386505126953
+      ],
+      [
+        1.385813945353772,
+        3.1601779460906982
+      ],
+      [
+        1.419450411386439,
+        3.1572415828704834
+      ],
+      [
+        1.4581650685278926,
+        3.151883840560913
+      ],
+      [
+        1.502008818685145,
+        3.161489725112915
+      ],
+      [
+        1.5537861655521723,
+        3.1066627502441406
+      ],
+      [
+        1.6135642262287588,
+        3.1374642848968506
+      ],
+      [
+        1.683961466818794,
+        3.268012523651123
+      ],
+      [
+        1.7667610852988056,
+        3.3973145484924316
+      ],
+      [
+        1.8711434010238654,
+        3.584506034851074
+      ],
+      [
+        1.9975314503210069,
+        3.731048107147217
+      ],
+      [
+        2.157486993998541,
+        3.9963865280151367
+      ],
+      [
+        2.3668810263718476,
+        4.167774200439453
+      ],
+      [
+        2.654746413301001,
+        4.547670364379883
+      ],
+      [
+        3.0581057712085324,
+        5.206591606140137
+      ],
+      [
+        3.6648114904680074,
+        6.144196033477783
+      ],
+      [
+        4.498088101290652,
+        7.706370830535889
+      ],
+      [
+        4.187511563786312,
+        9.476119041442871
+      ]
+    ],
+    [
+      [
+        16.954912821213078,
+        27.55267906188965
+      ],
+      [
+        1.0183849475613833,
+        20.078630447387695
+      ],
+      [
+        1.0218283999102071,
+        11.52000904083252
+      ],
+      [
+        1.0241976049606947,
+        13.1417818069458
+      ],
+      [
+        1.0275450585713093,
+        8.938725471496582
+      ],
+      [
+        1.0327736311149647,
+        7.229921817779541
+      ],
+      [
+        1.0376623242689238,
+        6.585071086883545
+      ],
+      [
+        1.0457847809103307,
+        5.670392036437988
+      ],
+      [
+        1.0494089220590062,
+        4.614689826965332
+      ],
+      [
+        1.0558726982177349,
+        3.727670669555664
+      ],
+      [
+        1.0656884452335416,
+        3.8470420837402344
+      ],
+      [
+        1.0681356172733458,
+        3.4073023796081543
+      ],
+      [
+        1.0741254355520327,
+        3.3745274543762207
+      ],
+      [
+        1.0811355990639309,
+        2.712183713912964
+      ],
+      [
+        1.0896385520748257,
+        2.6725950241088867
+      ],
+      [
+        1.0958262996576422,
+        2.5133490562438965
+      ],
+      [
+        1.1031391390647167,
+        2.6068155765533447
+      ],
+      [
+        1.1113779448414465,
+        2.5488710403442383
+      ],
+      [
+        1.118765233466611,
+        2.164625406265259
+      ],
+      [
+        1.1293708770240156,
+        2.2108194828033447
+      ],
+      [
+        1.1393787689311408,
+        2.0953407287597656
+      ],
+      [
+        1.1495786777075918,
+        2.005361557006836
+      ],
+      [
+        1.1619412644100693,
+        2.240478277206421
+      ],
+      [
+        1.1751320755325907,
+        1.975300669670105
+      ],
+      [
+        1.1867728379777656,
+        1.8581115007400513
+      ],
+      [
+        1.201312618268124,
+        1.7835352420806885
+      ],
+      [
+        1.2172866500992758,
+        1.7008771896362305
+      ],
+      [
+        1.2346997311463415,
+        1.6423696279525757
+      ],
+      [
+        1.253631017951299,
+        1.6742002964019775
+      ],
+      [
+        1.2732924350808488,
+        1.6808124780654907
+      ],
+      [
+        1.29543471441613,
+        1.6845532655715942
+      ],
+      [
+        1.3202295972206568,
+        1.6591159105300903
+      ],
+      [
+        1.3481585547553707,
+        1.6244046688079834
+      ],
+      [
+        1.378502369861771,
+        1.6621581315994263
+      ],
+      [
+        1.413572957296315,
+        1.7131880521774292
+      ],
+      [
+        1.4529809579673467,
+        1.7266348600387573
+      ],
+      [
+        1.4967264635290236,
+        1.7562335729599
+      ],
+      [
+        1.5490682661111326,
+        1.8399741649627686
+      ],
+      [
+        1.6082192822324053,
+        1.9662704467773438
+      ],
+      [
+        1.6795643321873326,
+        2.03745436668396
+      ],
+      [
+        1.7622818022924769,
+        2.2353482246398926
+      ],
+      [
+        1.865333790489431,
+        2.468663454055786
+      ],
+      [
+        1.9911417229345727,
+        2.547380208969116
+      ],
+      [
+        2.149987716508256,
+        2.95670223236084
+      ],
+      [
+        2.3601660581421022,
+        3.58032488822937
+      ],
+      [
+        2.6469358353242827,
+        4.283688068389893
+      ],
+      [
+        3.0564266208529154,
+        4.9856276512146
+      ],
+      [
+        3.6856774059934376,
+        6.04160213470459
+      ],
+      [
+        4.68575951339666,
+        7.726983547210693
+      ],
+      [
+        5.387865911496488,
+        9.153261184692383
+      ]
+    ]
+  ],
+  "timesteps": [
+    999.0,
+    995.0,
+    991.0,
+    987.0,
+    982.0,
+    978.0,
+    973.0,
+    968.0,
+    963.0,
+    957.0,
+    952.0,
+    946.0,
+    940.0,
+    934.0,
+    927.0,
+    920.0,
+    913.0,
+    906.0,
+    898.0,
+    890.0,
+    882.0,
+    873.0,
+    863.0,
+    854.0,
+    843.0,
+    833.0,
+    821.0,
+    809.0,
+    796.0,
+    783.0,
+    768.0,
+    753.0,
+    737.0,
+    720.0,
+    701.0,
+    681.0,
+    660.0,
+    636.0,
+    611.0,
+    584.0,
+    555.0,
+    522.0,
+    487.0,
+    448.0,
+    405.0,
+    356.0,
+    302.0,
+    241.0,
+    172.0,
+    92.0
+  ],
+  "J_x_norm": [
+    30.281094631286354,
+    1.0253578971805597,
+    1.0235086386118912,
+    1.027300557992328,
+    1.031650846491201,
+    1.0358092374960297,
+    1.0398549998342121,
+    1.0464838684045719,
+    1.0515965108199552,
+    1.0575994079688082,
+    1.0640350125145126,
+    1.0700873051786384,
+    1.0769285354542526,
+    1.084028082156684,
+    1.091734335953831,
+    1.0979750435627464,
+    1.1062065011238533,
+    1.1144569791319734,
+    1.1227755271087871,
+    1.1320325426508073,
+    1.1414088844607697,
+    1.1519819101422584,
+    1.1634690852598686,
+    1.1760033140830601,
+    1.1894331318779974,
+    1.2034424546006055,
+    1.2193390168477292,
+    1.2364124471737024,
+    1.2552770066577312,
+    1.2758074865906937,
+    1.2985425480279638,
+    1.3236298319905315,
+    1.3512038080786324,
+    1.3824754381805717,
+    1.4175382311206517,
+    1.4570276105308193,
+    1.5023978907025637,
+    1.5551081189958382,
+    1.6155492573491166,
+    1.6872949714476144,
+    1.77189042446808,
+    1.876324848312819,
+    2.0030180561595126,
+    2.164911850114203,
+    2.3761995102531506,
+    2.666649425718295,
+    3.0806471998458926,
+    3.7157563982965227,
+    4.720327295697711,
+    5.385225914054912
+  ],
+  "J_t_norm": [
+    24.624274611473083,
+    22.995402336120605,
+    21.077970266342163,
+    16.654852747917175,
+    13.027913808822632,
+    10.030131161212921,
+    8.2092986702919,
+    7.257687926292419,
+    5.877661883831024,
+    5.297245979309082,
+    4.544106692075729,
+    4.360071122646332,
+    3.9334662556648254,
+    3.754183441400528,
+    3.302377223968506,
+    3.229465514421463,
+    2.981497138738632,
+    2.7982927709817886,
+    2.725343480706215,
+    2.604599490761757,
+    2.4584953486919403,
+    2.3429635614156723,
+    2.327071323990822,
+    2.234137624502182,
+    2.1669288128614426,
+    2.1219977736473083,
+    2.0201680660247803,
+    2.010640263557434,
+    1.9879851341247559,
+    1.9810554534196854,
+    1.9611691385507584,
+    1.94838248193264,
+    1.9442416280508041,
+    1.9351896941661835,
+    1.9924417287111282,
+    1.9908714890480042,
+    2.046753242611885,
+    2.0839243084192276,
+    2.185685619711876,
+    2.282913565635681,
+    2.418309450149536,
+    2.5936331748962402,
+    2.77477103471756,
+    3.061056524515152,
+    3.47594091296196,
+    4.052447259426117,
+    4.820993781089783,
+    5.951424300670624,
+    7.69110244512558,
+    9.545807242393494
+  ],
+  "sample_video_sha256": {
+    "calib_commons8_00_dog": "35b63426b2bbb756cf6c24574abc21f5f43243e52d683c02d60c6532808f4dc9",
+    "calib_commons8_01_waterfall": "5284b829ee6d1f52eefece0582a3068c0fb2b3f78c0e05590fd1d4983596a091",
+    "calib_commons8_02_traffic": "e5facb24baf755f0c1193999d823e99f6032661ad2bdef5cc28cc1cbbfde03e2",
+    "calib_commons8_03_train": "d33ccb72ee1cbd4b4504a9055e43e80a58f66c6b72ac7143445f7ff9f4999d77",
+    "calib_commons8_04_boat": "5db925128f3164f231ec6ca25c1fe651763f51c27999a37f6e071cddcc5b90b5",
+    "calib_commons8_05_waves": "627ddf7100b9d45f345b6e44e2a0d310a804469daa9c0a933c45ed27747d8551",
+    "calib_commons8_06_leaves": "29c8397f1ebf57e0fed41caac1c1e92bfcdfbe8084d6f4b05d01b3a001ff0936",
+    "calib_commons8_07_peafowl": "74bd108d7e8c856eacd7780eab8a9df7f39d4afa373d45b7331391c6b53f389b"
+  },
+  "video_downloads": {
+    "calib_commons8_00_dog": {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0000.webm",
+      "sha256": "35b63426b2bbb756cf6c24574abc21f5f43243e52d683c02d60c6532808f4dc9",
+      "expected_sha256": "35b63426b2bbb756cf6c24574abc21f5f43243e52d683c02d60c6532808f4dc9",
+      "checksum_status": "matches_expected",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Summer_Dog_-_video.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "status": "existing",
+      "bytes": 30376108
+    },
+    "calib_commons8_01_waterfall": {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0001.webm",
+      "sha256": "5284b829ee6d1f52eefece0582a3068c0fb2b3f78c0e05590fd1d4983596a091",
+      "expected_sha256": "5284b829ee6d1f52eefece0582a3068c0fb2b3f78c0e05590fd1d4983596a091",
+      "checksum_status": "matches_expected",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Small_waterfall.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "status": "downloaded",
+      "bytes": 18429839
+    },
+    "calib_commons8_02_traffic": {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0002.webm",
+      "sha256": "e5facb24baf755f0c1193999d823e99f6032661ad2bdef5cc28cc1cbbfde03e2",
+      "expected_sha256": null,
+      "checksum_status": "observed_only",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Street_traffic.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "status": "existing",
+      "bytes": 26490572
+    },
+    "calib_commons8_03_train": {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0003.webm",
+      "sha256": "d33ccb72ee1cbd4b4504a9055e43e80a58f66c6b72ac7143445f7ff9f4999d77",
+      "expected_sha256": null,
+      "checksum_status": "observed_only",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Train_on_the_Kotoden_Kotohira_Line_near_Ritsurin-Koen_Station_-_2021_April_1.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "status": "downloaded",
+      "bytes": 4214818
+    },
+    "calib_commons8_04_boat": {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0004.webm",
+      "sha256": "5db925128f3164f231ec6ca25c1fe651763f51c27999a37f6e071cddcc5b90b5",
+      "expected_sha256": "5db925128f3164f231ec6ca25c1fe651763f51c27999a37f6e071cddcc5b90b5",
+      "checksum_status": "matches_expected",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Sailing_over_Ta_Dung_Lake.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "status": "downloaded",
+      "bytes": 10066911
+    },
+    "calib_commons8_05_waves": {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0005.webm",
+      "sha256": "627ddf7100b9d45f345b6e44e2a0d310a804469daa9c0a933c45ed27747d8551",
+      "expected_sha256": "627ddf7100b9d45f345b6e44e2a0d310a804469daa9c0a933c45ed27747d8551",
+      "checksum_status": "matches_expected",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Rialto_Beach_Waves_2022.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "status": "downloaded",
+      "bytes": 162449321
+    },
+    "calib_commons8_06_leaves": {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0006.webm",
+      "sha256": "29c8397f1ebf57e0fed41caac1c1e92bfcdfbe8084d6f4b05d01b3a001ff0936",
+      "expected_sha256": null,
+      "checksum_status": "observed_only",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Leaves_in_summer.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "status": "downloaded",
+      "bytes": 70868619
+    },
+    "calib_commons8_07_peafowl": {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/videos/0007.webm",
+      "sha256": "74bd108d7e8c856eacd7780eab8a9df7f39d4afa373d45b7331391c6b53f389b",
+      "expected_sha256": null,
+      "checksum_status": "observed_only",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/A_white_peafowl_walking.webm?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "status": "existing",
+      "bytes": 20383348
+    }
+  },
+  "calibration_wall_seconds": null,
+  "profile_kind": "merged",
+  "shards": [
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/sencache/shard-0000.json",
+      "sha256": "ca75e2de8d8693391c09a101c6b2332511486eace059281661fd3b934047e490",
+      "sample_indices": [
+        0
+      ],
+      "calibration_wall_seconds": 559.3596299780002
+    },
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/sencache/shard-0001.json",
+      "sha256": "5e04dc278e2fe6b7057599468216667769e0a7d1c3035c0a9bae01986545e3db",
+      "sample_indices": [
+        1
+      ],
+      "calibration_wall_seconds": 548.4013715684414
+    },
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/sencache/shard-0002.json",
+      "sha256": "6bdeb600c86c83896eabfad7cd6c14ccb54e761d38794004a50629db4b022dea",
+      "sample_indices": [
+        2
+      ],
+      "calibration_wall_seconds": 545.0922665239996
+    },
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/sencache/shard-0003.json",
+      "sha256": "cfae47f895afecf7400c3e5a78623ebc6f0c9939ba1708b6223622236d92be76",
+      "sample_indices": [
+        3
+      ],
+      "calibration_wall_seconds": 551.8819395843893
+    },
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/sencache/shard-0004.json",
+      "sha256": "969a151927f639d3d5074b953f71b83c666cce6d79ac43569a8cb7c8f74dd169",
+      "sample_indices": [
+        4
+      ],
+      "calibration_wall_seconds": 554.3167339963838
+    },
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/sencache/shard-0005.json",
+      "sha256": "b620c9172cdc29b5337408541624fb35ac4f16bb04dd8fce57ab2a73f54bf8ce",
+      "sample_indices": [
+        5
+      ],
+      "calibration_wall_seconds": 608.0262820376083
+    },
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/sencache/shard-0006.json",
+      "sha256": "ea3396edce31d039c8400e97b342bb2a834ed30be96630ed9f202019d8ac9372",
+      "sample_indices": [
+        6
+      ],
+      "calibration_wall_seconds": 574.292530240491
+    },
+    {
+      "path": "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/sencache/shard-0007.json",
+      "sha256": "f37f0e9533f5fc72626c80ecfa248bcbafd755a04335ef63e4a0890586d3f1d1",
+      "sample_indices": [
+        7
+      ],
+      "calibration_wall_seconds": 538.34201037
+    }
+  ],
+  "calibration_time_accounting": {
+    "note": "Sum includes each shard preparation/model load; parallel elapsed wall time is not measured here.",
+    "sum_shard_wall_seconds": 4479.712764299314,
+    "max_shard_wall_seconds": 608.0262820376083,
+    "merge_wall_seconds": 0.00911737800015544,
+    "shard_count": 8
+  }
+}

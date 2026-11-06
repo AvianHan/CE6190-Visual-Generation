@@ -1,0 +1,8 @@
+.runtime/
+work/
+results/
+models/
+vendor/
+venv/
+__pycache__/
+*.pyc

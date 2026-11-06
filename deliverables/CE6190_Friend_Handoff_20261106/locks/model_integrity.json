@@ -1,0 +1,67 @@
+{
+  "model_id": "Wan-AI/Wan2.1-T2V-1.3B",
+  "revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a",
+  "checkpoint": "/scratch/prj0000000262_1/hansy/ce6190-runtime/models/Wan2.1-T2V-1.3B-37ec512624d6",
+  "files": [
+    {
+      "path": "diffusion_pytorch_model.safetensors",
+      "bytes": 5676070424,
+      "hash": "96b6b242ca1c2f24e9d02cd6596066fab6d310e2d7538f33ae267cb18d957e8f",
+      "algorithm": "sha256"
+    },
+    {
+      "path": "models_t5_umt5-xxl-enc-bf16.pth",
+      "bytes": 11361920418,
+      "hash": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d",
+      "algorithm": "sha256"
+    },
+    {
+      "path": "Wan2.1_VAE.pth",
+      "bytes": 507609880,
+      "hash": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+      "algorithm": "sha256"
+    },
+    {
+      "path": "config.json",
+      "bytes": 249,
+      "hash": "d203bef600b2f3c64fe1f5f53d70a2087f4ccd2f",
+      "algorithm": "git_blob_sha1"
+    },
+    {
+      "path": "google/umt5-xxl/special_tokens_map.json",
+      "bytes": 6623,
+      "hash": "14855e7052ffbb595057dfd791d293c1c940db2c",
+      "algorithm": "git_blob_sha1"
+    },
+    {
+      "path": "google/umt5-xxl/spiece.model",
+      "bytes": 4548313,
+      "hash": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "algorithm": "sha256"
+    },
+    {
+      "path": "google/umt5-xxl/tokenizer.json",
+      "bytes": 16837417,
+      "hash": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b",
+      "algorithm": "sha256"
+    },
+    {
+      "path": "google/umt5-xxl/tokenizer_config.json",
+      "bytes": 61728,
+      "hash": "4e1cc1cd85599ce0b47fd0a746af188fe4043ff2",
+      "algorithm": "git_blob_sha1"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 11357,
+      "hash": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "algorithm": "git_blob_sha1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16913,
+      "hash": "fbbf7c13900d37f3179c546d09372aeb52e0fae1",
+      "algorithm": "git_blob_sha1"
+    }
+  ]
+}

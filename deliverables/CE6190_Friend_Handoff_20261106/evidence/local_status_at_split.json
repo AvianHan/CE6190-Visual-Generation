@@ -1,0 +1,27 @@
+{
+  "status": "stopped",
+  "updated_at": "2026-11-06T19:05:41.259476+08:00",
+  "phase": "batch",
+  "completed": 181,
+  "total": 1592,
+  "allowed_physical_gpus": [
+    0,
+    1
+  ],
+  "third_gpu_deadline": "2026-11-06T12:45:50+08:00",
+  "active": {
+    "0": {
+      "index": 176,
+      "run_id": "59bbec7129bb39aa6ecc",
+      "pid": 969903,
+      "started_at": 1793962066.006934
+    },
+    "1": {
+      "index": 177,
+      "run_id": "c6ce754d8bc242db06f1",
+      "pid": 1047746,
+      "started_at": 1793962558.7162778
+    }
+  },
+  "failures": []
+}

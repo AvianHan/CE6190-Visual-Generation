@@ -1,0 +1,86 @@
+{
+  "experiment_id": "wan13b-81f-validation-grid",
+  "default_split": "tune",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "generation": {
+    "model_id": "Wan2.1-T2V-1.3B",
+    "num_frames": 81,
+    "height": 480,
+    "width": 832,
+    "num_inference_steps": 50,
+    "guidance_scale": 5.0,
+    "flow_shift": 5.0,
+    "sample_solver": "unipc",
+    "dtype": "bfloat16",
+    "fps": 16,
+    "negative_prompt": null,
+    "attention_backend": "flash_attention_2",
+    "offload": false,
+    "warmup": 1,
+    "timing_repeats": 3,
+    "generation_backend": "seacache_wan"
+  },
+  "methods": [
+    {
+      "method": "baseline"
+    },
+    {
+      "method": "teacache",
+      "grid": {
+        "threshold": [
+          0.04,
+          0.08,
+          0.12,
+          0.16
+        ]
+      }
+    },
+    {
+      "method": "magcache",
+      "parameters": {
+        "max_skip": 4,
+        "retention_ratio": 0.2,
+        "calibration_path": "calibration/magcache_81f.json"
+      },
+      "grid": {
+        "threshold": [
+          0.06,
+          0.12,
+          0.24
+        ]
+      }
+    },
+    {
+      "method": "seacache",
+      "grid": {
+        "threshold": [
+          0.1,
+          0.2,
+          0.35
+        ]
+      }
+    },
+    {
+      "method": "sencache",
+      "parameters": {
+        "threshold_start": 0.045,
+        "max_skip": 3,
+        "sencache_scale": "official_81f",
+        "calibration_path": "calibration/sencache_81f.json"
+      },
+      "grid": {
+        "threshold": [
+          0.5,
+          1,
+          2,
+          4
+        ]
+      }
+    }
+  ],
+  "status": "planned_configuration_not_measured_results"
+}

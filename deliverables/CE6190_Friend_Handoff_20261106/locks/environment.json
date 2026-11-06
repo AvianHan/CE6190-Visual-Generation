@@ -1,0 +1,24 @@
+{
+  "source_member": "l40sp/results/f873f91a73da44bf10f9/metrics.json",
+  "gpu_name": "NVIDIA L40S",
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "numpy": "1.26.4",
+    "diffusers": "0.32.2",
+    "transformers": "4.49.0",
+    "accelerate": "1.4.0",
+    "flash-attn": "2.7.4.post1",
+    "imageio": "2.37.0",
+    "Pillow": "11.1.0"
+  },
+  "cuda_version": "12.4",
+  "cudnn_version": 90100,
+  "gpu_capability": [
+    8,
+    9
+  ],
+  "python": "3.11.9 (main, May  5 2025, 17:45:24) [GCC 11.4.0]",
+  "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+  "generation_backend": "seacache_wan_official_loop"
+}

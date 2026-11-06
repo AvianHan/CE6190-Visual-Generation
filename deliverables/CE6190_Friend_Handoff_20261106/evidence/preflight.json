@@ -1,0 +1,46 @@
+{
+  "source_revisions": {
+    "wan": {
+      "url": "https://github.com/Wan-Video/Wan2.1.git",
+      "commit": "9737cba9c1c3c4d04b33fcad41c111989865d315"
+    },
+    "teacache": {
+      "url": "https://github.com/ali-vilab/TeaCache.git",
+      "commit": "7c10efc4702c6b619f47805f7abe4a7a08085aa0"
+    },
+    "magcache": {
+      "url": "https://github.com/Zehong-Ma/MagCache.git",
+      "commit": "df81cb181776c2c61477c08e1d21f87fda1cd938"
+    },
+    "seacache": {
+      "url": "https://github.com/jiwoogit/SeaCache.git",
+      "commit": "8dcf49097fcd37e39774fe7409cb3b9e0fdb4fe2"
+    },
+    "sencache": {
+      "url": "https://github.com/vita-epfl/SenCache.git",
+      "commit": "3fb96a41511ede1e38f3555c863b1cb7cddfe567"
+    }
+  },
+  "core_denoising_hashes_match_original": {
+    "seacache_generation_source": "20261dee4f612f1c327f428fd6d7d61cbf5fdb8e215a10f836ba8bc67cbefe9e",
+    "seacache_t2v_generate": "2a7b91880a8d56abfb85f162a62912054b61cc30777529159b947e1b0cab56f0",
+    "seacache_denoising_loop_ast": "c5bb8fde294039df4b44f2b9756a4343bc9f9131290f1095c97db085d33a7952"
+  },
+  "all_manifest_rows_valid": 1592,
+  "local_scientific_code_sha256": {
+    "src/manifest.py": "b0f215672ea791cb1cd16b99ab639360da8d49f8f771e659f6c0edf573d75769",
+    "src/policies.py": "dc5df7abc5efdcf6414c35f06f2295195cbc3c56abf5524dd86fe02d4eda5e25",
+    "src/generate.py": "30e1c708dfc959d13673ca1316c91f2bd4a63ad40f7e2002c25dbd312540c4e8",
+    "src/evaluate.py": "a09a751bb38b08ef1ad79d385c2dab3a848b3b1d8bbf8eb4b1fd4495b4fcd3ce",
+    "src/wan_adapter.py": "08ceaa40520a15d46fe1d36d98d4ea95742ba995ebbbba93000ce64e51b43d02",
+    "src/sources.py": "a92cf464ba122a8287d85bd581c95ed380d19b5240b4fb268ff816291309130d",
+    "src/__init__.py": "38ce6ba7444615fc45f284267a7289d0612db8246a081c88517d44beadc0bd62",
+    "src/seacache_base.py": "ef5d5c1ed1e84c93241ed95a4b48e2bdae886f4853dc0c75bcf63955b6b8010e",
+    "src/aggregate.py": "6bfe2f6ee40caeccc356e90ad297f5b372882309cba881e6f250d3b529f48b2d",
+    "src/calibrate.py": "a00af55fcab113efec5783229cc597550c294863dca31afe450d8e06fd44c6c8"
+  },
+  "profile_sha256": {
+    "magcache": "7f145477115af1ec2f13b338071ec0556543d9ab1721898eadaad70ef10a877a",
+    "sencache": "a480e3f18a8a1f2057b4e54c8915c729ef51ee835ed00877ab4490d381678600"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "model_id": "Wan-AI/Wan2.1-T2V-1.3B",
+  "revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a",
+  "checkpoint_fingerprint": "b6725fb6e8b1b4869a82655cb9e9eec6730f51199ed91f7e7230be01cbd4eba4",
+  "checkpoint_fingerprint_kind": "sha256 of relative filenames and complete file contents; cached on unchanged size/mtime_ns",
+  "source_release_sha256": "4a3a585db39e3effaae4f478aa357c67537f2b4fa68f614214565e5431636593",
+  "known_original_code_hashes": {
+    "code/SHA256SUMS.txt": "4a3a585db39e3effaae4f478aa357c67537f2b4fa68f614214565e5431636593",
+    "code/src/calibrate.py": "a00af55fcab113efec5783229cc597550c294863dca31afe450d8e06fd44c6c8",
+    "code/scripts/start_orion.py": "3a06667f952632fe926c23fcc7187adcf30aa6ad74d119927797a73b46e567de",
+    "rolling/code/queue_orion.py": "91f4bcab54f6a4a966c15c14dc2c880ffc4543bb0de9f7e25258f7619a88a0e7",
+    "rolling/code/orion_hardware.py": "c05b70ee4d1552929fc1aabd47a37da0711dff68e256b566c0eafebc3173ca9b",
+    "code/configs/development_prompts.jsonl": "63f714200e375d58f93e834de7e8acddbe78e80a437f0e4b8df39cfe8907d889",
+    "code/benchmarks/vbench/VBench_full_info.json": "5dd2de80ee43cda750b2b72ea7023657c0b90d3702041c7e4608c65dbe50dccd",
+    "code/configs/smoke_prompts.jsonl": "dd8415e42b109c67c63f8d2e257c46617bdd9fd1c1fe13bbf0cb03e4807ce581"
+  },
+  "code_bytes_included": false,
+  "vendor_bytes_included": false,
+  "weights_included": false,
+  "requirement": "Verify team repository against original runtime code; current GitHub HEAD equivalence is not established by this export."
+}
