@@ -1,0 +1,17 @@
+{
+  "status": "stopped_by_user",
+  "updated_at": "2026-11-06T19:14:14.552190+08:00",
+  "phase": "transferred_all_unfinished",
+  "completed": 183,
+  "total_original": 1592,
+  "local_pending": 0,
+  "friend_pending": 1409,
+  "receiver_additional_baselines": 2,
+  "active": {},
+  "interrupted_runs_preserved": [
+    "c8a00adc059e57735679",
+    "c8f3203f022386dc0cd3"
+  ],
+  "failures": [],
+  "note": "Do not resume this service. All remaining work belongs to friend. Completed and partial result directories are untouched."
+}

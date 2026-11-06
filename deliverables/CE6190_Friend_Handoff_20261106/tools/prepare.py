@@ -16,10 +16,16 @@ def main():
         if not path.is_relative_to(ROOT) or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise ValueError('Handoff checksum mismatch: ' + name)
     rows = [json.loads(x) for x in (ROOT / 'pending.jsonl').read_text().splitlines()]
-    reserved = {json.loads(x)['run_id'] for x in (ROOT / 'local_reserved.jsonl').read_text().splitlines()}
+    completed = {json.loads(x)['run_id'] for x in (ROOT / 'local_completed.jsonl').read_text().splitlines()}
+    extra = [json.loads(x) for x in (ROOT / 'new_hardware_baselines.jsonl').read_text().splitlines()]
     identifiers = {r['run_id'] for r in rows}
-    if len(rows) != 1362 or len(identifiers) != len(rows) or identifiers & reserved:
+    if len(rows) != 1409 or len(identifiers) != len(rows) or identifiers & completed:
         raise ValueError('Invalid or overlapping assignment')
+    if len(extra) != 2 or any(r['method'] != 'baseline' or r['run_id'] not in completed for r in extra):
+        raise ValueError('Invalid receiver-only baseline supplement')
+    rows = extra + rows
+    if len({r['run_id'] for r in rows}) != 1411:
+        raise ValueError('Duplicate execution task')
     refs = {r['run_id'] for r in rows if r['method'] == 'baseline'}
     if not {r['reference_run_id'] for r in rows} <= refs:
         raise ValueError('Missing baseline assignment')

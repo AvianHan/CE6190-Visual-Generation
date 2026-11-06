@@ -1,12 +1,18 @@
 {
-  "verified_at": "2026-11-06T19:11:44.349757+08:00",
-  "existing_results_validated": 183,
-  "existing_results_modified_or_deleted": false,
-  "local_total": 230,
-  "local_remaining": 47,
-  "friend_tasks": 1362,
-  "local_manifest_sha256": "c7d527fea7d2eeac3ff7c30b196d4247be002b6f471d3c03fa7b1615f9fdd586",
-  "friend_manifest_sha256": "a0627606ccbca80353a5a6e55f09276325793b9be5967af59c41c55af773d127",
-  "local_original_manifest_backup": "runtime/a100-20261106/manifest.before-friend-split.jsonl",
-  "note": "Original indexes remapped only after draining all in-flight tasks; scientific rows and output directories unchanged."
+  "updated_at": "2026-11-06T19:14:14.552190+08:00",
+  "user_requested_immediate_stop": true,
+  "local_service_stopped": true,
+  "timer_cancelled": true,
+  "local_results_preserved": 183,
+  "local_partial_results_preserved": [
+    "c8a00adc059e57735679",
+    "c8f3203f022386dc0cd3"
+  ],
+  "friend_pending_tasks": 1409,
+  "receiver_only_additional_baselines": [
+    "59bbec7129bb39aa6ecc",
+    "977e7ca5475db1bfcd93"
+  ],
+  "overwrite_or_deletion_of_generated_outputs": false,
+  "earlier_local_reservation_revoked": true
 }
