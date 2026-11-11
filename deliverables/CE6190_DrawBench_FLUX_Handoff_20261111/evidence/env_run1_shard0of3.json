@@ -1,0 +1,28 @@
+{
+ "host": "gpu-h200-205",
+ "gpu": "NVIDIA H200",
+ "torch": "2.6.0+cu124",
+ "diffusers": "0.32.2",
+ "python": "3.11.18",
+ "argv": [
+  "scripts/run_drawbench_flux.py",
+  "--revision",
+  "3de623fc3c33e44ffbe2bad470d0f45bccf2eb21",
+  "--vendor",
+  "/dataDisk/home/jiangnan/ce6190-runtime/vendor",
+  "--output",
+  "/dataDisk/home/jiangnan/ce6190-runtime/runs/drawbench_flux_28step",
+  "--shard",
+  "0/3",
+  "--resume"
+ ],
+ "settings": {
+  "model": "black-forest-labs/FLUX.1-dev",
+  "revision": "3de623fc3c33e44ffbe2bad470d0f45bccf2eb21",
+  "seed": 0,
+  "steps": 28,
+  "guidance": 3.5,
+  "height": 1024,
+  "width": 1024
+ }
+}
