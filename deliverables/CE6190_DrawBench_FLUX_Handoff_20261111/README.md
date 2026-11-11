@@ -33,7 +33,7 @@
 | ~2.45× | SenCache .158 < SeaCache .193 < MagCache .200 ≪ TeaCache .323 |
 | ~3× | 固定调度 .248 ≲ MagCache .258；TeaCache 3.3× 时为 .421；SeaCache 和 SenCache 按现有阈值档位没有到 3× 的点 |
 
-**五条结论**（正文见 `results/REPORT_SECTION.md`）
+**五条结论**（正文见 `results/REPORT_SECTION.md`；第 2、4 条已用 Wan 现有 trace 交叉核对，见第 5 节）
 
 1. **保真度差距大，画质指标几乎不动。**
    - 相同加速下，各方法 LPIPS 最多相差约 5 倍。
@@ -64,6 +64,7 @@
 | `results/per_image_metrics_all.csv` | 逐张图 × 配置的全部指标 |
 | `results/sensitivity_flux_dev_28step_1024.json` | SenCache 的 FLUX 校准文件 |
 | `results/README.md` | 英文文件说明和完整复现命令 |
+| `results/wan_schedules/schedules_wan.csv` | Wan 已完成运行的调度统计（交叉核对用） |
 | `code/` | 本次实际运行的代码快照（仓库里 `src/`、`scripts/`、`tests/`、`benchmarks/` 有同样的文件） |
 | `evidence/` | 运行环境（GPU、torch、diffusers、命令行参数）、关键包版本、测试输出 |
 
@@ -95,17 +96,24 @@
 - 每条 prompt 只用了一个 seed。
 - 保真度是对照 uncached 输出来衡量的，不是对照真实图片，也不是人工评分。
 
-## 5. 需要队长 / 王海洲决定的事：与 Wan 部分的一致性
+## 5. 与 Wan 部分的关系：不依赖任何人补实验
 
-第 2–4 条结论目前只有 FLUX 的证据。王海洲的 Wan 交接包（`deliverables/CE6190_Friend_Handoff_20261106/`）写明了"禁止重新调参"，所以下面三项不在任何人的任务里：
-- 补跑 Wan 上的固定调度对照（前 20% 全算，之后均匀刷新）；
-- 补 SenCache 的低阈值点（约 0.1–0.3）；
-- 核对 Wan 上 Sen 阈值 1/2/4 是否已经变成同一个调度。
+这部分**不需要 Wan 那边补任何实验**，报告段落按现有数据就能成立。
 
-请二选一：
-- 把这三项加进 Wan 任务；
-- 或者在报告里写明"第 2–4 条只在 FLUX 上验证"。
+**Wan 交叉核对（无需 GPU）**
+- 做法：读取 Wan 已完成的 183 项运行的 trace，见 `results/wan_schedules/schedules_wan.csv`，脚本为 `code/scripts/wan_schedule_audit.py`。
+- 结果：
+  - TeaCache 和 SenCache 在 Wan 上同样每个阈值只有一种调度，不随 prompt 变化。这支持第 2 条。
+  - SenCache 阈值 1/2/4 的调度完全相同：50 步算 17 步，刷新比例 0.34。这正好解释了 Wan 速度表里约 2.47× 的平台。这支持第 4 条。
+  - 第 4 条的成因在两个模型上不同：
+    - FLUX：前 20% 全算，加上最多连续跳 3 步；
+    - Wan：前期仍会跳步（前 10 步算 7 步），上限只由"最多连续跳 3 步"决定。
 
-如果 Wan 结果与 FLUX 不同，应写成"两个模型表现不同"，不要删掉。
+**只在 FLUX 上验证的部分**
+- 第 3 条依赖固定调度对照，只在 FLUX 上做过。报告里已在局限性中写明。
+
+**Wan 那边以后会自然产生、可以顺手用上的数据（都不是新实验）**
+- Wan 评测：对已生成的视频算保真度后，可以直接比较 SenCache 2 和 TeaCache 0.16。两者刷新比例都是 0.34，调度都是固定的，只是分布不同，正好在 Wan 上检验"刷新步放在哪里更重要"。
+- 剩余任务：跑完后，对新的 trace 重跑 `wan_schedule_audit.py`，就能补上 MagCache 和 SeaCache 的调度统计。目前它们本地各只有 1 项。
 
 另外，Jiang Nan 之前在群里发过一份中文结论页，那是加入 SenCache 之前写的，**已经过时**，以本包为准。

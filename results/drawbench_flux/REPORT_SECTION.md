@@ -89,13 +89,26 @@ The gain from SenCache therefore comes from a calibrated, timestep-dependent pla
 
 **4. SenCache has a speed ceiling under its default rules.** Two rules cap the speedup: every step in the first 20% is computed (in practice no step there passes the strict threshold), and no more than 3 reuses may occur in a row. Together they limit SenCache to 11 of 28 computed steps, about 2.45×. Above a threshold of about 1.2, the schedule stops changing and the method becomes a fixed schedule: the first 6 steps, then every 4th step.
 
-Wan shows the same limit: SenCache's speedup flattens at about 2.47× for thresholds of 1–4. So "best fidelity at 2.45×" describes this fixed schedule, not the sensitivity criterion. SenCache cannot reach the 3× budget without changing K, which would no longer be the authors' setting.
+Wan2.1 shows the same ceiling (cross-check below). So "best fidelity at 2.45×" describes this fixed schedule, not the sensitivity criterion. SenCache cannot reach the 3× budget without changing K, which would no longer be the authors' setting.
 
 **5. Speedup is set almost entirely by the fraction of refreshed steps.** At a refresh ratio of 0.393, TeaCache, SenCache and MagCache reach 2.45×, 2.46× and 2.47× respectively. SeaCache's spectral filter adds a small overhead. Comparing methods at matched refresh ratio is therefore close to comparing them at matched wall-clock time.
+
+## Cross-check on Wan2.1 (existing runs, no new experiments)
+
+We read the compute/reuse traces of the 183 Wan2.1-T2V-1.3B runs that are already complete (`scripts/wan_schedule_audit.py`, output in `results/wan_schedules/schedules_wan.csv` in the repository (`wan_schedules/` in the handoff package)). These runs use 50 steps with CFG, one A100, and 16–24 prompt–seed pairs per configuration. Two schedule-level findings carry over:
+
+- **No per-prompt adaptation (finding 2).** TeaCache (thresholds 0.04–0.16) and SenCache (0.5, 2, 4) each produce a single schedule for every prompt–seed pair. SenCache at threshold 1 produces two schedules, one of which covers 21 of the 22 pairs.
+- **SenCache ceiling (finding 4).** Thresholds 1, 2 and 4 give the same schedule: 17 of 50 steps computed, a refresh ratio of 0.34. This matches the plateau at about 2.47× in the Wan speed table. On Wan the strict early phase still skips some steps (7 of the first 10 are computed), so here the K = 3 limit alone sets the ceiling.
+
+Finding 3 depends on the static-schedule control, which was not run on Wan, so it rests on FLUX alone. Two observations make a partial check possible on Wan without new runs, once fidelity is computed for the Wan outputs:
+
+- SenCache at threshold 2 and TeaCache at 0.16 both refresh 34% of steps through different fixed schedules, so they can be compared directly.
+- MagCache and SeaCache have only one finished Wan run each. Their schedules can be audited with the same script as their runs complete.
 
 ## Limitations
 
 - Single seed per prompt. Close calls are reported as ties, and differences are given as paired win rates with bootstrap confidence intervals.
+- The static-schedule control (finding 3) exists only on FLUX; the Wan cross-check covers findings 2 and 4 from existing traces.
 - The SenCache FLUX version is our own port, including its calibration data, its threshold scaling, and the K and start threshold taken from Wan. It is not an authors' result.
 - The static control is one hand-designed schedule, not an optimised one. A better static schedule could close the remaining gaps in finding 3.
 - Fidelity is measured against the uncached FLUX output, not against real images or human ratings.
