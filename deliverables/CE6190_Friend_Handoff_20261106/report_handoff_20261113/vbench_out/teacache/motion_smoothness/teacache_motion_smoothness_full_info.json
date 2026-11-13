@@ -1,0 +1,152 @@
+[
+    {
+        "prompt_en": "a person giving a presentation to a room full of colleagues",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person giving a presentation to a room full of colleagues-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person giving a presentation to a room full of colleagues-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person giving a presentation to a room full of colleagues-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person giving a presentation to a room full of colleagues-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person giving a presentation to a room full of colleagues-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a person eating a burger",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person eating a burger-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person eating a burger-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person eating a burger-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person eating a burger-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a person eating a burger-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a bus accelerating to gain speed",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a bus accelerating to gain speed-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a bus accelerating to gain speed-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a bus accelerating to gain speed-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a bus accelerating to gain speed-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a bus accelerating to gain speed-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a train crossing over a tall bridge",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train crossing over a tall bridge-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train crossing over a tall bridge-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train crossing over a tall bridge-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train crossing over a tall bridge-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train crossing over a tall bridge-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a boat sailing smoothly on a calm lake",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a boat sailing smoothly on a calm lake-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a boat sailing smoothly on a calm lake-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a boat sailing smoothly on a calm lake-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a boat sailing smoothly on a calm lake-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a boat sailing smoothly on a calm lake-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a cat grooming itself meticulously with its tongue",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cat grooming itself meticulously with its tongue-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cat grooming itself meticulously with its tongue-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cat grooming itself meticulously with its tongue-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cat grooming itself meticulously with its tongue-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cat grooming itself meticulously with its tongue-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a horse galloping across an open field",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a horse galloping across an open field-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a horse galloping across an open field-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a horse galloping across an open field-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a horse galloping across an open field-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a horse galloping across an open field-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a sheep running to join a herd of its kind",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a sheep running to join a herd of its kind-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a sheep running to join a herd of its kind-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a sheep running to join a herd of its kind-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a sheep running to join a herd of its kind-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a sheep running to join a herd of its kind-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a cow bending down to drink water from a river",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cow bending down to drink water from a river-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cow bending down to drink water from a river-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cow bending down to drink water from a river-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cow bending down to drink water from a river-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a cow bending down to drink water from a river-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "an elephant running to join a herd of its kind",
+        "dimension": [
+            "subject_consistency",
+            "dynamic_degree",
+            "motion_smoothness"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant running to join a herd of its kind-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant running to join a herd of its kind-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant running to join a herd of its kind-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant running to join a herd of its kind-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant running to join a herd of its kind-4.mp4"
+        ]
+    }
+]

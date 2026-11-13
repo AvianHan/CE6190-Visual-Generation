@@ -1,0 +1,1189 @@
+[
+  {
+    "policy_id": "0477020417246f7fdd0b",
+    "policy": {
+      "method": "magcache",
+      "threshold": 0.24,
+      "max_skip": 4,
+      "retention_ratio": 0.2,
+      "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/magcache.json"
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": "7f145477115af1ec2f13b338071ec0556543d9ab1721898eadaad70ef10a877a",
+    "metrics": {
+      "generation_seconds": {
+        "mean": 164.64957496393052,
+        "ci95": [
+          164.61939819871384,
+          164.68029495859275
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.6481262252414697,
+        "ci95": [
+          1.6478705233559823,
+          1.6483831826098123
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 26.91316016985185,
+        "ci95": [
+          25.731936837639317,
+          28.324342734159924
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.8841189723177746,
+        "ci95": [
+          0.8629737423895313,
+          0.904450302142208
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.07948842366100863,
+        "ci95": [
+          0.0683993106538437,
+          0.08987316299343913
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.38000000000000017,
+        "ci95": [
+          0.38000000000000017,
+          0.38000000000000017
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.238414764404297,
+        "ci95": [
+          26.238414764404297,
+          26.238414764404297
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.6481343802607704,
+    "pareto_latency_lpips": true
+  },
+  {
+    "policy_id": "0f307517cd4baabccbe7",
+    "policy": {
+      "method": "sencache",
+      "threshold": 1,
+      "threshold_start": 0.045,
+      "max_skip": 3,
+      "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/sencache.json",
+      "sencache_scale": "official_81f"
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": "a480e3f18a8a1f2057b4e54c8915c729ef51ee835ed00877ab4490d381678600",
+    "metrics": {
+      "generation_seconds": {
+        "mean": 158.85296179956885,
+        "ci95": [
+          158.44188578111874,
+          159.3226409214555
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.7084363259071889,
+        "ci95": [
+          1.703381102219534,
+          1.7127704559333559
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 23.649556962886095,
+        "ci95": [
+          22.416623831555246,
+          25.18079575540397
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.8217488304372765,
+        "ci95": [
+          0.7910002767389926,
+          0.8485981778665926
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.1293180659056509,
+        "ci95": [
+          0.114260457773392,
+          0.14346071643845634
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.3459770114942529,
+        "ci95": [
+          0.34367816091954023,
+          0.348735632183908
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 25.86330716363315,
+        "ci95": [
+          25.863303612018452,
+          25.863311199210155
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.708141512253229,
+    "pareto_latency_lpips": false
+  },
+  {
+    "policy_id": "5c07dc3d0ec4df82b832",
+    "policy": {
+      "method": "magcache",
+      "threshold": 0.06,
+      "max_skip": 4,
+      "retention_ratio": 0.2,
+      "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/magcache.json"
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": "7f145477115af1ec2f13b338071ec0556543d9ab1721898eadaad70ef10a877a",
+    "metrics": {
+      "generation_seconds": {
+        "mean": 188.74340518961583,
+        "ci95": [
+          188.70628301216232,
+          188.78152899118191
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.4377366139054943,
+        "ci95": [
+          1.4375525794521025,
+          1.4379181295604273
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 27.53658748757337,
+        "ci95": [
+          26.276515711883512,
+          29.016526955017564
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.8999901885647341,
+        "ci95": [
+          0.8798505094183323,
+          0.919554694838538
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.06297897648769896,
+        "ci95": [
+          0.053799824852814086,
+          0.07163982309439988
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.5199999999999999,
+        "ci95": [
+          0.5199999999999999,
+          0.5199999999999999
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.238414764404297,
+        "ci95": [
+          26.238414764404297,
+          26.238414764404297
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.4377397351181382,
+    "pareto_latency_lpips": false
+  },
+  {
+    "policy_id": "681c896ed726b4cc729d",
+    "policy": {
+      "method": "seacache",
+      "threshold": 0.35
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": null,
+    "metrics": {
+      "generation_seconds": {
+        "mean": 158.6582686065236,
+        "ci95": [
+          158.62707929544288,
+          158.68849979721108
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.7103632803526294,
+        "ci95": [
+          1.710106646770563,
+          1.7106467813904145
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 24.920140502034773,
+        "ci95": [
+          23.78902843515431,
+          26.282590849491307
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.8368185358165906,
+        "ci95": [
+          0.8118339923867902,
+          0.8607330658225031
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.11683250715771334,
+        "ci95": [
+          0.10237791184573833,
+          0.13018669288977014
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.33999999999999997,
+        "ci95": [
+          0.33999999999999997,
+          0.33999999999999997
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.613323211669922,
+        "ci95": [
+          26.613323211669922,
+          26.613323211669922
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.7103691036652187,
+    "pareto_latency_lpips": true
+  },
+  {
+    "policy_id": "71aec7f9df02b4315dd5",
+    "policy": {
+      "method": "seacache",
+      "threshold": 0.1
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": null,
+    "metrics": {
+      "generation_seconds": {
+        "mean": 220.4825002044141,
+        "ci95": [
+          220.15228565046752,
+          220.7988213113554
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.2308157113412383,
+        "ci95": [
+          1.2290335083667774,
+          1.232606306688769
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 38.939465921541256,
+        "ci95": [
+          37.13421711792523,
+          40.958603704079195
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.9826477811049181,
+        "ci95": [
+          0.9738799501942336,
+          0.9883315026523736
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.010463508553967998,
+        "ci95": [
+          0.007581298558274103,
+          0.013960416278150535
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.6993103448275861,
+        "ci95": [
+          0.6974712643678159,
+          0.7011494252873561
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.613323211669922,
+        "ci95": [
+          26.613323211669922,
+          26.613323211669922
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.2307725557468554,
+    "pareto_latency_lpips": true
+  },
+  {
+    "policy_id": "7f75b0db672cf9be3745",
+    "policy": {
+      "method": "sencache",
+      "threshold": 4,
+      "threshold_start": 0.045,
+      "max_skip": 3,
+      "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/sencache.json",
+      "sencache_scale": "official_81f"
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": "a480e3f18a8a1f2057b4e54c8915c729ef51ee835ed00877ab4490d381678600",
+    "metrics": {
+      "generation_seconds": {
+        "mean": 157.8214147392356,
+        "ci95": [
+          157.7921029109154,
+          157.85163412146423
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.7194326452767794,
+        "ci95": [
+          1.719149604075778,
+          1.7196887399253111
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 23.633075372204043,
+        "ci95": [
+          22.407776935603994,
+          25.150009579384495
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.8207504624871403,
+        "ci95": [
+          0.7902229523682575,
+          0.8473763312892643
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.12980728653488605,
+        "ci95": [
+          0.11481934241259054,
+          0.14385934010616816
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.33999999999999997,
+        "ci95": [
+          0.33999999999999997,
+          0.33999999999999997
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 25.86330223083496,
+        "ci95": [
+          25.86330223083496,
+          25.86330223083496
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.7194492855160772,
+    "pareto_latency_lpips": false
+  },
+  {
+    "policy_id": "97eef0615d0b122bca54",
+    "policy": {
+      "method": "sencache",
+      "threshold": 2,
+      "threshold_start": 0.045,
+      "max_skip": 3,
+      "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/sencache.json",
+      "sencache_scale": "official_81f"
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": "a480e3f18a8a1f2057b4e54c8915c729ef51ee835ed00877ab4490d381678600",
+    "metrics": {
+      "generation_seconds": {
+        "mean": 157.81474689204617,
+        "ci95": [
+          157.78119432927144,
+          157.84810282302183
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.7195054747072402,
+        "ci95": [
+          1.719235299447333,
+          1.7197694042944716
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 23.633075372204043,
+        "ci95": [
+          22.407776935603994,
+          25.150009579384495
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.8207504624871403,
+        "ci95": [
+          0.7902229523682575,
+          0.8473763312892643
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.12980728652907106,
+        "ci95": [
+          0.11481934240670949,
+          0.1438593401080316
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.33999999999999997,
+        "ci95": [
+          0.33999999999999997,
+          0.33999999999999997
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 25.86330223083496,
+        "ci95": [
+          25.86330223083496,
+          25.86330223083496
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.719510433866992,
+    "pareto_latency_lpips": true
+  },
+  {
+    "policy_id": "a6dba480454c388a1cad",
+    "policy": {
+      "method": "sencache",
+      "threshold": 0.5,
+      "threshold_start": 0.045,
+      "max_skip": 3,
+      "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/sencache.json",
+      "sencache_scale": "official_81f"
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": "a480e3f18a8a1f2057b4e54c8915c729ef51ee835ed00877ab4490d381678600",
+    "metrics": {
+      "generation_seconds": {
+        "mean": 164.92917707832146,
+        "ci95": [
+          164.77427321573498,
+          165.1042884072936
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.6453705596204553,
+        "ci95": [
+          1.6436991289090037,
+          1.646870692592753
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 23.73065003316054,
+        "ci95": [
+          22.471457511404132,
+          25.28886615969379
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.8282152238411994,
+        "ci95": [
+          0.7972987477626149,
+          0.8553188068900385
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.12259990801573237,
+        "ci95": [
+          0.10855071754211977,
+          0.135972613387857
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.3811494252873564,
+        "ci95": [
+          0.38022988505747146,
+          0.38206896551724157
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 25.86339678709534,
+        "ci95": [
+          25.86339170083232,
+          25.863399856391997
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.6453125837613156,
+    "pareto_latency_lpips": false
+  },
+  {
+    "policy_id": "a890f97abbdf604a4b56",
+    "policy": {
+      "method": "seacache",
+      "threshold": 0.2
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": null,
+    "metrics": {
+      "generation_seconds": {
+        "mean": 182.3564502206138,
+        "ci95": [
+          182.15922867185793,
+          182.55451294125277
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.4881468062130443,
+        "ci95": [
+          1.4866091263995371,
+          1.489722207056203
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 30.880273482108265,
+        "ci95": [
+          29.46963243717703,
+          32.50820090178926
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.9361051332343395,
+        "ci95": [
+          0.9221783304359416,
+          0.9493178587192875
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.04398075328066436,
+        "ci95": [
+          0.03564308561075988,
+          0.051983650035266435
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.4777011494252873,
+        "ci95": [
+          0.47655172413793107,
+          0.4788505747126437
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.613323211669922,
+        "ci95": [
+          26.613323211669922,
+          26.613323211669922
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.4881342317054211,
+    "pareto_latency_lpips": true
+  },
+  {
+    "policy_id": "b58766adcbe18c83a386",
+    "policy": {
+      "method": "teacache",
+      "threshold": 0.16
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": null,
+    "metrics": {
+      "generation_seconds": {
+        "mean": 157.83165314405707,
+        "ci95": [
+          157.797557080078,
+          157.86439181815066
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.7193212456260851,
+        "ci95": [
+          1.719013865516314,
+          1.7196011858756683
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 21.729322495719792,
+        "ci95": [
+          20.665522176661536,
+          23.033803183514127
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.777121767571874,
+        "ci95": [
+          0.7436360288655973,
+          0.8076218270512554
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.17078613934831485,
+        "ci95": [
+          0.15471520289581528,
+          0.18677441403313377
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.33999999999999997,
+        "ci95": [
+          0.33999999999999997,
+          0.33999999999999997
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.23833465576172,
+        "ci95": [
+          26.23833465576172,
+          26.23833465576172
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.7193219294157926,
+    "pareto_latency_lpips": false
+  },
+  {
+    "policy_id": "bd0c65232727633d905c",
+    "policy": {
+      "method": "teacache",
+      "threshold": 0.04
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": null,
+    "metrics": {
+      "generation_seconds": {
+        "mean": 219.81686249295356,
+        "ci95": [
+          219.7660557619468,
+          219.86922466163728
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.234497600072186,
+        "ci95": [
+          1.234388848868398,
+          1.2345903421325455
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 32.07849054254358,
+        "ci95": [
+          30.56324560655517,
+          33.740048944223446
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.9482820527546598,
+        "ci95": [
+          0.9332912565277627,
+          0.9614676837969505
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.029922496451937716,
+        "ci95": [
+          0.024087340830063635,
+          0.03615621334668838
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.6999999999999997,
+        "ci95": [
+          0.6999999999999997,
+          0.6999999999999997
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.23833465576172,
+        "ci95": [
+          26.23833465576172,
+          26.23833465576172
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.2345002343869007,
+    "pareto_latency_lpips": true
+  },
+  {
+    "policy_id": "d6e206abe131a26f0524",
+    "policy": {
+      "method": "teacache",
+      "threshold": 0.12
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": null,
+    "metrics": {
+      "generation_seconds": {
+        "mean": 171.60042632599354,
+        "ci95": [
+          171.56165699386514,
+          171.63719058577212
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.5813672691170848,
+        "ci95": [
+          1.5810737730538624,
+          1.5816453046011
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 23.506548025279827,
+        "ci95": [
+          22.245704790505044,
+          25.033347924581935
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.819723886612542,
+        "ci95": [
+          0.789019699349502,
+          0.8470673087870301
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.12652101663086784,
+        "ci95": [
+          0.112301669849042,
+          0.14005052665079284
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.42,
+        "ci95": [
+          0.42,
+          0.42
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.23833465576172,
+        "ci95": [
+          26.23833465576172,
+          26.23833465576172
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.5813673900175371,
+    "pareto_latency_lpips": false
+  },
+  {
+    "policy_id": "e50d5f69d38618f0717b",
+    "policy": {
+      "method": "magcache",
+      "threshold": 0.12,
+      "max_skip": 4,
+      "retention_ratio": 0.2,
+      "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/magcache.json"
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": "7f145477115af1ec2f13b338071ec0556543d9ab1721898eadaad70ef10a877a",
+    "metrics": {
+      "generation_seconds": {
+        "mean": 171.50992638416076,
+        "ci95": [
+          171.47409917400572,
+          171.54694995338102
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.582201686572034,
+        "ci95": [
+          1.581957943179475,
+          1.5824495236385827
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 27.10861723604518,
+        "ci95": [
+          25.903334426047966,
+          28.529272172575894
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.8901525270764236,
+        "ci95": [
+          0.8690101772108084,
+          0.9103710127417368
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.0736904279613024,
+        "ci95": [
+          0.06331288481493445,
+          0.0830874221931134
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.42,
+        "ci95": [
+          0.42,
+          0.42
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.238323211669922,
+        "ci95": [
+          26.238323211669922,
+          26.238323211669922
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.5822106015554729,
+    "pareto_latency_lpips": true
+  },
+  {
+    "policy_id": "ed07e6ab9197dcba13a7",
+    "policy": {
+      "method": "teacache",
+      "threshold": 0.08
+    },
+    "n_videos": 86,
+    "n_prompts": 29,
+    "splits": [
+      "tune"
+    ],
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "psnr_infinite_count": 0,
+    "calibration_sha256": null,
+    "metrics": {
+      "generation_seconds": {
+        "mean": 185.36892373626512,
+        "ci95": [
+          185.32036134474848,
+          185.41498862930183
+        ],
+        "n_prompts": 29
+      },
+      "reference_generation_seconds": {
+        "mean": 271.36354219454626,
+        "ci95": [
+          271.29390663629647,
+          271.4310444322456
+        ],
+        "n_prompts": 29
+      },
+      "speedup": {
+        "mean": 1.4639095076904047,
+        "ci95": [
+          1.4636962661420243,
+          1.4641386261211078
+        ],
+        "n_prompts": 29
+      },
+      "psnr_db": {
+        "mean": 24.08235179065551,
+        "ci95": [
+          22.687124020530188,
+          25.766647701408075
+        ],
+        "n_prompts": 29
+      },
+      "ssim": {
+        "mean": 0.8372736688956227,
+        "ci95": [
+          0.805301396348388,
+          0.8651751979440508
+        ],
+        "n_prompts": 29
+      },
+      "lpips": {
+        "mean": 0.1119042699767362,
+        "ci95": [
+          0.09777415857934449,
+          0.12592763297056414
+        ],
+        "n_prompts": 29
+      },
+      "refresh_ratio": {
+        "mean": 0.5,
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "n_prompts": 29
+      },
+      "peak_memory_gb": {
+        "mean": 26.23833465576172,
+        "ci95": [
+          26.23833465576172,
+          26.23833465576172
+        ],
+        "n_prompts": 29
+      }
+    },
+    "ratio_of_total_times": 1.4639151503163854,
+    "pareto_latency_lpips": false
+  }
+]

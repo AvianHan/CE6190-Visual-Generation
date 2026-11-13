@@ -1,0 +1,182 @@
+[
+    {
+        "prompt_en": "a green car",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "green"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green car-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green car-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green car-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green car-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green car-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a blue umbrella",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "blue"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue umbrella-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue umbrella-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue umbrella-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue umbrella-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue umbrella-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a black umbrella",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "black"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black umbrella-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black umbrella-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black umbrella-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black umbrella-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black umbrella-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a blue suitcase",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "blue"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue suitcase-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue suitcase-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue suitcase-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue suitcase-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a blue suitcase-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a pink suitcase",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "pink"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a pink suitcase-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a pink suitcase-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a pink suitcase-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a pink suitcase-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a pink suitcase-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a black bowl",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "black"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black bowl-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black bowl-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black bowl-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black bowl-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a black bowl-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a yellow clock",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "yellow"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow clock-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow clock-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow clock-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow clock-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow clock-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a red vase",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "red"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a red vase-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a red vase-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a red vase-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a red vase-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a red vase-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a green vase",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "green"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green vase-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green vase-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green vase-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green vase-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a green vase-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a yellow vase",
+        "dimension": [
+            "color"
+        ],
+        "auxiliary_info": {
+            "color": {
+                "color": "yellow"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow vase-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow vase-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow vase-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow vase-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a yellow vase-4.mp4"
+        ]
+    }
+]

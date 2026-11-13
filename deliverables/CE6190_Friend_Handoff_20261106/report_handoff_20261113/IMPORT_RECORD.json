@@ -1,0 +1,150 @@
+{
+  "source": "/home/ecs-user/ce6190-runtime/a100x8-20261110",
+  "destination": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/runtime/a100x8-20261110",
+  "entries": [
+    {
+      "name": "PLAN.md",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3306768
+    },
+    {
+      "name": "acceptance",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3946321
+    },
+    {
+      "name": "analysis",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3946349
+    },
+    {
+      "name": "code",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3292653
+    },
+    {
+      "name": "eval",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3943200
+    },
+    {
+      "name": "handoff.json",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3279088
+    },
+    {
+      "name": "logs",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3279089
+    },
+    {
+      "name": "manifest.jsonl",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3279080
+    },
+    {
+      "name": "models",
+      "action": "left_external",
+      "path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/models"
+    },
+    {
+      "name": "phaseC",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3301001
+    },
+    {
+      "name": "phaseD",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3943206
+    },
+    {
+      "name": "py310",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3297329
+    },
+    {
+      "name": "py311",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3288379
+    },
+    {
+      "name": "quarantine",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3292908
+    },
+    {
+      "name": "report",
+      "action": "moved_with_legacy_symlink",
+      "inode": 5369142
+    },
+    {
+      "name": "results",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3292862
+    },
+    {
+      "name": "state",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3301066
+    },
+    {
+      "name": "texenv",
+      "action": "moved_with_legacy_symlink",
+      "inode": 5372323
+    },
+    {
+      "name": "tools",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3279066
+    },
+    {
+      "name": "vbench_cache",
+      "action": "left_external",
+      "path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_cache"
+    },
+    {
+      "name": "vbench_out",
+      "action": "moved_with_legacy_symlink",
+      "inode": 49453785
+    },
+    {
+      "name": "vbench_stage",
+      "action": "moved_with_legacy_symlink",
+      "inode": 49449703
+    },
+    {
+      "name": "vendor",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3292156
+    },
+    {
+      "name": "venv",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3290916
+    },
+    {
+      "name": "venv_vbench",
+      "action": "moved_with_legacy_symlink",
+      "inode": 3299849
+    }
+  ],
+  "external_annotations": [
+    "vendor/vbench/VBench-2.0/vbench2/third_party/YOLO-World/data/coco/lvis/lvis_v1_minival_inserted_image_name.json",
+    "vendor/vbench/VBench-2.0/vbench2/third_party/ViTDetector/lvis/lvis_v1_minival_inserted_image_name.json",
+    "vendor/vbench/VBench-2.0/vbench2/third_party/ViTDetector/data/lvis/annotations/lvis_v1_minival_inserted_image_name.json",
+    "vendor/vbench/VBench-2.0/vbench2/third_party/ViTDetector/third_party/YOLO-World/data/coco/lvis/lvis_v1_minival_inserted_image_name.json"
+  ],
+  "verified_generation": {
+    "complete": 5497,
+    "original_handoff": 1411,
+    "phaseD": 336,
+    "phaseC": 3750,
+    "missing_required_artifacts": 0
+  },
+  "vbench": {
+    "jobs_done": 85,
+    "failed": [],
+    "result_files_per_method": 16
+  },
+  "report_status": "draft_with_TBD"
+}

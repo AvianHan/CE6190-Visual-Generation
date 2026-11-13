@@ -1,0 +1,207 @@
+{
+    "overall_consistency": [
+        0.20884540155529976,
+        [
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Close up of grapes on a rotating table.-0.mp4",
+                "video_results": 0.22279688715934753
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Close up of grapes on a rotating table.-1.mp4",
+                "video_results": 0.23346877098083496
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Close up of grapes on a rotating table.-2.mp4",
+                "video_results": 0.22824130952358246
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Close up of grapes on a rotating table.-3.mp4",
+                "video_results": 0.21279630064964294
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Close up of grapes on a rotating table.-4.mp4",
+                "video_results": 0.18736132979393005
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Splash of turquoise water in extreme slow motion, alpha channel included.-0.mp4",
+                "video_results": 0.18183733522891998
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Splash of turquoise water in extreme slow motion, alpha channel included.-1.mp4",
+                "video_results": 0.16351324319839478
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Splash of turquoise water in extreme slow motion, alpha channel included.-2.mp4",
+                "video_results": 0.23846891522407532
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Splash of turquoise water in extreme slow motion, alpha channel included.-3.mp4",
+                "video_results": 0.17433500289916992
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Splash of turquoise water in extreme slow motion, alpha channel included.-4.mp4",
+                "video_results": 0.18656042218208313
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fantasy landscape-0.mp4",
+                "video_results": 0.1844259351491928
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fantasy landscape-1.mp4",
+                "video_results": 0.15799090266227722
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fantasy landscape-2.mp4",
+                "video_results": 0.16904309391975403
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fantasy landscape-3.mp4",
+                "video_results": 0.16225360333919525
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fantasy landscape-4.mp4",
+                "video_results": 0.1540841907262802
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Pacific coast, carmel by the sea ocean and waves.-0.mp4",
+                "video_results": 0.16013631224632263
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Pacific coast, carmel by the sea ocean and waves.-1.mp4",
+                "video_results": 0.1986016184091568
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Pacific coast, carmel by the sea ocean and waves.-2.mp4",
+                "video_results": 0.22113250195980072
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Pacific coast, carmel by the sea ocean and waves.-3.mp4",
+                "video_results": 0.1637956202030182
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Pacific coast, carmel by the sea ocean and waves.-4.mp4",
+                "video_results": 0.17767471075057983
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A fantasy landscape-0.mp4",
+                "video_results": 0.18874497711658478
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A fantasy landscape-1.mp4",
+                "video_results": 0.161749929189682
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A fantasy landscape-2.mp4",
+                "video_results": 0.1695585697889328
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A fantasy landscape-3.mp4",
+                "video_results": 0.171248659491539
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A fantasy landscape-4.mp4",
+                "video_results": 0.11662659794092178
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Yoda playing guitar on the stage-0.mp4",
+                "video_results": 0.10449495911598206
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Yoda playing guitar on the stage-1.mp4",
+                "video_results": 0.13784167170524597
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Yoda playing guitar on the stage-2.mp4",
+                "video_results": 0.09609624743461609
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Yoda playing guitar on the stage-3.mp4",
+                "video_results": 0.11996468901634216
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/Yoda playing guitar on the stage-4.mp4",
+                "video_results": 0.1515350341796875
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A car moving slowly on an empty street, rainy evening-0.mp4",
+                "video_results": 0.21961209177970886
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A car moving slowly on an empty street, rainy evening-1.mp4",
+                "video_results": 0.2166777104139328
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A car moving slowly on an empty street, rainy evening-2.mp4",
+                "video_results": 0.2326265573501587
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A car moving slowly on an empty street, rainy evening-3.mp4",
+                "video_results": 0.22603757679462433
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A car moving slowly on an empty street, rainy evening-4.mp4",
+                "video_results": 0.24986925721168518
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A panda playing on a swing set-0.mp4",
+                "video_results": 0.2844310998916626
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A panda playing on a swing set-1.mp4",
+                "video_results": 0.25216811895370483
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A panda playing on a swing set-2.mp4",
+                "video_results": 0.23399698734283447
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A panda playing on a swing set-3.mp4",
+                "video_results": 0.28467074036598206
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A panda playing on a swing set-4.mp4",
+                "video_results": 0.20691019296646118
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A robot DJ is playing the turntable, in heavy raining futuristic tokyo rooftop cyberpunk night, sci-fi, fantasy-0.mp4",
+                "video_results": 0.3652413785457611
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A robot DJ is playing the turntable, in heavy raining futuristic tokyo rooftop cyberpunk night, sci-fi, fantasy-1.mp4",
+                "video_results": 0.29989558458328247
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A robot DJ is playing the turntable, in heavy raining futuristic tokyo rooftop cyberpunk night, sci-fi, fantasy-2.mp4",
+                "video_results": 0.33354783058166504
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A robot DJ is playing the turntable, in heavy raining futuristic tokyo rooftop cyberpunk night, sci-fi, fantasy-3.mp4",
+                "video_results": 0.3423362970352173
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A robot DJ is playing the turntable, in heavy raining futuristic tokyo rooftop cyberpunk night, sci-fi, fantasy-4.mp4",
+                "video_results": 0.3543134331703186
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, vibrant color-0.mp4",
+                "video_results": 0.2322995364665985
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, vibrant color-1.mp4",
+                "video_results": 0.2301746904850006
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, vibrant color-2.mp4",
+                "video_results": 0.24209032952785492
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, vibrant color-3.mp4",
+                "video_results": 0.22233545780181885
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, vibrant color-4.mp4",
+                "video_results": 0.21665586531162262
+            }
+        ]
+    ]
+}

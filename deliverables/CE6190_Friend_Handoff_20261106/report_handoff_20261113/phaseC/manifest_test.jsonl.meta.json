@@ -1,0 +1,110 @@
+{
+  "prompts": 110,
+  "runs": 3750,
+  "manifest_sha256": "655a985f713828fa6197f55eb41c425a98cc8632c50eecfd07321c1de7df83f2",
+  "prompt_source": "/home/ecs-user/ce6190-runtime/a100x8-20261110/phaseC/VBench_subset_info.json",
+  "config": {
+    "experiment_id": "wan13b-81f-test-frozen-2.0x-denoise-a100",
+    "default_split": "test",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "generation": {
+      "model_id": "Wan2.1-T2V-1.3B",
+      "num_frames": 81,
+      "height": 480,
+      "width": 832,
+      "num_inference_steps": 50,
+      "guidance_scale": 5.0,
+      "flow_shift": 5.0,
+      "sample_solver": "unipc",
+      "dtype": "bfloat16",
+      "fps": 16,
+      "negative_prompt": null,
+      "attention_backend": "flash_attention_2",
+      "offload": false,
+      "warmup": 0,
+      "timing_repeats": 1,
+      "generation_backend": "seacache_wan"
+    },
+    "methods": [
+      {
+        "method": "baseline"
+      },
+      {
+        "method": "magcache",
+        "parameters": {
+          "threshold": 0.12,
+          "max_skip": 4,
+          "retention_ratio": 0.2,
+          "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/magcache.json"
+        }
+      },
+      {
+        "method": "seacache",
+        "parameters": {
+          "threshold": 0.2
+        }
+      },
+      {
+        "method": "sencache",
+        "parameters": {
+          "threshold": 0.5,
+          "threshold_start": 0.045,
+          "max_skip": 3,
+          "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/sencache.json",
+          "sencache_scale": "official_81f"
+        }
+      },
+      {
+        "method": "teacache",
+        "parameters": {
+          "threshold": 0.12
+        }
+      }
+    ],
+    "status": "frozen_on_tune_a100_2.0x_denoise",
+    "selection": {
+      "split": "tune",
+      "target": "denoise-only speedup >= 2.0 (ratio of summed denoise seconds, 86 common A100 pairs)",
+      "rule": "minimum LPIPS among candidates meeting the target (same rule as official freeze_at_speedup, applied to denoise speedup)",
+      "reason": "end-to-end 2.0x unreachable on A100 (fixed ~99 s FP32 VAE decode); denoise-only budget preserves the GUIDE 2x budget on the accelerated part and comparability with the H200 run",
+      "decisions": [
+        {
+          "method": "magcache",
+          "threshold": 0.12,
+          "validation_denoise_speedup": 2.37,
+          "validation_end_to_end_speedup": 1.582,
+          "validation_lpips": 0.0738
+        },
+        {
+          "method": "seacache",
+          "threshold": 0.2,
+          "validation_denoise_speedup": 2.065,
+          "validation_end_to_end_speedup": 1.488,
+          "validation_lpips": 0.0441
+        },
+        {
+          "method": "sencache",
+          "threshold": 0.5,
+          "validation_denoise_speedup": 2.609,
+          "validation_end_to_end_speedup": 1.645,
+          "validation_lpips": 0.1228
+        },
+        {
+          "method": "teacache",
+          "threshold": 0.12,
+          "validation_denoise_speedup": 2.369,
+          "validation_end_to_end_speedup": 1.581,
+          "validation_lpips": 0.1267
+        }
+      ]
+    },
+    "temporal_flickering_25": true
+  },
+  "contains_measured_results": false
+}

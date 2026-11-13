@@ -1,0 +1,182 @@
+[
+    {
+        "prompt_en": "a train",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "train"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a train-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a fire hydrant",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "fire hydrant"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a fire hydrant-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a fire hydrant-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a fire hydrant-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a fire hydrant-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a fire hydrant-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a parking meter",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "parking meter"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a parking meter-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a parking meter-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a parking meter-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a parking meter-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a parking meter-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "an elephant",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "elephant"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/an elephant-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a tennis racket",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "tennis racket"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a tennis racket-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a tennis racket-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a tennis racket-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a tennis racket-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a tennis racket-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a spoon",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "spoon"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a spoon-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a spoon-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a spoon-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a spoon-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a spoon-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a banana",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "banana"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a banana-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a banana-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a banana-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a banana-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a banana-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a dining table",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "dining table"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a dining table-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a dining table-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a dining table-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a dining table-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a dining table-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a keyboard",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "keyboard"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a keyboard-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a keyboard-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a keyboard-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a keyboard-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a keyboard-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a toaster",
+        "dimension": [
+            "object_class"
+        ],
+        "auxiliary_info": {
+            "object_class": {
+                "object": "toaster"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a toaster-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a toaster-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a toaster-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a toaster-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/a toaster-4.mp4"
+        ]
+    }
+]

@@ -1,0 +1,15 @@
+\begin{table}[htbp]\centering\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrrcrrl@{}}\toprule
+Method & Thr. & Total (s) & Denoise (s) & VAE (s) & Speedup E2E / Den. & Full calls & Peak GB & Calib.\\\midrule
+Uncached & -- & 271.4 & 172.7 & 98.5 & 1.00 / 1.00 & 100 & 25.9 & n/a \\
+TeaCache & 0.12 & 171.6 & 72.9 & 98.6 & 1.58 / 2.37 & 42 & 26.2 & none \\
+MagCache & 0.12 & 171.5 & 72.9 & 98.5 & 1.58 / 2.37 & 42 & 26.2 & reused \\
+SeaCache & 0.2 & 182.4 & 83.6 & 98.6 & 1.49 / 2.06 & 48 & 26.6 & none \\
+SenCache & 0.5 & 164.9 & 66.2 & 98.6 & 1.65 / 2.61 & 38 & 25.9 & reused \\
+\bottomrule\end{tabular}
+\caption{Latency at the frozen settings on the validation grid (86 pairs; per-run time is the mean of 3 timed repeats after
+one warm-up, GPU-synchronised, model loading excluded). Full calls: full block-stack evaluations per video out of 100
+(50 UniPC steps $\times$ 2 CFG branches). The FP32 VAE decode ($\approx$98.5\,s, identical for all methods) bounds the
+end-to-end speedup on this GPU. Calibration: MagCache ratios and SenCache sensitivity profiles were reused from the
+handoff package (same checkpoint fingerprint); their one-off calibration time was not re-measured here.}
+\label{tab:efficiency}\end{table}

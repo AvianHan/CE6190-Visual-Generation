@@ -1,0 +1,182 @@
+[
+    {
+        "prompt_en": "A beautiful coastal beach in spring, waves lapping on sand, oil painting",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "oil painting"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A beautiful coastal beach in spring, waves lapping on sand, oil painting-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A beautiful coastal beach in spring, waves lapping on sand, oil painting-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A beautiful coastal beach in spring, waves lapping on sand, oil painting-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A beautiful coastal beach in spring, waves lapping on sand, oil painting-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A beautiful coastal beach in spring, waves lapping on sand, oil painting-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "The bund Shanghai, pixel art",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "pixel art"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/The bund Shanghai, pixel art-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/The bund Shanghai, pixel art-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/The bund Shanghai, pixel art-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/The bund Shanghai, pixel art-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/The bund Shanghai, pixel art-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a shark is swimming in the ocean by Hokusai, in the style of Ukiyo",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "by Hokusai, in the style of Ukiyo"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean by Hokusai, in the style of Ukiyo-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean by Hokusai, in the style of Ukiyo-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean by Hokusai, in the style of Ukiyo-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean by Hokusai, in the style of Ukiyo-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean by Hokusai, in the style of Ukiyo-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a shark is swimming in the ocean, in cyberpunk style",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "in cyberpunk style"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, in cyberpunk style-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, in cyberpunk style-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, in cyberpunk style-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, in cyberpunk style-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, in cyberpunk style-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a shark is swimming in the ocean, animated style",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "animated style"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, animated style-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, animated style-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, animated style-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, animated style-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/a shark is swimming in the ocean, animated style-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "A panda drinking coffee in a cafe in Paris, pixel art",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "pixel art"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, pixel art-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, pixel art-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, pixel art-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, pixel art-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, pixel art-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "A panda drinking coffee in a cafe in Paris, watercolor painting",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "watercolor painting"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, watercolor painting-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, watercolor painting-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, watercolor painting-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, watercolor painting-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A panda drinking coffee in a cafe in Paris, watercolor painting-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "A cute happy Corgi playing in park, sunset, watercolor painting",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "watercolor painting"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A cute happy Corgi playing in park, sunset, watercolor painting-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A cute happy Corgi playing in park, sunset, watercolor painting-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A cute happy Corgi playing in park, sunset, watercolor painting-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A cute happy Corgi playing in park, sunset, watercolor painting-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A cute happy Corgi playing in park, sunset, watercolor painting-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "Gwen Stacy reading a book, watercolor painting",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "watercolor painting"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/Gwen Stacy reading a book, watercolor painting-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/Gwen Stacy reading a book, watercolor painting-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/Gwen Stacy reading a book, watercolor painting-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/Gwen Stacy reading a book, watercolor painting-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/Gwen Stacy reading a book, watercolor painting-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "A boat sailing leisurely along the Seine River with the Eiffel Tower in background, in cyberpunk style",
+        "dimension": [
+            "appearance_style"
+        ],
+        "auxiliary_info": {
+            "appearance_style": {
+                "appearance_style": "in cyberpunk style"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, in cyberpunk style-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, in cyberpunk style-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, in cyberpunk style-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, in cyberpunk style-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, in cyberpunk style-4.mp4"
+        ]
+    }
+]

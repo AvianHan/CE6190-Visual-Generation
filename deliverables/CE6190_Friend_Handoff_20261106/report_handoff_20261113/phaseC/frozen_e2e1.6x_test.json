@@ -1,0 +1,98 @@
+{
+  "experiment_id": "wan13b-81f-test-frozen-1.6x-a100",
+  "default_split": "test",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "generation": {
+    "model_id": "Wan2.1-T2V-1.3B",
+    "num_frames": 81,
+    "height": 480,
+    "width": 832,
+    "num_inference_steps": 50,
+    "guidance_scale": 5.0,
+    "flow_shift": 5.0,
+    "sample_solver": "unipc",
+    "dtype": "bfloat16",
+    "fps": 16,
+    "negative_prompt": null,
+    "attention_backend": "flash_attention_2",
+    "offload": false,
+    "warmup": 0,
+    "timing_repeats": 1,
+    "generation_backend": "seacache_wan"
+  },
+  "methods": [
+    {
+      "method": "baseline"
+    },
+    {
+      "method": "magcache",
+      "parameters": {
+        "threshold": 0.24,
+        "max_skip": 4,
+        "retention_ratio": 0.2,
+        "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/magcache.json"
+      }
+    },
+    {
+      "method": "seacache",
+      "parameters": {
+        "threshold": 0.35
+      }
+    },
+    {
+      "method": "sencache",
+      "parameters": {
+        "threshold": 0.5,
+        "threshold_start": 0.045,
+        "max_skip": 3,
+        "calibration_path": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/sencache.json",
+        "sencache_scale": "official_81f"
+      }
+    },
+    {
+      "method": "teacache",
+      "parameters": {
+        "threshold": 0.16
+      }
+    }
+  ],
+  "status": "frozen_on_tune_a100_1.6x",
+  "selection": {
+    "split": "tune",
+    "target_speedup": 1.6,
+    "rule": "minimum LPIPS among measured speedup >= target",
+    "decisions": [
+      {
+        "method": "magcache",
+        "policy_id": "0477020417246f7fdd0b",
+        "validation_speedup": 1.6481343802607704,
+        "validation_lpips": 0.07948842366100863
+      },
+      {
+        "method": "seacache",
+        "policy_id": "681c896ed726b4cc729d",
+        "validation_speedup": 1.7103691036652187,
+        "validation_lpips": 0.11683250715771334
+      },
+      {
+        "method": "sencache",
+        "policy_id": "a6dba480454c388a1cad",
+        "validation_speedup": 1.6453125837613156,
+        "validation_lpips": 0.12259990801573237
+      },
+      {
+        "method": "teacache",
+        "policy_id": "b58766adcbe18c83a386",
+        "validation_speedup": 1.7193219294157926,
+        "validation_lpips": 0.17078613934831485
+      }
+    ]
+  },
+  "temporal_flickering_25": true
+}

@@ -1,0 +1,10 @@
+{
+  "package": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106",
+  "tasks": 1411,
+  "path_mapping": {
+    "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/sencache/profile.json": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/sencache.json",
+    "/scratch/prj0000000262_1/hansy/ce6190-runtime/runs/20261101-052136-8d55cc/calibration/magcache/profile.json": "/home/ecs-user/CE6190-Visual-Generation/deliverables/CE6190_Friend_Handoff_20261106/calibration/magcache.json"
+  },
+  "hardware_group": "RECORD_RECEIVER_HARDWARE_BEFORE_RUN",
+  "original_manifest_sha256": "2b7f469c5da4f5d2978552c860d003c8efaa62406bc435d392b1e34f1aa8f9fd"
+}

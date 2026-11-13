@@ -1,0 +1,132 @@
+[
+    {
+        "prompt_en": "A beautiful coastal beach in spring, waves lapping on sand, racking focus",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A beautiful coastal beach in spring, waves lapping on sand, racking focus-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A beautiful coastal beach in spring, waves lapping on sand, racking focus-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A beautiful coastal beach in spring, waves lapping on sand, racking focus-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A beautiful coastal beach in spring, waves lapping on sand, racking focus-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A beautiful coastal beach in spring, waves lapping on sand, racking focus-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "The bund Shanghai, zoom in",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, zoom in-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, zoom in-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, zoom in-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, zoom in-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/The bund Shanghai, zoom in-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a shark is swimming in the ocean, with an intense shaking effect",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, with an intense shaking effect-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, with an intense shaking effect-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, with an intense shaking effect-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, with an intense shaking effect-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, with an intense shaking effect-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a shark is swimming in the ocean, featuring a steady and smooth perspective",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, featuring a steady and smooth perspective-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, featuring a steady and smooth perspective-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, featuring a steady and smooth perspective-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, featuring a steady and smooth perspective-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a shark is swimming in the ocean, featuring a steady and smooth perspective-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "A cute happy Corgi playing in park, sunset, pan right",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, pan right-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, pan right-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, pan right-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, pan right-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, pan right-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "A cute happy Corgi playing in park, sunset, with an intense shaking effect",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, with an intense shaking effect-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, with an intense shaking effect-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, with an intense shaking effect-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, with an intense shaking effect-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A cute happy Corgi playing in park, sunset, with an intense shaking effect-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "A boat sailing leisurely along the Seine River with the Eiffel Tower in background, pan left",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, pan left-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, pan left-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, pan left-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, pan left-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A boat sailing leisurely along the Seine River with the Eiffel Tower in background, pan left-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "An astronaut flying in space, with an intense shaking effect",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, with an intense shaking effect-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, with an intense shaking effect-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, with an intense shaking effect-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, with an intense shaking effect-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, with an intense shaking effect-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "An astronaut flying in space, featuring a steady and smooth perspective",
+        "dimension": [
+            "temporal_style"
+        ],
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, featuring a steady and smooth perspective-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, featuring a steady and smooth perspective-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, featuring a steady and smooth perspective-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, featuring a steady and smooth perspective-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/An astronaut flying in space, featuring a steady and smooth perspective-4.mp4"
+        ]
+    }
+]

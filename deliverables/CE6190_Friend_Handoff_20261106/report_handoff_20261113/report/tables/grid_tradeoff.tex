@@ -1,0 +1,27 @@
+\begin{table}[htbp]\centering\small
+\begin{tabular}{@{}llrrrrrl@{}}\toprule
+Method & Thr. & E2E $\times$ & Denoise $\times$ & Refresh & PSNR$\uparrow$ & SSIM$\uparrow$ & LPIPS$\downarrow$ [95\% CI]\\\midrule
+TeaCache & 0.04 & 1.23 & 1.43 & 0.70 & 32.08 & 0.948 & 0.030 [0.024, 0.036] \\
+ & 0.08 & 1.46 & 1.99 & 0.50 & 24.08 & 0.837 & 0.112 [0.098, 0.126] \\
+ & 0.12$^\star$ & 1.58 & 2.37 & 0.42 & 23.51 & 0.820 & 0.127 [0.112, 0.140] \\
+ & 0.16 & 1.72 & 2.92 & 0.34 & 21.73 & 0.777 & 0.171 [0.155, 0.187] \\
+\addlinespace
+MagCache & 0.06 & 1.44 & 1.92 & 0.52 & 27.54 & 0.900 & 0.063 [0.054, 0.072] \\
+ & 0.12$^\star$ & 1.58 & 2.37 & 0.42 & 27.11 & 0.890 & 0.074 [0.063, 0.083] \\
+ & 0.24 & 1.65 & 2.62 & 0.38 & 26.91 & 0.884 & 0.079 [0.068, 0.090] \\
+\addlinespace
+SeaCache & 0.1 & 1.23 & 1.42 & 0.70 & 38.94 & 0.983 & 0.010 [0.008, 0.014] \\
+ & 0.2$^\star$ & 1.49 & 2.06 & 0.48 & 30.88 & 0.936 & 0.044 [0.036, 0.052] \\
+ & 0.35 & 1.71 & 2.88 & 0.34 & 24.92 & 0.837 & 0.117 [0.102, 0.130] \\
+\addlinespace
+SenCache & 0.5$^\star$ & 1.65 & 2.61 & 0.38 & 23.73 & 0.828 & 0.123 [0.109, 0.136] \\
+ & 1 & 1.71 & 2.87 & 0.35 & 23.65 & 0.822 & 0.129 [0.114, 0.143] \\
+ & 2 & 1.72 & 2.92 & 0.34 & 23.63 & 0.821 & 0.130 [0.115, 0.144] \\
+ & 4 & 1.72 & 2.92 & 0.34 & 23.63 & 0.821 & 0.130 [0.115, 0.144] \\
+\bottomrule\end{tabular}
+\caption{Validation (tune) grid on A100-SXM4-80GB: 86 prompt--seed pairs common to all policies (29 development prompts
+$\times$ seeds 0--2). Speedups are ratios of summed times against the paired uncached runs (E2E includes text encoding,
+denoising and VAE decoding; ``Denoise'' is the denoising loop only). Refresh is the fraction of the 100 CFG-branch calls
+that ran the full block stack. Agreement metrics compare against the same-seed uncached frames; means over prompts with
+prompt-cluster bootstrap CIs (2000 draws). $^\star$: frozen setting (2.0$\times$ denoising-only budget).}
+\label{tab:grid}\end{table}

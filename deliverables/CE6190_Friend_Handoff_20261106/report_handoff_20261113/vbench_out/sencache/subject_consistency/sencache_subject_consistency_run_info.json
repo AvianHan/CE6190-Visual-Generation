@@ -1,0 +1,26 @@
+{
+  "started": "2026-11-13T09:06:46+08:00",
+  "stage": {
+    "protocol": "custom_subset",
+    "unique_prompts": 110,
+    "metadata_records": 110,
+    "samples_per_prompt": 5,
+    "warning": "Coverage alone does not establish official temporal-flickering/static-filter protocol compliance",
+    "generation_manifest": "/home/ecs-user/ce6190-runtime/a100x8-20261110/phaseC/manifest_test.jsonl",
+    "method": "sencache",
+    "dimension": null
+  },
+  "stage_dir": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache",
+  "videos": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/sencache/videos",
+  "n_videos": 550,
+  "dimensions": [
+    "subject_consistency"
+  ],
+  "vbench_commit": "fd18b3d055cb0fc6f066ca90fe2c3c8cbb698490",
+  "vbench_cache": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_cache",
+  "torch_home": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_cache/torch_home",
+  "device": "cuda",
+  "torch": "2.7.1+cu128",
+  "protocol_note": "custom 110-prompt subset; not a leaderboard score",
+  "finished": "2026-11-13T09:08:15+08:00"
+}

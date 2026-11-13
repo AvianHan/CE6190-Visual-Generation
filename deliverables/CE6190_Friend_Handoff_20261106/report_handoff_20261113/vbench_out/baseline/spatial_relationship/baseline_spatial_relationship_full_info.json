@@ -1,0 +1,222 @@
+[
+    {
+        "prompt_en": "a fire hydrant on the right of a stop sign, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "fire hydrant",
+                    "object_b": "stop sign",
+                    "relationship": "on the right of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fire hydrant on the right of a stop sign, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fire hydrant on the right of a stop sign, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fire hydrant on the right of a stop sign, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fire hydrant on the right of a stop sign, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fire hydrant on the right of a stop sign, front view-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a bottle on the left of a wine glass, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "bottle",
+                    "object_b": "wine glass",
+                    "relationship": "on the left of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a bottle on the left of a wine glass, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a bottle on the left of a wine glass, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a bottle on the left of a wine glass, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a bottle on the left of a wine glass, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a bottle on the left of a wine glass, front view-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a fork on the right of a knife, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "fork",
+                    "object_b": "knife",
+                    "relationship": "on the right of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fork on the right of a knife, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fork on the right of a knife, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fork on the right of a knife, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fork on the right of a knife, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a fork on the right of a knife, front view-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a spoon on the right of a bowl, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "spoon",
+                    "object_b": "bowl",
+                    "relationship": "on the right of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a spoon on the right of a bowl, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a spoon on the right of a bowl, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a spoon on the right of a bowl, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a spoon on the right of a bowl, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a spoon on the right of a bowl, front view-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a sink on the right of a toilet, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "sink",
+                    "object_b": "toilet",
+                    "relationship": "on the right of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a sink on the right of a toilet, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a sink on the right of a toilet, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a sink on the right of a toilet, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a sink on the right of a toilet, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a sink on the right of a toilet, front view-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a microwave on the bottom of an oven, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "microwave",
+                    "object_b": "oven",
+                    "relationship": "on the bottom of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a microwave on the bottom of an oven, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a microwave on the bottom of an oven, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a microwave on the bottom of an oven, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a microwave on the bottom of an oven, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a microwave on the bottom of an oven, front view-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a banana on the top of an apple, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "banana",
+                    "object_b": "apple",
+                    "relationship": "on the top of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a banana on the top of an apple, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a banana on the top of an apple, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a banana on the top of an apple, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a banana on the top of an apple, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a banana on the top of an apple, front view-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a snowboard on the top of a kite, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "snowboard",
+                    "object_b": "kite",
+                    "relationship": "on the top of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the top of a kite, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the top of a kite, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the top of a kite, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the top of a kite, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the top of a kite, front view-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a snowboard on the bottom of a kite, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "snowboard",
+                    "object_b": "kite",
+                    "relationship": "on the bottom of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the bottom of a kite, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the bottom of a kite, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the bottom of a kite, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the bottom of a kite, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a snowboard on the bottom of a kite, front view-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a kite on the top of a skateboard, front view",
+        "dimension": [
+            "spatial_relationship"
+        ],
+        "auxiliary_info": {
+            "spatial_relationship": {
+                "spatial_relationship": {
+                    "object_a": "kite",
+                    "object_b": "skateboard",
+                    "relationship": "on the top of"
+                }
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a kite on the top of a skateboard, front view-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a kite on the top of a skateboard, front view-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a kite on the top of a skateboard, front view-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a kite on the top of a skateboard, front view-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/baseline/videos/a kite on the top of a skateboard, front view-4.mp4"
+        ]
+    }
+]

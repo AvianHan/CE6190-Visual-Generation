@@ -1,0 +1,24 @@
+{
+  "rule": "per VBench dimension, first 10 prompts by sha256(\"ce6190-vbench-subset-v1|\"+canonical prompt), excluding development and calibration prompts; union over 16 dimensions",
+  "source": "benchmarks/vbench/VBench_full_info.json (sha256 5dd2de80...)",
+  "unique_prompts": 110,
+  "records": 110,
+  "coverage_per_dimension": {
+    "appearance_style": 10,
+    "object_class": 10,
+    "scene": 10,
+    "background_consistency": 10,
+    "color": 10,
+    "imaging_quality": 10,
+    "overall_consistency": 10,
+    "aesthetic_quality": 10,
+    "human_action": 10,
+    "multiple_objects": 10,
+    "spatial_relationship": 10,
+    "motion_smoothness": 10,
+    "subject_consistency": 10,
+    "dynamic_degree": 10,
+    "temporal_style": 10,
+    "temporal_flickering": 10
+  }
+}

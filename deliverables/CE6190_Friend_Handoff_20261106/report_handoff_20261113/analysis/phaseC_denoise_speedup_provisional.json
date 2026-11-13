@@ -1,0 +1,22 @@
+{
+  "magcache": {
+    "n": 550,
+    "denoise_speedup_ratio_of_totals": 2.3698981023722983,
+    "e2e_speedup_ratio_of_totals": 1.582253817362542
+  },
+  "seacache": {
+    "n": 550,
+    "denoise_speedup_ratio_of_totals": 2.057948267980142,
+    "e2e_speedup_ratio_of_totals": 1.4864810140891023
+  },
+  "sencache": {
+    "n": 550,
+    "denoise_speedup_ratio_of_totals": 2.6063489054138356,
+    "e2e_speedup_ratio_of_totals": 1.6460147174599766
+  },
+  "teacache": {
+    "n": 550,
+    "denoise_speedup_ratio_of_totals": 2.368787067191766,
+    "e2e_speedup_ratio_of_totals": 1.5819494860236796
+  }
+}

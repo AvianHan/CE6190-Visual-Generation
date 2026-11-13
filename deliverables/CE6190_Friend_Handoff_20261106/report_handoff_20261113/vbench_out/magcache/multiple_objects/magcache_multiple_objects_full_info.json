@@ -1,0 +1,182 @@
+[
+    {
+        "prompt_en": "a cat and a dog",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "cat and dog"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat and a dog-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat and a dog-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat and a dog-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat and a dog-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat and a dog-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a dog and a horse",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "dog and horse"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a dog and a horse-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a dog and a horse-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a dog and a horse-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a dog and a horse-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a dog and a horse-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a potted plant and a tv",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "potted plant and tv"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a potted plant and a tv-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a potted plant and a tv-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a potted plant and a tv-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a potted plant and a tv-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a potted plant and a tv-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "scissors and a teddy bear",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "scissors and teddy bear"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/scissors and a teddy bear-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/scissors and a teddy bear-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/scissors and a teddy bear-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/scissors and a teddy bear-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/scissors and a teddy bear-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a baseball glove and a skateboard",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "baseball glove and skateboard"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a baseball glove and a skateboard-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a baseball glove and a skateboard-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a baseball glove and a skateboard-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a baseball glove and a skateboard-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a baseball glove and a skateboard-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a tennis racket and a bottle",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "tennis racket and bottle"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a tennis racket and a bottle-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a tennis racket and a bottle-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a tennis racket and a bottle-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a tennis racket and a bottle-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a tennis racket and a bottle-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a boat and an airplane",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "boat and airplane"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat and an airplane-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat and an airplane-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat and an airplane-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat and an airplane-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat and an airplane-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a motorcycle and a bus",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "motorcycle and bus"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a motorcycle and a bus-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a motorcycle and a bus-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a motorcycle and a bus-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a motorcycle and a bus-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a motorcycle and a bus-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a sink and a toilet",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "sink and toilet"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sink and a toilet-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sink and a toilet-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sink and a toilet-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sink and a toilet-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sink and a toilet-4.mp4"
+        ]
+    },
+    {
+        "prompt_en": "a donut and a suitcase",
+        "dimension": [
+            "multiple_objects"
+        ],
+        "auxiliary_info": {
+            "multiple_objects": {
+                "object": "donut and suitcase"
+            }
+        },
+        "video_list": [
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a donut and a suitcase-0.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a donut and a suitcase-1.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a donut and a suitcase-2.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a donut and a suitcase-3.mp4",
+            "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a donut and a suitcase-4.mp4"
+        ]
+    }
+]

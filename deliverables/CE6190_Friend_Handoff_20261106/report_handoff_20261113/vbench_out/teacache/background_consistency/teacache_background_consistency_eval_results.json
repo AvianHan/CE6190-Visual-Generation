@@ -1,0 +1,307 @@
+{
+    "background_consistency": [
+        0.9804511108398437,
+        [
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/arch-0.mp4",
+                "video_results": 0.96605224609375,
+                "video_sim": 77.2841796875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/arch-1.mp4",
+                "video_results": 0.9415374755859375,
+                "video_sim": 75.322998046875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/arch-2.mp4",
+                "video_results": 0.9704620361328125,
+                "video_sim": 77.636962890625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/arch-3.mp4",
+                "video_results": 0.9772613525390625,
+                "video_sim": 78.180908203125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/arch-4.mp4",
+                "video_results": 0.9641082763671875,
+                "video_sim": 77.128662109375,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/construction site-0.mp4",
+                "video_results": 0.9686309814453125,
+                "video_sim": 77.490478515625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/construction site-1.mp4",
+                "video_results": 0.9662200927734375,
+                "video_sim": 77.297607421875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/construction site-2.mp4",
+                "video_results": 0.97548828125,
+                "video_sim": 78.0390625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/construction site-3.mp4",
+                "video_results": 0.97515869140625,
+                "video_sim": 78.0126953125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/construction site-4.mp4",
+                "video_results": 0.9830810546875,
+                "video_sim": 78.646484375,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/food court-0.mp4",
+                "video_results": 0.97994384765625,
+                "video_sim": 78.3955078125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/food court-1.mp4",
+                "video_results": 0.9658905029296875,
+                "video_sim": 77.271240234375,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/food court-2.mp4",
+                "video_results": 0.988629150390625,
+                "video_sim": 79.09033203125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/food court-3.mp4",
+                "video_results": 0.9733673095703125,
+                "video_sim": 77.869384765625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/food court-4.mp4",
+                "video_results": 0.995794677734375,
+                "video_sim": 79.66357421875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/football field-0.mp4",
+                "video_results": 0.9784576416015625,
+                "video_sim": 78.276611328125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/football field-1.mp4",
+                "video_results": 0.9649658203125,
+                "video_sim": 77.197265625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/football field-2.mp4",
+                "video_results": 0.9827972412109375,
+                "video_sim": 78.623779296875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/football field-3.mp4",
+                "video_results": 0.9722900390625,
+                "video_sim": 77.783203125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/football field-4.mp4",
+                "video_results": 0.99644775390625,
+                "video_sim": 79.7158203125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor gymnasium-0.mp4",
+                "video_results": 0.9946441650390625,
+                "video_sim": 79.571533203125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor gymnasium-1.mp4",
+                "video_results": 0.9837249755859375,
+                "video_sim": 78.697998046875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor gymnasium-2.mp4",
+                "video_results": 0.987066650390625,
+                "video_sim": 78.96533203125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor gymnasium-3.mp4",
+                "video_results": 0.9945770263671875,
+                "video_sim": 79.566162109375,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor gymnasium-4.mp4",
+                "video_results": 0.993231201171875,
+                "video_sim": 79.45849609375,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/industrial area-0.mp4",
+                "video_results": 0.9567779541015625,
+                "video_sim": 76.542236328125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/industrial area-1.mp4",
+                "video_results": 0.977728271484375,
+                "video_sim": 78.21826171875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/industrial area-2.mp4",
+                "video_results": 0.9775054931640625,
+                "video_sim": 78.200439453125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/industrial area-3.mp4",
+                "video_results": 0.9850830078125,
+                "video_sim": 78.806640625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/industrial area-4.mp4",
+                "video_results": 0.9796051025390625,
+                "video_sim": 78.368408203125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor movie theater-0.mp4",
+                "video_results": 0.98997802734375,
+                "video_sim": 79.1982421875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor movie theater-1.mp4",
+                "video_results": 0.9817535400390625,
+                "video_sim": 78.540283203125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor movie theater-2.mp4",
+                "video_results": 0.9861114501953125,
+                "video_sim": 78.888916015625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor movie theater-3.mp4",
+                "video_results": 0.991387939453125,
+                "video_sim": 79.31103515625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor movie theater-4.mp4",
+                "video_results": 0.9939483642578125,
+                "video_sim": 79.515869140625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor museum-0.mp4",
+                "video_results": 0.9900848388671875,
+                "video_sim": 79.206787109375,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor museum-1.mp4",
+                "video_results": 0.9789215087890625,
+                "video_sim": 78.313720703125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor museum-2.mp4",
+                "video_results": 0.995489501953125,
+                "video_sim": 79.63916015625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor museum-3.mp4",
+                "video_results": 0.987786865234375,
+                "video_sim": 79.02294921875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/indoor museum-4.mp4",
+                "video_results": 0.9974212646484375,
+                "video_sim": 79.793701171875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/baseball stadium-0.mp4",
+                "video_results": 0.984356689453125,
+                "video_sim": 78.74853515625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/baseball stadium-1.mp4",
+                "video_results": 0.994537353515625,
+                "video_sim": 79.56298828125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/baseball stadium-2.mp4",
+                "video_results": 0.9855072021484375,
+                "video_sim": 78.840576171875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/baseball stadium-3.mp4",
+                "video_results": 0.990753173828125,
+                "video_sim": 79.26025390625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/baseball stadium-4.mp4",
+                "video_results": 0.9670623779296875,
+                "video_sim": 77.364990234375,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/supermarket-0.mp4",
+                "video_results": 0.98634033203125,
+                "video_sim": 78.9072265625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/supermarket-1.mp4",
+                "video_results": 0.969525146484375,
+                "video_sim": 77.56201171875,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/supermarket-2.mp4",
+                "video_results": 0.9693511962890625,
+                "video_sim": 77.548095703125,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/supermarket-3.mp4",
+                "video_results": 0.98165283203125,
+                "video_sim": 78.5322265625,
+                "cnt_per_video": 80
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/teacache/videos/supermarket-4.mp4",
+                "video_results": 0.9840576171875,
+                "video_sim": 78.724609375,
+                "cnt_per_video": 80
+            }
+        ]
+    ]
+}
