@@ -1,19 +1,24 @@
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}%
+\begin{tabularx}{\linewidth}{lrRRR}
 \toprule
-Variant & $\epsilon$ & Generation speedup & LPIPS $\downarrow$ & Compute (\%) \\
+\rowcolor{tabhead}Variant & $\epsilon$ & Speedup $\uparrow$ & LPIPS $\downarrow$ & Compute $\downarrow$ \\
 \midrule
-SeaCache / Full & 0.1 & 1.229 & 0.0153 & 70.1 \\
-SeaCache / No gain norm. & 0.1 & 0.998 & 0.0000 & 100.0 \\
-SeaCache / Raw proxy & 0.1 & 1.914 & 0.6008 & 24.6 \\
-SeaCache / Full & 0.2 & 1.488 & 0.0532 & 47.8 \\
-SeaCache / No gain norm. & 0.2 & 1.194 & 0.0169 & 74.0 \\
-SeaCache / Raw proxy & 0.2 & 2.176 & 0.6389 & 14.7 \\
+\grouprow{5}{\mSea}
+\rowcolor{refrow}Full & 0.1 & 1.229 & 0.0153 & 70.1 \\
+No gain norm. & 0.1 & \loss{0.998} & \gain{0.0000} & 100.0 \\
+Raw proxy & 0.1 & \gain{1.914} & \loss{0.6008} & 24.6 \\
+\addlinespace[2pt]
+\rowcolor{refrow}Full & 0.2 & 1.488 & 0.0532 & 47.8 \\
+No gain norm. & 0.2 & \loss{1.194} & \gain{0.0169} & 74.0 \\
+Raw proxy & 0.2 & \gain{2.176} & \loss{0.6389} & 14.7 \\
 \midrule
-SenCache / Full & 0.5 & 1.647 & 0.1394 & 38.0 \\
-SenCache / Latent only & 0.5 & 1.815 & 0.4120 & 29.2 \\
-SenCache / Time only & 0.5 & 1.721 & 0.1457 & 34.0 \\
-SenCache / Full & 2 & 1.719 & 0.1457 & 34.0 \\
-SenCache / Latent only & 2 & 1.842 & 0.4158 & 28.0 \\
-SenCache / Time only & 2 & 1.721 & 0.1457 & 34.0 \\
+\grouprow{5}{\mSen}
+\rowcolor{refrow}Full & 0.5 & 1.647 & 0.1394 & 38.0 \\
+Latent only & 0.5 & \gain{1.815} & \loss{0.4120} & 29.2 \\
+Time only & 0.5 & 1.721 & 0.1457 & 34.0 \\
+\addlinespace[2pt]
+\rowcolor{refrow}Full & 2 & 1.719 & 0.1457 & 34.0 \\
+Latent only & 2 & \gain{1.842} & \loss{0.4158} & 28.0 \\
+Time only & 2 & 1.721 & 0.1457 & 34.0 \\
 \bottomrule
-\end{tabular*}
+\end{tabularx}

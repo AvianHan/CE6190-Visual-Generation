@@ -1,6 +1,6 @@
 # Beyond Skip Counts
 
-**Understanding Adaptive Caching for Efficient Generation** · CE6190 Group Project
+**Understanding Adaptive Caching for Efficient Generation** · CE6190 Group 7 Project
 
 [Report PDF](report/report.pdf) · [LaTeX source](report/report.tex) · [Reproduction guide](GUIDE.md) · [Learning notes](docs/learning_notes.md)
 
@@ -41,7 +41,7 @@ Start with the [Wan handoff](deliverables/CE6190_Friend_Handoff_20261106/report_
 
 The assignment requires at least two methods and one dataset, own experimental results, parameter analysis, component ablations, comparisons, visualizations and discussion of improvements. Methods must differ from Project 1; the report must contain at least four pages.
 
-Submit `group_XX_report_project2.pdf` and `group_XX_code_project2.zip`, replacing `XX` with the group ID. The recorded deadline is **17 November 2026**; check NTULearn for the submission time. Submit the files themselves and exclude model weights and datasets from the code ZIP.
+Submit `group_XX_report_project2.pdf` and `group_XX_code_project2.zip`, replacing `XX` with the group ID (Group 7). The recorded deadline is **17 November 2026**; check NTULearn for the submission time. Submit the files themselves and exclude model weights and datasets from the code ZIP.
 
 ```bash
 python scripts/package_submission.py --output /path/to/group_XX_code_project2.zip

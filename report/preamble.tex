@@ -1,0 +1,72 @@
+%% Packages on top of cvpr.sty, which already loads times, xcolor, graphicx, amsmath, amssymb,
+%% booktabs, natbib, caption and subcaption.
+\usepackage{cuted}      % official CVPR kit tweak for full-width material
+\usepackage{array,tabularx,multirow,colortbl}
+\usepackage{enumitem}
+\usepackage{stfloats}   % allows figure*[b] / table*[b]
+\usepackage{microtype}
+\setlist{nosep,leftmargin=*}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}  % right-aligned stretch column (generated tables)
+
+%% Float placement for many full-width floats in two columns.
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.6}
+\renewcommand{\textfraction}{.1}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\dbltopfraction}{.9}
+\renewcommand{\dblfloatpagefraction}{.8}
+\setcounter{topnumber}{3}
+\setcounter{dbltopnumber}{2}
+\setcounter{totalnumber}{4}
+
+%% Report palette. Method colours match the data figures (scripts/make_report_figures.py).
+\definecolor{teacolor}{HTML}{466F87}
+\definecolor{magcolor}{HTML}{78B6C8}
+\definecolor{seacolor}{HTML}{F2D98E}
+\definecolor{sencolor}{HTML}{E48578}
+\definecolor{fixedcolor}{HTML}{98AF1E}
+\definecolor{unccolor}{HTML}{B5B5B5}
+\definecolor{tabhead}{gray}{0.92}      % table header rows
+\definecolor{tabgroup}{gray}{0.965}    % table group rows
+\definecolor{refrow}{HTML}{EEF4F8}     % reference rows (Uncached, Full)
+\definecolor{bestbg}{HTML}{DDEFD7}     % cell with the lowest LPIPS
+\definecolor{gaincolor}{HTML}{1B7F3B}  % improvement
+\definecolor{losscolor}{HTML}{B3261E}  % degradation
+
+%% Table helpers. Colour is used inside tables only; body text stays black.
+\newcommand{\swatch}[1]{{\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{.3pt}%
+  \fcolorbox{black!45}{#1}{\rule{0pt}{.52em}\rule{.52em}{0pt}}}\hspace{.35em}}
+\newcommand{\mUnc}{\swatch{unccolor}Uncached}
+\newcommand{\mTea}{\swatch{teacolor}TeaCache}
+\newcommand{\mMag}{\swatch{magcolor}MagCache}
+\newcommand{\mSea}{\swatch{seacolor}SeaCache}
+\newcommand{\mSen}{\swatch{sencolor}SenCache}
+\newcommand{\mFix}{\swatch{fixedcolor}Fixed}
+\newcommand{\best}[1]{\textbf{#1}}                         % best value in a column or group
+\newcommand{\bestlp}[1]{\cellcolor{bestbg}\textbf{#1}}     % lowest LPIPS
+\newcommand{\gain}[1]{\textcolor{gaincolor}{#1}}           % better than the stated reference
+\newcommand{\loss}[1]{\textcolor{losscolor}{#1}}           % worse than the stated reference
+\newcommand{\rel}[1]{\,{\scriptsize\textcolor{gaincolor}{#1}}}  % relative LPIPS change
+\newcommand{\grouprow}[2]{\rowcolor{tabgroup}\multicolumn{#1}{l}{\textit{#2}}\\}
+\newcommand{\thead}[1]{\textbf{#1}}
+
+%% Shaded rows touch the booktabs rules: no rule padding inside floats, slightly taller rows instead.
+\AtBeginEnvironment{table}{\setlength{\aboverulesep}{0pt}\setlength{\belowrulesep}{0pt}%
+  \renewcommand{\arraystretch}{1.25}}
+\AtBeginEnvironment{table*}{\setlength{\aboverulesep}{0pt}\setlength{\belowrulesep}{0pt}%
+  \renewcommand{\arraystretch}{1.25}}
+
+%% Author block: each name with the student ID below; the envelope icon after the ID links to the email.
+\usepackage{fontawesome5}
+\usepackage{tikz}
+\definecolor{grouptag}{HTML}{2A9D8F}
+%% Group tag: small solid teal pill with white Times bold text,
+%% vertically centred on the two-line name/ID blocks.
+\newcommand{\grouptag}{\tikz[baseline={([yshift=-.6ex]t.center)}]\node[fill=grouptag,
+  text=white, rounded corners=7pt, inner xsep=7pt, inner ysep=3pt,
+  font=\rmfamily\bfseries\normalsize](t){GROUP 7};}
+\newcommand{\member}[3]{\begin{tabular}[c]{@{}c@{}}%
+  #1\textsuperscript{*}\\[1pt]{\small\ttfamily #3}\hspace{.4em}%
+  \href{mailto:#2}{\textcolor{black}{\raisebox{.05ex}{\small\faEnvelope[regular]}}}\end{tabular}}
+%% Unnumbered first-page footnote with a * mark, for the equal-contribution note.
+\newcommand{\equalfootnote}{{\renewcommand{\thefootnote}{*}\footnotetext{Equal contribution; authors listed in alphabetical order.}}}

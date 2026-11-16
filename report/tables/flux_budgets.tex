@@ -1,27 +1,30 @@
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}%
+\begin{tabularx}{\linewidth}{lRRRRRRr}
 \toprule
-Configuration & Speedup & \shortstack{PSNR $\uparrow$\\(dB)} & SSIM $\uparrow$ & LPIPS $\downarrow$ & CLIP $\uparrow$ & ImageReward $\uparrow$ \\
+\rowcolor{tabhead} & \multicolumn{2}{c}{\thead{Efficiency}} & \multicolumn{3}{c}{\thead{Fidelity to Uncached}} & \multicolumn{2}{c}{\thead{Content quality}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}\cmidrule(l){7-8}
+\rowcolor{tabhead}Configuration & Speedup $\uparrow$ & Compute $\downarrow$ & PSNR $\uparrow$ & SSIM $\uparrow$ & LPIPS $\downarrow$ & CLIP $\uparrow$ & ImageReward $\uparrow$ \\
 \midrule
-\multicolumn{7}{@{}l}{\textit{Near $1.7\times$ generation speedup}} \\[2pt]
-SeaCache 0.3 & 1.710 & 29.43 & 0.930 & \textbf{0.0629} & 27.62 & 1.008 \\
-SenCache 0.5 & 1.719 & 28.31 & 0.920 & 0.0720 & 27.56 & 1.025 \\
-Fixed 16 & 1.723 & 28.19 & 0.920 & 0.0722 & 27.59 & 1.023 \\
-TeaCache 0.25 & 1.717 & 19.77 & 0.786 & 0.2317 & 27.89 & 1.049 \\
+\grouprow{8}{Near $1.7\times$ generation speedup}
+\mSea{} 0.3 & 1.710 & 57.5 & \best{29.43} & \best{0.930} & \bestlp{0.0629}\rel{$-$12.7\%} & 27.62 & 1.008 \\
+\mSen{} 0.5 & 1.719 & 58.1 & 28.31 & 0.920 & 0.0720 & 27.56 & 1.025 \\
+\mFix{} 16 & 1.723 & 57.1 & 28.19 & 0.920 & 0.0722 & 27.59 & 1.023 \\
+\mTea{} 0.25 & 1.717 & 57.5 & 19.77 & 0.786 & 0.2317 & \best{27.89} & \best{1.049} \\
 \midrule
-\multicolumn{7}{@{}l}{\textit{Near $1.96\times$ generation speedup}} \\[2pt]
-Fixed 14 & 1.959 & 26.37 & 0.893 & \textbf{0.1011} & 27.57 & 1.021 \\
-SenCache 0.8 & 1.955 & 26.67 & 0.888 & 0.1094 & 27.55 & 1.018 \\
+\grouprow{8}{Near $1.96\times$ generation speedup}
+\mFix{} 14 & 1.959 & 50.0 & 26.37 & \best{0.893} & \bestlp{0.1011}\rel{$-$7.6\%} & \best{27.57} & \best{1.021} \\
+\mSen{} 0.8 & 1.955 & 47.8 & \best{26.67} & 0.888 & 0.1094 & 27.55 & 1.018 \\
 \midrule
-\multicolumn{7}{@{}l}{\textit{Near $2.27\times$ generation speedup}} \\[2pt]
-SenCache 1 & 2.262 & 25.61 & 0.875 & \textbf{0.1259} & 27.46 & 1.007 \\
-Fixed 12 & 2.273 & 24.87 & 0.864 & 0.1384 & 27.53 & 1.008 \\
-SeaCache 0.45 & 2.245 & 24.26 & 0.862 & 0.1401 & 27.58 & 1.007 \\
-MagCache 0.09 & 2.273 & 22.42 & 0.832 & 0.1763 & 27.69 & 1.027 \\
+\grouprow{8}{Near $2.27\times$ generation speedup}
+\mSen{} 1 & 2.262 & 42.9 & \best{25.61} & \best{0.875} & \bestlp{0.1259}\rel{$-$9.0\%} & 27.46 & 1.007 \\
+\mFix{} 12 & 2.273 & 42.9 & 24.87 & 0.864 & 0.1384 & 27.53 & 1.008 \\
+\mSea{} 0.45 & 2.245 & 43.2 & 24.26 & 0.862 & 0.1401 & 27.58 & 1.007 \\
+\mMag{} 0.09 & 2.273 & 42.9 & 22.42 & 0.832 & 0.1763 & \best{27.69} & \best{1.027} \\
 \midrule
-\multicolumn{7}{@{}l}{\textit{Near $2.45\times$ generation speedup}} \\[2pt]
-SenCache 2 & 2.457 & 24.56 & 0.846 & \textbf{0.1576} & 27.49 & 1.004 \\
-SeaCache 0.6 & 2.442 & 22.25 & 0.822 & 0.1930 & 27.77 & 1.014 \\
-MagCache 0.12 & 2.471 & 21.82 & 0.817 & 0.1996 & 27.67 & 1.005 \\
-TeaCache 0.5 & 2.450 & 17.97 & 0.727 & 0.3231 & 27.78 & 1.017 \\
+\grouprow{8}{Near $2.45\times$ generation speedup}
+\mSen{} 2 & 2.457 & 39.3 & \best{24.56} & \best{0.846} & \bestlp{0.1576}\rel{$-$18.4\%} & 27.49 & 1.004 \\
+\mSea{} 0.6 & 2.442 & 38.0 & 22.25 & 0.822 & 0.1930 & 27.77 & 1.014 \\
+\mMag{} 0.12 & 2.471 & 39.3 & 21.82 & 0.817 & 0.1996 & 27.67 & 1.005 \\
+\mTea{} 0.5 & 2.450 & 39.3 & 17.97 & 0.727 & 0.3231 & \best{27.78} & \best{1.017} \\
 \bottomrule
-\end{tabular*}
+\end{tabularx}
