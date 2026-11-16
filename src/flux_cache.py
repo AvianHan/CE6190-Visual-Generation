@@ -12,7 +12,7 @@ WHEN gate:
 * HOW (shared): cache ``r = h_out - h_in`` over the full double+single block
   stack on image tokens; on reuse compute ``h_in + r``. Embeddings, rotary,
   norm_out and proj_out are always computed. Same as all three upstreams.
-* WHEN (per method, kept verbatim from pinned upstream source):
+* WHEN (adapted from pinned upstream source; see tiny-model tests):
   - TeaCache: rescaled rel-L1 of block-0 ``norm1`` modulated input, accumulated;
     first and last step forced. ``TeaCache4FLUX/teacache_flux.py``.
   - MagCache: calibrated magnitude ratios, accumulated error, K-limit,

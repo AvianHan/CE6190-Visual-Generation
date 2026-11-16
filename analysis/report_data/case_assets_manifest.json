@@ -1,0 +1,119 @@
+[
+  {
+    "filename": "flux_db_053_magcache_0.12.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_053_magcache_0.12.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "f73dfbf2fabb4595fb77b97976053bd2c4228c70ef58c3caf394457e93bbb7e2"
+  },
+  {
+    "filename": "flux_db_053_seacache_0.6.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_053_seacache_0.6.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "1c4604c5598074f5310b9542273918497799a0e890c841152be3005eddb666aa"
+  },
+  {
+    "filename": "flux_db_053_sencache_2.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_053_sencache_2.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "ba5edc0c3e2aecd731616c9409e30a59f8ea11c8e4ba1a82a91e0d6da914a386"
+  },
+  {
+    "filename": "flux_db_053_teacache_0.5.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_053_teacache_0.5.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "893d2fd49c55f6fb11f45c9ff2ee4428f043177f7996a88f2a4ca5e0490354b9"
+  },
+  {
+    "filename": "flux_db_053_uncached.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_053_uncached.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "4d17d1caca9d87ed7134d830f9db34f23c2c232fa583b7efe2ca9fc77b443797"
+  },
+  {
+    "filename": "flux_db_101_magcache_0.12.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_101_magcache_0.12.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "84a1f42eb4d814a4ae894f313d7e8922dbc77b78e2cd0ae19bf44796c031c23c"
+  },
+  {
+    "filename": "flux_db_101_seacache_0.6.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_101_seacache_0.6.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "d1c53674e7c0d483802ad63a75ac8932b82575f986fcf981de14bc1449dad203"
+  },
+  {
+    "filename": "flux_db_101_sencache_2.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_101_sencache_2.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "58702d6525011dfd408aa52a405b295ee25be169b81a21dace7828537a3db553"
+  },
+  {
+    "filename": "flux_db_101_teacache_0.5.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_101_teacache_0.5.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "f7c34fe67adc61c70917fb8d7613dc4858951115fb1fb80b9d86959191c797b0"
+  },
+  {
+    "filename": "flux_db_101_uncached.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_db_101_uncached.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "sha256": "6807ca285477ea9d7b4504f6681f01574516cb99f6de0123dbdbada6bf40fdb8"
+  },
+  {
+    "filename": "flux_existing_examples_2.45x.jpg",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/flux_existing_examples_2.45x.jpg",
+    "dimensions": [
+      1770,
+      1558
+    ],
+    "sha256": "7fc09190c2db0dcf6bfc14d1e2cfe9a3fa9108a417416a1789570e2d24426763"
+  },
+  {
+    "filename": "wan_qualitative_failure.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/wan_qualitative_failure.png",
+    "dimensions": [
+      1361,
+      999
+    ],
+    "sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70"
+  },
+  {
+    "filename": "wan_qualitative_success.png",
+    "path": "/workspace/scratch/14968d99de7d/report_cases_20261116/wan_qualitative_success.png",
+    "dimensions": [
+      1026,
+      999
+    ],
+    "sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374"
+  }
+]

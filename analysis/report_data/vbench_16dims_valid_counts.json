@@ -1,0 +1,130 @@
+[
+  {
+    "dimension": "subject_consistency",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "background_consistency",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "temporal_flickering",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "motion_smoothness",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "dynamic_degree",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "aesthetic_quality",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "imaging_quality",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "object_class",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "multiple_objects",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "human_action",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "color",
+    "Uncached": 36,
+    "TeaCache": 35,
+    "MagCache": 37,
+    "SeaCache": 37,
+    "SenCache": 36
+  },
+  {
+    "dimension": "spatial_relationship",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "scene",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "appearance_style",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "temporal_style",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  },
+  {
+    "dimension": "overall_consistency",
+    "Uncached": 50,
+    "TeaCache": 50,
+    "MagCache": 50,
+    "SeaCache": 50,
+    "SenCache": 50
+  }
+]

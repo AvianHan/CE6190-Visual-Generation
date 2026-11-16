@@ -1,25 +1,143 @@
-% Verified against the primary arXiv records and official VBench citation on 2026-10-29.
-% Version-pinned arXiv citations are used for SeaCache and SenCache so that equations
-% and reported settings can be traced to the exact reviewed paper revision.
+% All 45 entries individually checked against primary sources on 2026-11-16.
+% See reference_audit.json for version-specific verification and claim support.
+% Primary-source verification: 16 November 2026; details in foundations_part_a.json.
 
-@misc{chung2026seacache,
-  title = {{SeaCache}: Spectral-Evolution-Aware Cache for Accelerating Diffusion Models},
-  author = {Chung, Jiwoo and Hyun, Sangeek and Lee, MinKyu and Han, Byeongju and Cha, Geonho and Wee, Dongyoon and Hong, Youngjun and Heo, Jae-Pil},
-  year = {2026},
-  howpublished = {arXiv:2602.18993v2},
-  note = {Version 2, 24 March 2026. Accepted to CVPR 2026},
-  doi = {10.48550/arXiv.2602.18993},
-  url = {https://arxiv.org/abs/2602.18993v2}
+@inproceedings{ho2020ddpm,
+  title = {Denoising Diffusion Probabilistic Models},
+  author = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {33},
+  pages = {6840--6851},
+  year = {2020},
+  sourceurl = {https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html}
 }
 
-@misc{haghighi2026sencache,
+@inproceedings{song2021sde,
+  title = {Score-Based Generative Modeling through Stochastic Differential Equations},
+  author = {Song, Yang and Sohl-Dickstein, Jascha and Kingma, Diederik P. and Kumar, Abhishek and Ermon, Stefano and Poole, Ben},
+  booktitle = {International Conference on Learning Representations},
+  year = {2021},
+  sourceurl = {https://arxiv.org/abs/2011.13456}
+}
+
+@inproceedings{song2021ddim,
+  title = {Denoising Diffusion Implicit Models},
+  author = {Song, Jiaming and Meng, Chenlin and Ermon, Stefano},
+  booktitle = {International Conference on Learning Representations},
+  year = {2021},
+  sourceurl = {https://arxiv.org/abs/2010.02502}
+}
+
+@inproceedings{lu2022dpmsolver,
+  title = {{DPM-Solver}: A Fast {ODE} Solver for Diffusion Probabilistic Model Sampling in Around 10 Steps},
+  author = {Lu, Cheng and Zhou, Yuhao and Bao, Fan and Chen, Jianfei and Li, Chongxuan and Zhu, Jun},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {35},
+  pages = {5775--5787},
+  year = {2022},
+  doi = {10.52202/068431-0418},
+  sourceurl = {https://proceedings.neurips.cc/paper_files/paper/2022/hash/260a14acce2a89dad36adc8eefe7c59e-Abstract-Conference.html}
+}
+
+@inproceedings{zhao2023unipc,
+  title = {{UniPC}: A Unified Predictor-Corrector Framework for Fast Sampling of Diffusion Models},
+  author = {Zhao, Wenliang and Bai, Lujia and Rao, Yongming and Zhou, Jie and Lu, Jiwen},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {36},
+  year = {2023},
+  doi = {10.52202/075280-2170},
+  sourceurl = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/9c2aa1e456ea543997f6927295196381-Abstract-Conference.html}
+}
+
+@misc{ho2022cfg,
+  title = {Classifier-Free Diffusion Guidance},
+  author = {Ho, Jonathan and Salimans, Tim},
+  howpublished = {arXiv:2207.12598},
+  year = {2022},
+  doi = {10.48550/arXiv.2207.12598},
+  url = {https://arxiv.org/abs/2207.12598}
+}
+
+
+% Primary-source verification completed 2026-11-16.
+% Source evidence and retrieval limitations are recorded in foundations_part_b.json.
+
+@inproceedings{lipman2023flowmatching,
+  title = {Flow Matching for Generative Modeling},
+  author = {Lipman, Yaron and Chen, Ricky T. Q. and Ben-Hamu, Heli and Nickel, Maximilian and Le, Matt},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year = {2023},
+  sourceurl = {https://arxiv.org/abs/2210.02747}
+}
+
+@inproceedings{liu2023rectifiedflow,
+  title = {Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow},
+  author = {Liu, Xingchao and Gong, Chengyue and Liu, Qiang},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year = {2023},
+  sourceurl = {https://iclr.cc/virtual/2023/poster/11266}
+}
+
+@inproceedings{peebles2023dit,
+  title = {Scalable Diffusion Models with Transformers},
+  author = {Peebles, William and Xie, Saining},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages = {4195--4205},
+  year = {2023},
+  sourceurl = {https://openaccess.thecvf.com/content/ICCV2023/html/Peebles_Scalable_Diffusion_Models_with_Transformers_ICCV_2023_paper.html}
+}
+
+@inproceedings{rombach2022ldm,
+  title = {High-Resolution Image Synthesis with Latent Diffusion Models},
+  author = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj{\"o}rn},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages = {10684--10695},
+  year = {2022},
+  sourceurl = {https://openaccess.thecvf.com/content/CVPR2022/html/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.html}
+}
+
+@inproceedings{salimans2022progressive,
+  title = {Progressive Distillation for Fast Sampling of Diffusion Models},
+  author = {Salimans, Tim and Ho, Jonathan},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year = {2022},
+  sourceurl = {https://arxiv.org/abs/2202.00512}
+}
+
+@inproceedings{song2023consistency,
+  title = {Consistency Models},
+  author = {Song, Yang and Dhariwal, Prafulla and Chen, Mark and Sutskever, Ilya},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning},
+  series = {Proceedings of Machine Learning Research},
+  volume = {202},
+  pages = {32211--32252},
+  publisher = {PMLR},
+  year = {2023},
+  sourceurl = {https://proceedings.mlr.press/v202/song23a.html}
+}
+
+% Six caching references verified against primary records on 2026-11-16.
+% Citation identifiers are preserved for compatibility; publication metadata
+% is taken from the verified record rather than inferred from the key.
+
+@inproceedings{chung2026seacache,
+  title = {{SeaCache}: Spectral-Evolution-Aware Cache for Accelerating Diffusion Models},
+  author = {Chung, Jiwoo and Hyun, Sangeek and Lee, MinKyu and Han, Byeongju and Cha, Geonho and Wee, Dongyoon and Hong, Youngjun and Heo, Jae-Pil},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year = {2026},
+  pages = {14283--14294},
+  note = {Reviewed arXiv:2602.18993v2, 24 March 2026},
+  sourceurl = {https://arxiv.org/abs/2602.18993v2}
+}
+
+@inproceedings{haghighi2026sencache,
   title = {{SenCache}: Accelerating Diffusion Model Inference via Sensitivity-Aware Caching},
   author = {Haghighi, Yasaman and Alahi, Alexandre},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year = {2026},
-  howpublished = {arXiv:2602.24208v2},
-  note = {Version 2, 20 September 2026},
-  doi = {10.48550/arXiv.2602.24208},
-  url = {https://arxiv.org/abs/2602.24208v2}
+  pages = {14295--14304},
+  note = {Reviewed arXiv:2602.24208v2, 20 September 2026},
+  sourceurl = {https://arxiv.org/abs/2602.24208v2}
 }
 
 @inproceedings{liu2025teacache,
@@ -27,27 +145,233 @@
   author = {Liu, Feng and Zhang, Shiwei and Wang, Xiaofeng and Wei, Yujie and Qiu, Haonan and Zhao, Yuzhong and Zhang, Yingya and Ye, Qixiang and Wan, Fang},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year = {2025},
+  pages = {7353--7363},
   note = {Reviewed arXiv:2411.19108v2, 18 March 2025},
-  url = {https://arxiv.org/abs/2411.19108v2}
+  sourceurl = {https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Timestep_Embedding_Tells_Its_Time_to_Cache_for_Video_Diffusion_CVPR_2025_paper.html}
 }
 
 @inproceedings{ma2025magcache,
   title = {{MagCache}: Fast Video Generation with Magnitude-Aware Cache},
   author = {Ma, Zehong and Wei, Longhui and Wang, Feng and Zhang, Shiliang and Tian, Qi},
   booktitle = {Advances in Neural Information Processing Systems},
+  volume = {38},
   year = {2025},
   note = {Reviewed arXiv:2506.09045v2, 5 November 2025},
-  url = {https://arxiv.org/abs/2506.09045v2}
+  sourceurl = {https://proceedings.neurips.cc/paper_files/paper/2025/hash/311207bb626e36a8f1d3eb92aa67af22-Abstract-Conference.html}
 }
+
+@inproceedings{zhao2024pab,
+  title = {Real-Time Video Generation with Pyramid Attention Broadcast},
+  author = {Zhao, Xuanlei and Jin, Xiaolong and Wang, Kai and You, Yang},
+  booktitle = {International Conference on Learning Representations},
+  year = {2025},
+  sourceurl = {https://proceedings.iclr.cc/paper_files/paper/2025/hash/092c2d45005ea2db40fc24c470663416-Abstract-Conference.html}
+}
+
+@inproceedings{lv2024fastercache,
+  title = {{FasterCache}: Training-Free Video Diffusion Model Acceleration with High Quality},
+  author = {Lyu, Zhengyao and Si, Chenyang and Song, Junhao and Yang, Zhenyu and Qiao, Yu and Liu, Ziwei and Wong, Kwan-Yee K},
+  booktitle = {International Conference on Learning Representations},
+  year = {2025},
+  sourceurl = {https://proceedings.iclr.cc/paper_files/paper/2025/hash/518046d86bbc41a0707727c38301ad8e-Abstract-Conference.html}
+}
+
+% Six primary-source references verified on 2026-11-16.
+% WHEN/HOW/WHICH are overlapping descriptive axes; see caching_child.json.
+
+@inproceedings{ma2024deepcache,
+  title = {{DeepCache}: Accelerating Diffusion Models for Free},
+  author = {Ma, Xinyin and Fang, Gongfan and Wang, Xinchao},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year = {2024},
+  pages = {15762--15772},
+  sourceurl = {https://openaccess.thecvf.com/content/CVPR2024/html/Ma_DeepCache_Accelerating_Diffusion_Models_for_Free_CVPR_2024_paper.html}
+}
+
+@inproceedings{kahatapitiya2025adacache,
+  title = {Adaptive Caching for Faster Video Generation with Diffusion Transformers},
+  author = {Kahatapitiya, Kumara and Liu, Haozhe and He, Sen and Liu, Ding and Jia, Menglin and Zhang, Chenyang and Ryoo, Michael S. and Xie, Tian},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year = {2025},
+  pages = {15240--15252},
+  sourceurl = {https://openaccess.thecvf.com/content/ICCV2025/html/Kahatapitiya_Adaptive_Caching_for_Faster_Video_Generation_with_Diffusion_Transformers_ICCV_2025_paper.html}
+}
+
+@inproceedings{zou2025toca,
+  title = {Accelerating Diffusion Transformers with Token-wise Feature Caching},
+  author = {Zou, Chang and Liu, Xuyang and Liu, Ting and Huang, Siteng and Zhang, Linfeng},
+  booktitle = {International Conference on Learning Representations},
+  year = {2025},
+  sourceurl = {https://proceedings.iclr.cc/paper_files/paper/2025/hash/bbe024e0517fe12ac3a8d388b19ff9fe-Abstract-Conference.html}
+}
+
+@inproceedings{liu2025taylorseer,
+  title = {From Reusing to Forecasting: Accelerating Diffusion Models with {TaylorSeers}},
+  author = {Liu, Jiacheng and Zou, Chang and Lyu, Yuanhuiyi and Chen, Junjie and Zhang, Linfeng},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year = {2025},
+  pages = {15853--15863},
+  sourceurl = {https://openaccess.thecvf.com/content/ICCV2025/html/Liu_From_Reusing_to_Forecasting_Accelerating_Diffusion_Models_with_TaylorSeers_ICCV_2025_paper.html}
+}
+
+@misc{chen2024deltadit,
+  title = {{$\Delta$-DiT}: A Training-Free Acceleration Method Tailored for Diffusion Transformers},
+  author = {Chen, Pengtao and Shen, Mingzhu and Ye, Peng and Cao, Jianjian and Tu, Chongjun and Bouganis, Christos-Savvas and Zhao, Yiren and Chen, Tao},
+  year = {2024},
+  howpublished = {arXiv:2406.01125},
+  url = {https://arxiv.org/abs/2406.01125}
+}
+
+@inproceedings{ma2024learningtocache,
+  title = {Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching},
+  author = {Ma, Xinyin and Fang, Gongfan and Mi, Michael Bi and Wang, Xinchao},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {37},
+  year = {2024},
+  sourceurl = {https://proceedings.neurips.cc/paper_files/paper/2024/hash/f0b1515be276f6ba82b4f2b25e50bef0-Abstract-Conference.html}
+}
+
+% Each entry individually checked against a primary source on 2026-11-16.
+% Venue metadata uses official proceedings where available.
+
+@inproceedings{bu2026dicache,
+  title = {{DiCache}: Let Diffusion Model Determine Its Own Cache},
+  author = {Bu, Jiazi and Ling, Pengyang and Zhou, Yujie and Wang, Yibin and Zang, Yuhang and Lin, Dahua and Wang, Jiaqi},
+  booktitle = {International Conference on Learning Representations},
+  year = {2026},
+  sourceurl = {https://proceedings.iclr.cc/paper_files/paper/2026/hash/78288ef33b18a351c3cd679dc9a15c8d-Abstract-Conference.html}
+}
+
+@inproceedings{gao2025lemica,
+  title = {{LeMiCa}: Lexicographic Minimax Path Caching for Efficient Diffusion-Based Video Generation},
+  author = {Gao, Huanlin and Chen, Ping and Shi, Fuyuan and Tan, Chao and Liu, Zhaoxiang and Zhao, Fang and Wang, Kai and Lian, Shiguo},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {38},
+  year = {2025},
+  doi = {10.52202/085713-4408},
+  sourceurl = {https://proceedings.neurips.cc/paper_files/paper/2025/hash/bfa0d4d182de7e7939f67940fe524cce-Abstract-Conference.html}
+}
+
+@misc{selvaraju2024fora,
+  title = {{FORA}: Fast-Forward Caching in Diffusion Transformer Acceleration},
+  author = {Selvaraju, Pratheba and Ding, Tianyu and Chen, Tianyi and Zharkov, Ilya and Liang, Luming},
+  year = {2024},
+  howpublished = {arXiv:2407.01425},
+  doi = {10.48550/arXiv.2407.01425},
+  url = {https://arxiv.org/abs/2407.01425}
+}
+
+@inproceedings{li2023qdiffusion,
+  title = {{Q-Diffusion}: Quantizing Diffusion Models},
+  author = {Li, Xiuyu and Liu, Yijiang and Lian, Long and Yang, Huanrui and Dong, Zhen and Kang, Daniel and Zhang, Shanghang and Keutzer, Kurt},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year = {2023},
+  pages = {17535--17545},
+  sourceurl = {https://openaccess.thecvf.com/content/ICCV2023/papers/Li_Q-Diffusion_Quantizing_Diffusion_Models_ICCV_2023_paper.pdf}
+}
+
+@inproceedings{wu2024ptq4dit,
+  title = {{PTQ4DiT}: Post-training Quantization for Diffusion Transformers},
+  author = {Wu, Junyi and Wang, Haoxuan and Shang, Yuzhang and Shah, Mubarak and Yan, Yan},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {37},
+  year = {2024},
+  doi = {10.52202/079017-2006},
+  sourceurl = {https://proceedings.neurips.cc/paper_files/paper/2024/hash/72d32f4fe0b7af03732bd227bf1c4a5f-Abstract-Conference.html}
+}
+
+@inproceedings{zhao2025viditq,
+  title = {{ViDiT-Q}: Efficient and Accurate Quantization of Diffusion Transformers for Image and Video Generation},
+  author = {Zhao, Tianchen and Fang, Tongcheng and Huang, Haofeng and Wan, Rui and Soedarmadji, Widyadewi and Liu, Enshu and Li, Shiyao and Lin, Zinan and Dai, Guohao and Yan, Shengen and Yang, Huazhong and Ning, Xuefei and Wang, Yu},
+  booktitle = {International Conference on Learning Representations},
+  year = {2025},
+  sourceurl = {https://proceedings.iclr.cc/paper_files/paper/2025/hash/a4a1ee071ce0fe63b83bce507c9dc4d7-Abstract-Conference.html}
+}
+
+@inproceedings{li2025svdquant,
+  title = {{SVDQuant}: Absorbing Outliers by Low-Rank Component for 4-Bit Diffusion Models},
+  author = {Li, Muyang and Lin, Yujun and Zhang, Zhekai and Cai, Tianle and Li, Xiuyu and Guo, Junxian and Xie, Enze and Meng, Chenlin and Zhu, Jun-Yan and Han, Song},
+  booktitle = {International Conference on Learning Representations},
+  year = {2025},
+  sourceurl = {https://proceedings.iclr.cc/paper_files/paper/2025/hash/f34f0630c33be15b8c89426bb8056798-Abstract-Conference.html}
+}
+
+% Independently checked against primary sources on 2026-11-16. See evaluation.json.
 
 @misc{wan2025wan,
   title = {{Wan}: Open and Advanced Large-Scale Video Generative Models},
   author = {{Team Wan} and others},
   year = {2025},
   howpublished = {arXiv:2503.20314v2},
-  note = {Version 2, 19 April 2025. Collective author abbreviated as Team Wan et al.},
   doi = {10.48550/arXiv.2503.20314},
   url = {https://arxiv.org/abs/2503.20314v2}
+}
+
+@misc{flux2024,
+  title = {{FLUX.1 [dev]} Model Card},
+  author = {{Black Forest Labs}},
+  year = {2024},
+  howpublished = {Official model documentation},
+  url = {https://huggingface.co/black-forest-labs/FLUX.1-dev},
+  note = {Model family announced 1 August 2024; accessed 16 November 2026}
+}
+
+@misc{saharia2022imagen,
+  title = {Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding},
+  author = {Saharia, Chitwan and Chan, William and Saxena, Saurabh and Li, Lala and Whang, Jay and Denton, Emily and Seyed Ghasemipour, Seyed Kamyar and Ayan, Burcu Karagol and Mahdavi, S. Sara and Gontijo Lopes, Rapha and Salimans, Tim and Ho, Jonathan and Fleet, David J. and Norouzi, Mohammad},
+  year = {2022},
+  howpublished = {arXiv:2205.11487v1},
+  url = {https://arxiv.org/abs/2205.11487v1},
+  note = {Introduces the DrawBench evaluation prompt set}
+}
+
+@inproceedings{onoe2024docci,
+  title = {{DOCCI}: Descriptions of Connected and Contrasting Images},
+  author = {Onoe, Yasumasa and Rane, Sunayana and Berger, Zachary and Bitton, Yonatan and Cho, Jaemin and Garg, Roopal and Ku, Alexander and Parekh, Zarana and Pont-Tuset, Jordi and Tanzer, Garrett and Wang, Su and Baldridge, Jason},
+  booktitle = {European Conference on Computer Vision},
+  year = {2024},
+  sourceurl = {https://google.github.io/docci/},
+}
+
+@inproceedings{zhang2018lpips,
+  title = {The Unreasonable Effectiveness of Deep Features as a Perceptual Metric},
+  author = {Zhang, Richard and Isola, Phillip and Efros, Alexei A. and Shechtman, Eli and Wang, Oliver},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  year = {2018},
+  sourceurl = {https://arxiv.org/abs/1801.03924v2},
+}
+
+@article{wang2004ssim,
+  title = {Image Quality Assessment: From Error Visibility to Structural Similarity},
+  author = {Wang, Zhou and Bovik, Alan Conrad and Sheikh, Hamid Rahim and Simoncelli, Eero P.},
+  journal = {IEEE Transactions on Image Processing},
+  volume = {13},
+  number = {4},
+  pages = {600--612},
+  year = {2004},
+  doi = {10.1109/TIP.2003.819861},
+  sourceurl = {https://ece.uwaterloo.ca/~z70wang/publications/ssim.html}
+}
+
+@inproceedings{radford2021clip,
+  title = {Learning Transferable Visual Models From Natural Language Supervision},
+  author = {Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and Krueger, Gretchen and Sutskever, Ilya},
+  booktitle = {Proceedings of the 38th International Conference on Machine Learning},
+  series = {Proceedings of Machine Learning Research},
+  volume = {139},
+  pages = {8748--8763},
+  publisher = {PMLR},
+  year = {2021},
+  sourceurl = {https://proceedings.mlr.press/v139/radford21a.html},
+}
+
+@inproceedings{xu2023imagereward,
+  title = {{ImageReward}: Learning and Evaluating Human Preferences for Text-to-Image Generation},
+  author = {Xu, Jiazheng and Liu, Xiao and Wu, Yuchen and Tong, Yuxuan and Li, Qinkai and Ding, Ming and Tang, Jie and Dong, Yuxiao},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {36},
+  year = {2023},
+  sourceurl = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/33646ef0ed554145eab65f6250fab0c9-Abstract-Conference.html},
 }
 
 @inproceedings{huang2024vbench,
@@ -55,6 +379,59 @@
   author = {Huang, Ziqi and He, Yinan and Yu, Jiashuo and Zhang, Fan and Si, Chenyang and Jiang, Yuming and Zhang, Yuanhan and Wu, Tianxing and Jin, Qingyang and Chanpaisit, Nattapol and Wang, Yaohui and Chen, Xinyuan and Wang, Limin and Lin, Dahua and Qiao, Yu and Liu, Ziwei},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year = {2024},
-  note = {Original benchmark; arXiv:2311.17982v1},
-  url = {https://arxiv.org/abs/2311.17982}
+  sourceurl = {https://vchitect.github.io/VBench-project/},
+}
+
+@inproceedings{yang2025cogvideox,
+  title = {{CogVideoX}: Text-to-Video Diffusion Models with An Expert Transformer},
+  author = {Yang, Zhuoyi and Teng, Jiayan and Zheng, Wendi and Ding, Ming and Huang, Shiyu and Xu, Jiazheng and Yang, Yuanming and Hong, Wenyi and Zhang, Xiaohan and Feng, Guanyu and Yin, Da and Zhang, Yuxuan and Wang, Weihan and Cheng, Yean and Xu, Bin and Gu, Xiaotao and Dong, Yuxiao and Tang, Jie},
+  booktitle = {International Conference on Learning Representations},
+  year = {2025},
+  sourceurl = {https://proceedings.iclr.cc/paper_files/paper/2025/hash/ce31378e9f41d8907e97dab172b6c559-Abstract-Conference.html}
+}
+
+@misc{kong2024hunyuanvideo,
+  title = {{HunyuanVideo}: A Systematic Framework For Large Video Generative Models},
+  author = {Kong, Weijie and Tian, Qi and Zhang, Zijian and Min, Rox and Dai, Zuozhuo and Zhou, Jin and Xiong, Jiangfeng and Li, Xin and Wu, Bo and Zhang, Jianwei and Wu, Kathrina and Lin, Qin and Yuan, Junkun and Long, Yanxin and Wang, Aladdin and Wang, Andong and Li, Changlin and Huang, Duojun and Yang, Fang and Tan, Hao and Wang, Hongmei and Song, Jacob and Bai, Jiawang and Wu, Jianbing and Xue, Jinbao and Wang, Joey and Wang, Kai and Liu, Mengyang and Li, Pengyu and Li, Shuai and Wang, Weiyan and Yu, Wenqing and Deng, Xinchi and Li, Yang and Chen, Yi and Cui, Yutao and Peng, Yuanbo and Yu, Zhentao and He, Zhiyu and Xu, Zhiyong and Zhou, Zixiang and Xu, Zunnan and Tao, Yangyu and Lu, Qinglin and Liu, Songtao and Zhou, Dax and Wang, Hongfa and Yang, Yong and Wang, Di and Liu, Yuhong and Jiang, Jie and Zhong, Caesar},
+  year = {2024},
+  howpublished = {arXiv:2412.03603},
+  url = {https://arxiv.org/abs/2412.03603}
+}
+
+@misc{hacohen2024ltxvideo,
+  title = {{LTX-Video}: Realtime Video Latent Diffusion},
+  author = {HaCohen, Yoav and Chiprut, Nisan and Brazowski, Benny and Shalem, Daniel and Moshe, Dudu and Richardson, Eitan and Levin, Eran and Shiran, Guy and Zabari, Nir and Gordon, Ori and Panet, Poriya and Weissbuch, Sapir and Kulikov, Victor and Bitterman, Yaki and Melumian, Zeev and Bibi, Ofir},
+  year = {2024},
+  howpublished = {arXiv:2501.00103},
+  url = {https://arxiv.org/abs/2501.00103}
+}
+
+@inproceedings{ghosh2023geneval,
+  title = {{GenEval}: An Object-Focused Framework for Evaluating Text-to-Image Alignment},
+  author = {Ghosh, Dhruba and Hajishirzi, Hannaneh and Schmidt, Ludwig},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {36},
+  year = {2023},
+  sourceurl = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/a3bf71c7c63f0c3bcb7ff67c67b1e7b1-Abstract-Datasets_and_Benchmarks.html}
+}
+
+@inproceedings{hessel2021clipscore,
+  title = {{CLIPScore}: A Reference-free Evaluation Metric for Image Captioning},
+  author = {Hessel, Jack and Holtzman, Ari and Forbes, Maxwell and Le Bras, Ronan and Choi, Yejin},
+  booktitle = {Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing},
+  year = {2021},
+  publisher = {Association for Computational Linguistics},
+  pages = {7514--7528},
+  doi = {10.18653/v1/2021.emnlp-main.595},
+  sourceurl = {https://aclanthology.org/2021.emnlp-main.595/}
+}
+
+@inproceedings{amdahl1967validity,
+  author = {Gene M. Amdahl},
+  title = {Validity of the Single Processor Approach to Achieving Large Scale Computing Capabilities},
+  booktitle = {Proceedings of the April 18--20, 1967, Spring Joint Computer Conference},
+  year = {1967},
+  pages = {483--485},
+  doi = {10.1145/1465482.1465560},
+  url = {https://doi.org/10.1145/1465482.1465560}
 }

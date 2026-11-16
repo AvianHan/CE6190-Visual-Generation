@@ -1,0 +1,17 @@
+dimension,Uncached,TeaCache,MagCache,SeaCache,SenCache
+subject_consistency,50,50,50,50,50
+background_consistency,50,50,50,50,50
+temporal_flickering,50,50,50,50,50
+motion_smoothness,50,50,50,50,50
+dynamic_degree,50,50,50,50,50
+aesthetic_quality,50,50,50,50,50
+imaging_quality,50,50,50,50,50
+object_class,50,50,50,50,50
+multiple_objects,50,50,50,50,50
+human_action,50,50,50,50,50
+color,36,35,37,37,36
+spatial_relationship,50,50,50,50,50
+scene,50,50,50,50,50
+appearance_style,50,50,50,50,50
+temporal_style,50,50,50,50,50
+overall_consistency,50,50,50,50,50

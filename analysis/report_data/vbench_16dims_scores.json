@@ -1,0 +1,130 @@
+[
+  {
+    "dimension": "subject_consistency",
+    "Uncached": 0.9611249516159296,
+    "TeaCache": 0.9630174320712686,
+    "MagCache": 0.9622990756444633,
+    "SeaCache": 0.9616853734329343,
+    "SenCache": 0.9622343022301794
+  },
+  {
+    "dimension": "background_consistency",
+    "Uncached": 0.98040576171875,
+    "TeaCache": 0.9804511108398437,
+    "MagCache": 0.9793540649414062,
+    "SeaCache": 0.9796978149414063,
+    "SenCache": 0.9804482421875
+  },
+  {
+    "dimension": "temporal_flickering",
+    "Uncached": 0.9893867281581842,
+    "TeaCache": 0.9880470344599557,
+    "MagCache": 0.9873860364147261,
+    "SeaCache": 0.9874558384652231,
+    "SenCache": 0.9876995993595499
+  },
+  {
+    "dimension": "motion_smoothness",
+    "Uncached": 0.9804862628538997,
+    "TeaCache": 0.9808592540515807,
+    "MagCache": 0.9808728405448719,
+    "SeaCache": 0.9808362457710114,
+    "SenCache": 0.9808054043888522
+  },
+  {
+    "dimension": "dynamic_degree",
+    "Uncached": 0.72,
+    "TeaCache": 0.68,
+    "MagCache": 0.7,
+    "SeaCache": 0.7,
+    "SenCache": 0.68
+  },
+  {
+    "dimension": "aesthetic_quality",
+    "Uncached": 0.6566365396976471,
+    "TeaCache": 0.6533964443206787,
+    "MagCache": 0.6499983710050583,
+    "SeaCache": 0.6515364199876785,
+    "SenCache": 0.6501775991916656
+  },
+  {
+    "dimension": "imaging_quality",
+    "Uncached": 0.6719662590921662,
+    "TeaCache": 0.6627060231338313,
+    "MagCache": 0.6598046033976989,
+    "SeaCache": 0.6656102955194165,
+    "SenCache": 0.6627874392662519
+  },
+  {
+    "dimension": "object_class",
+    "Uncached": 0.74625,
+    "TeaCache": 0.75875,
+    "MagCache": 0.7775,
+    "SeaCache": 0.77125,
+    "SenCache": 0.78125
+  },
+  {
+    "dimension": "multiple_objects",
+    "Uncached": 0.68875,
+    "TeaCache": 0.66875,
+    "MagCache": 0.68,
+    "SeaCache": 0.6825,
+    "SenCache": 0.70125
+  },
+  {
+    "dimension": "human_action",
+    "Uncached": 0.76,
+    "TeaCache": 0.78,
+    "MagCache": 0.76,
+    "SeaCache": 0.76,
+    "SenCache": 0.8
+  },
+  {
+    "dimension": "color",
+    "Uncached": 0.9372685185185186,
+    "TeaCache": 0.9538095238095238,
+    "MagCache": 0.9343629343629343,
+    "SeaCache": 0.9428746928746929,
+    "SenCache": 0.9515542328042328
+  },
+  {
+    "dimension": "spatial_relationship",
+    "Uncached": 0.8110906241395593,
+    "TeaCache": 0.7556152075316726,
+    "MagCache": 0.7614636619702939,
+    "SeaCache": 0.7599128803974255,
+    "SenCache": 0.7506608268266696
+  },
+  {
+    "dimension": "scene",
+    "Uncached": 0.08625,
+    "TeaCache": 0.06,
+    "MagCache": 0.085,
+    "SeaCache": 0.06375,
+    "SenCache": 0.05875
+  },
+  {
+    "dimension": "appearance_style",
+    "Uncached": 0.20415717592592553,
+    "TeaCache": 0.2019660300925927,
+    "MagCache": 0.20222777777777773,
+    "SeaCache": 0.2023653549382721,
+    "SenCache": 0.20235239197530974
+  },
+  {
+    "dimension": "temporal_style",
+    "Uncached": 0.23692883044481278,
+    "TeaCache": 0.23867688328027725,
+    "MagCache": 0.23733526229858398,
+    "SeaCache": 0.23676092505455018,
+    "SenCache": 0.23831657886505128
+  },
+  {
+    "dimension": "overall_consistency",
+    "Uncached": 0.20884540155529976,
+    "TeaCache": 0.2086724729835987,
+    "MagCache": 0.20656440079212188,
+    "SeaCache": 0.2071351945400238,
+    "SenCache": 0.2082708279788494
+  }
+]

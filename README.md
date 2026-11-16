@@ -1,120 +1,48 @@
-# CE6190-Visual-Generation
+# Beyond Skip Counts
 
-- Wan2.1
-    
-    ![Wan framework](assets/Wan_Fig9.png)
-    
-    - VAE
-        
-        ![Wan VAE](assets/Wan_Fig8.png)
-        
-    - DiT
-        
-        ![Wan DiT](assets/Wan_Fig10.png)
-        
-    - Diffusion
-        
-        
-        |  | training | sampling |
-        | --- | --- | --- |
-        | input | $z_t=(1-t)z_0+t\epsilon$ | $z_1=\epsilon$ 让 $t$ 递减 |
-        | Step 1 | $\hat v_t=f_\theta(z_t,t,c)$ | $\hat v_t=f_\theta(z_t,t,c)$ Adaptive Caching |
-        | Step 2 | $\mathcal L=\lVert\hat v-(\epsilon-z_0)\rVert^2$ | $z_{t-T}=\operatorname{Sampler}(z_t,\hat v_t,t,t-T)$ |
-        | output | 训练好的 $\theta$ | 生成视频 $\hat z_0$ |
-- Adaptive Caching → Efficient Generation
-    - skip/reuse or compute/refresh?
-    
-    |  |  | 任务 |  | backbone | dataset | SeaCache | SenCache |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
-    | SeaCache | CVPR 2026 Oral | T2I<br>T2V | when | FLUX.1-dev<br>**Wan2.1**-1.3B<br>HunyuanVideo | DrawBench<br>**VBench** |  |  |
-    | SenCache | CVPR 2026 Oral | T2V | when | **Wan2.1**<br>CogVideoX<br>LTX-Video | **VBench**<br>T2V-CompBench |  |  |
-    | Uncached |  |  |  |  |  |  |  |
-    | TeaCache | CVPR 2025 Highlight | T2V | when | Open-Sora<br>Latte | **VBench**<br>T2V-CompBench | 主表 | 主表 |
-    | MagCache | NeurIPS 2025 | T2I<br>T2V | when | FLUX<br>**Wan2.1**-1.3B<br>Open-Sora 1.2<br>HunyuanVideo<br>CogVideoX | **VBench** | 附录 | 主表 |
-    | TaylorSeer | ICCV 2025 | T2I<br>T2V<br>C2I | how | FLUX.1-dev<br>HunyuanVideo<br>DiT-XL/2<br>HiDream<br>FramePack<br>**Wan2.1** | DrawBench<br>**VBench**<br>ImageNet-256 | 主表 | / |
-    | Δ-DiT | IJCV 2026 | T2I<br>C2I | which | PixArt-α<br>DiT-XL<br>SD3 | ImageNet<br>MS-COCO2017<br>PartiPrompts | Table 1 | / |
-    | ToCa | ICLR 2025 | T2I<br>T2V<br>C2I | which | PixArt-α<br>OpenSora<br>DiT-XL/2<br>FLUX | ImageNet-256<br>**VBench**<br>MS-COCO2017<br>PartiPrompts | Table 1 | / |
-    | DiCache | ICLR 2026 | T2I<br>T2V | when<br>how | FLUX.1-dev<br>**Wan2.1**-1.3B<br>HunyuanVideo | LAION-5B<br>VideoDPO+VideoFeedback 经 GPT-4o 润色 | 消融 | / |
-    | D2Cache | CVPR 2026 | T2V | how | **Wan2.1**-1.3B<br>Open-Sora 1.2<br>LTX-Video<br>Latte | **VBench** | / | / |
-    | TC-Padé | CVPR 2026 | T2I<br>T2V<br>C2I | when<br>how | FLUX.1-dev<br>**Wan2.1**-1.3B<br>DiT-XL/2 | ImageNet-256<br>**VBench**-2.0<br>COCO2017 | / | / |
-    | BWCache | ICLR 2026 | T2V | when<br>which | **Wan2.1**<br>Open-Sora<br>Latte<br>HunyuanVideo | Open-Sora<br>**VBench**<br>T2V-CompBench | / | / |
-    | SVD-Cache | CVPR 2026 | T2I<br>T2V | how | FLUX.1-dev<br>HunyuanVideo | DrawBench<br>**VBench** | / | / |
-    | WorldCache | ECCV 2026 | T2W<br>I2W | when<br>how | **Wan2.1**<br>Cosmos-Predict2.5 | PAI-Bench<br>EgoDex-Eval | / | / |
-- SeaCache — CVPR 2026 Oral
-    
-    ![SeaCache Figure 3](assets/SeaCache_Fig3.png)
-    
-- SenCache — CVPR 2026 Oral
-    
-    ![SenCache Figure 2](assets/SenCache_Fig2.png)
-    
+**Understanding Adaptive Caching for Efficient Generation** · CE6190 Group Project
 
-![SeaCache and SenCache comparison](assets/Sea_Sen_Comparison.png)
----
+[Report PDF](report/report.pdf) · [LaTeX source](report/report.tex) · [Reproduction guide](GUIDE.md) · [Learning notes](docs/learning_notes.md)
 
+We benchmark **Uncached, TeaCache, MagCache, SeaCache and SenCache** for text-to-image and text-to-video generation. Within each backbone, the methods share the cached block scope and residual reuse; the comparison focuses on **when to reuse and when to recompute**.
 
-# Assignment 2: Visual generation
+## Experiments
 
-- A technical review of visual generation methods
-  - Identify a generation task:
+| Task | Backbone / hardware | Evaluation |
+| --- | --- | --- |
+| Text-to-video | Wan2.1-T2V-1.3B / A100 | 110-prompt VBench subset; 550 paired samples per cached method; 16 VBench dimensions; threshold and component studies |
+| Text-to-image | FLUX.1-dev / H200 | All 200 DrawBench prompts, seed 0; 24 configurations / 4,800 outputs; fidelity, CLIP, ImageReward and schedule analysis |
 
-    Examples:
-    - New generative model paradigms
-    - Image/Video/3D/4D generation
-    - Image/Video/3D/4D Editing
-    - Controllable generation
-    - Efficient generation
+SenCache on FLUX is a project port. The historical H200/L40S development results are kept separately from the A100 comparison. PSNR, SSIM and LPIPS measure deviation from paired Uncached outputs; content-quality metrics answer a separate question.
 
-  - Write a review report
+## Main findings
 
-  - **The selected methods should not overlap with Project 1**
+- **Equal computation counts do not imply equal fidelity.** Compared with TeaCache at matched computation counts and nearly identical runtime, MagCache lowers Wan LPIPS by 40.3% and SenCache lowers FLUX LPIPS by 51.2%.
+- **The SeaCache–SenCache comparison changes with the measured budget.** On FLUX, SeaCache has lower LPIPS near 1.7× speedup; SenCache has lower LPIPS near 2.45×.
+- **Reuse constraints can set a computation floor.** In the SenCache threshold-2 FLUX setting, all 200 prompts recompute at the same 11 of 28 steps. After the early stages, the consecutive-reuse limit forces every recomputation.
 
-- **It’s a group-based assignment**
+The report connects these findings to component ablations, recorded schedules, mathematical analysis and visual examples.
 
+## Repository
 
+| Path | Contents |
+| --- | --- |
+| `report/` | Report, bibliography, tables, figures and mathematical analysis |
+| `src/`, `scripts/`, `tests/` | Cache implementations, experiment/analysis tools and checks |
+| `analysis/`, `results/` | Report inputs, delivered metrics and schedule records |
+| `configs/`, `benchmarks/` | Settings, calibration descriptions and benchmark prompts |
+| `deliverables/` | Original handoffs, execution snapshots and experiment evidence |
+| `docs/`, `assets/` | Learning notes and their original figures |
+| `validation/` | Historical implementation-check records |
 
-# Assignment 2
+Start with the [Wan handoff](deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113), [FLUX results](results/drawbench_flux/README.md) and [report build instructions](report/README.md). Selected visual outputs are retained; complete generated videos and images are not included.
 
-- Use at least one dataset for evaluation
-  - You can use a subset of a dataset
-  - You can build your own dataset
-  - Using more datasets is encouraged.
-  - Using datasets different from those in the original papers is encouraged.
+## Course submission
 
-- Select methods for comparison and analysis
-  - Select at least two methods
-  - You can use any existing methods
-  - You can propose your own methods.
+The assignment requires at least two methods and one dataset, own experimental results, parameter analysis, component ablations, comparisons, visualizations and discussion of improvements. Methods must differ from Project 1; the report must contain at least four pages.
 
+Submit `group_XX_report_project2.pdf` and `group_XX_code_project2.zip`, replacing `XX` with the group ID. The recorded deadline is **17 November 2026**; check NTULearn for the submission time. Submit the files themselves and exclude model weights and datasets from the code ZIP.
 
-
-# Assignment 2
-
-- Evaluate and analyze the selected methods
-  - Analysis of the hyper-parameter settings
-  - Ablation study of the key components in a method.
-  - Comparison between the selected methods.
-  - Discussion on the advantages and disadvantages.
-  - Visualization and discussion of the results
-  - Discussion on future extension.
-  - Cannot simply copy results from other materials.
-
-- Submit a technical report and the code
-  - At least 4 pages.
-  - Format: introduction/methods/experiments and analysis/conclusion
-
-# Rubrics
-
-A good report should meet the following:
-
-- Meet the requirements well.
-- Well organized and structured
-- Clear explanation of the tasks and the methods.
-- Comprehensive and in-depth analysis.
-- Present clear and insightful comparisons and discussions
-- Good visualizations for analysis.
-- Target challenging datasets/applications/methods.
-- Discuss or implement possible solutions to improve the methods
-
-
-
+```bash
+python scripts/package_submission.py --output /path/to/group_XX_code_project2.zip
+```

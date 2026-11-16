@@ -1,0 +1,112 @@
+[
+  {
+    "prompt_id": "db_053",
+    "prompt": "Three cats and three dogs sitting on the grass.",
+    "category": "Counting",
+    "config_id": "magcache_0.12",
+    "method": "magcache",
+    "threshold": 0.12,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 2.6433279890334234
+  },
+  {
+    "prompt_id": "db_101",
+    "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+    "category": "Gary Marcus et al.",
+    "config_id": "magcache_0.12",
+    "method": "magcache",
+    "threshold": 0.12,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 2.6415859770495445
+  },
+  {
+    "prompt_id": "db_053",
+    "prompt": "Three cats and three dogs sitting on the grass.",
+    "category": "Counting",
+    "config_id": "seacache_0.6",
+    "method": "seacache",
+    "threshold": 0.6,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 2.679769793059677
+  },
+  {
+    "prompt_id": "db_101",
+    "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+    "category": "Gary Marcus et al.",
+    "config_id": "seacache_0.6",
+    "method": "seacache",
+    "threshold": 0.6,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 2.680958427954465
+  },
+  {
+    "prompt_id": "db_053",
+    "prompt": "Three cats and three dogs sitting on the grass.",
+    "category": "Counting",
+    "config_id": "sencache_2",
+    "method": "sencache",
+    "threshold": 2.0,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 2.646689255023375
+  },
+  {
+    "prompt_id": "db_101",
+    "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+    "category": "Gary Marcus et al.",
+    "config_id": "sencache_2",
+    "method": "sencache",
+    "threshold": 2.0,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 2.652096571982838
+  },
+  {
+    "prompt_id": "db_053",
+    "prompt": "Three cats and three dogs sitting on the grass.",
+    "category": "Counting",
+    "config_id": "teacache_0.5",
+    "method": "teacache",
+    "threshold": 0.5,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 2.659325227024965
+  },
+  {
+    "prompt_id": "db_101",
+    "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+    "category": "Gary Marcus et al.",
+    "config_id": "teacache_0.5",
+    "method": "teacache",
+    "threshold": 0.5,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 2.663619893952273
+  },
+  {
+    "prompt_id": "db_053",
+    "prompt": "Three cats and three dogs sitting on the grass.",
+    "category": "Counting",
+    "config_id": "uncached",
+    "method": "uncached",
+    "threshold": null,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 6.542486650054343
+  },
+  {
+    "prompt_id": "db_101",
+    "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+    "category": "Gary Marcus et al.",
+    "config_id": "uncached",
+    "method": "uncached",
+    "threshold": null,
+    "seed": 0,
+    "gpu": "NVIDIA H200",
+    "generation_s": 6.52933396899607
+  }
+]

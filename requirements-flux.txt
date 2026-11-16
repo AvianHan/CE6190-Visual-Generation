@@ -1,0 +1,8 @@
+# FLUX generation, evaluation and result aggregation; install the base stack first.
+-r requirements.txt
+
+# Recorded in the DrawBench handoff's evidence/key_packages.txt (PR commit 3e27f5c39b318b2ba2e60d75582467b28cbbd615).
+image-reward==1.5
+
+# Compatibility range for aggregation, not an observed version: the handoff did not record pandas.
+pandas>=2,<3

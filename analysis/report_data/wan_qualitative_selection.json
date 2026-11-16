@@ -1,0 +1,26 @@
+{
+  "n_candidate_pairs": 550,
+  "rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+  "success": {
+    "pair_id": "3bed2fd412cca0c9e73d",
+    "prompt": "a banana on the top of an apple, front view",
+    "seed": 2,
+    "lpips": {
+      "teacache": 0.008204072207948308,
+      "magcache": 0.005052951727936297,
+      "seacache": 0.00587806078593856,
+      "sencache": 0.008275748586949006
+    }
+  },
+  "failure": {
+    "pair_id": "3594e7177730de4da5e2",
+    "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+    "seed": 2,
+    "lpips": {
+      "teacache": 0.3471005349247544,
+      "magcache": 0.22303480093861805,
+      "seacache": 0.12775727407431897,
+      "sencache": 0.34226541717847186
+    }
+  }
+}

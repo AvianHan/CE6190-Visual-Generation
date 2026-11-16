@@ -1,0 +1,16 @@
+\begin{table}[!htbp]
+\caption{Decision signals used by the five benchmark methods.}
+\label{tab:method_rules}
+\centering\small\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\linewidth}{@{}lXX@{}}
+\toprule
+Method & Signal used for the decision & How the signal is used\\
+\midrule
+Uncached & No reuse decision. & Recompute the full block stack at every call.\\[3pt]
+TeaCache~\cite{liu2025teacache} & Timestep-related or modulated input changes. & Accumulate polynomial-rescaled relative changes as a proxy for block-output change.\\[3pt]
+MagCache~\cite{ma2025magcache} & Calibrated magnitude ratios across timesteps. & Estimate accumulated reuse error from the magnitude evolution since the last refresh.\\[3pt]
+SeaCache~\cite{chung2026seacache} & Spectrally transformed comparison features. & Accumulate feature changes after filtering and gain normalization.\\[3pt]
+SenCache~\cite{haghighi2026sencache} & Latent and timestep changes weighted by sensitivity. & Estimate output change relative to the most recent refresh.\\
+\bottomrule
+\end{tabularx}
+\end{table}

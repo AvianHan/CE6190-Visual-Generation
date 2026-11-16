@@ -1,0 +1,802 @@
+[
+  {
+    "dimension": "subject_consistency",
+    "method": "Uncached",
+    "score": 0.9611249516159296,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "subject_consistency",
+    "method": "TeaCache",
+    "score": 0.9630174320712686,
+    "delta_vs_uncached": 0.001892480455338963,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "subject_consistency",
+    "method": "MagCache",
+    "score": 0.9622990756444633,
+    "delta_vs_uncached": 0.001174124028533674,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "subject_consistency",
+    "method": "SeaCache",
+    "score": 0.9616853734329343,
+    "delta_vs_uncached": 0.0005604218170046638,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "subject_consistency",
+    "method": "SenCache",
+    "score": 0.9622343022301794,
+    "delta_vs_uncached": 0.001109350614249771,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "background_consistency",
+    "method": "Uncached",
+    "score": 0.98040576171875,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "background_consistency",
+    "method": "TeaCache",
+    "score": 0.9804511108398437,
+    "delta_vs_uncached": 4.534912109366296e-05,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "background_consistency",
+    "method": "MagCache",
+    "score": 0.9793540649414062,
+    "delta_vs_uncached": -0.0010516967773438468,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "background_consistency",
+    "method": "SeaCache",
+    "score": 0.9796978149414063,
+    "delta_vs_uncached": -0.0007079467773437598,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "background_consistency",
+    "method": "SenCache",
+    "score": 0.9804482421875,
+    "delta_vs_uncached": 4.248046874999467e-05,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_flickering",
+    "method": "Uncached",
+    "score": 0.9893867281581842,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_flickering",
+    "method": "TeaCache",
+    "score": 0.9880470344599557,
+    "delta_vs_uncached": -0.0013396936982285057,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_flickering",
+    "method": "MagCache",
+    "score": 0.9873860364147261,
+    "delta_vs_uncached": -0.0020006917434580718,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_flickering",
+    "method": "SeaCache",
+    "score": 0.9874558384652231,
+    "delta_vs_uncached": -0.0019308896929610686,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_flickering",
+    "method": "SenCache",
+    "score": 0.9876995993595499,
+    "delta_vs_uncached": -0.0016871287986343075,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "motion_smoothness",
+    "method": "Uncached",
+    "score": 0.9804862628538997,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "motion_smoothness",
+    "method": "TeaCache",
+    "score": 0.9808592540515807,
+    "delta_vs_uncached": 0.0003729911976809719,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "motion_smoothness",
+    "method": "MagCache",
+    "score": 0.9808728405448719,
+    "delta_vs_uncached": 0.00038657769097216743,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "motion_smoothness",
+    "method": "SeaCache",
+    "score": 0.9808362457710114,
+    "delta_vs_uncached": 0.0003499829171116353,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "motion_smoothness",
+    "method": "SenCache",
+    "score": 0.9808054043888522,
+    "delta_vs_uncached": 0.000319141534952494,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "dynamic_degree",
+    "method": "Uncached",
+    "score": 0.72,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Motion proportion; higher does not automatically mean better"
+  },
+  {
+    "dimension": "dynamic_degree",
+    "method": "TeaCache",
+    "score": 0.68,
+    "delta_vs_uncached": -0.039999999999999925,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Motion proportion; higher does not automatically mean better"
+  },
+  {
+    "dimension": "dynamic_degree",
+    "method": "MagCache",
+    "score": 0.7,
+    "delta_vs_uncached": -0.020000000000000018,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Motion proportion; higher does not automatically mean better"
+  },
+  {
+    "dimension": "dynamic_degree",
+    "method": "SeaCache",
+    "score": 0.7,
+    "delta_vs_uncached": -0.020000000000000018,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Motion proportion; higher does not automatically mean better"
+  },
+  {
+    "dimension": "dynamic_degree",
+    "method": "SenCache",
+    "score": 0.68,
+    "delta_vs_uncached": -0.039999999999999925,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Motion proportion; higher does not automatically mean better"
+  },
+  {
+    "dimension": "aesthetic_quality",
+    "method": "Uncached",
+    "score": 0.6566365396976471,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "aesthetic_quality",
+    "method": "TeaCache",
+    "score": 0.6533964443206787,
+    "delta_vs_uncached": -0.003240095376968455,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "aesthetic_quality",
+    "method": "MagCache",
+    "score": 0.6499983710050583,
+    "delta_vs_uncached": -0.0066381686925888195,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "aesthetic_quality",
+    "method": "SeaCache",
+    "score": 0.6515364199876785,
+    "delta_vs_uncached": -0.005100119709968598,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "aesthetic_quality",
+    "method": "SenCache",
+    "score": 0.6501775991916656,
+    "delta_vs_uncached": -0.006458940505981503,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "imaging_quality",
+    "method": "Uncached",
+    "score": 0.6719662590921662,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "imaging_quality",
+    "method": "TeaCache",
+    "score": 0.6627060231338313,
+    "delta_vs_uncached": -0.009260235958334917,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "imaging_quality",
+    "method": "MagCache",
+    "score": 0.6598046033976989,
+    "delta_vs_uncached": -0.012161655694467366,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "imaging_quality",
+    "method": "SeaCache",
+    "score": 0.6656102955194165,
+    "delta_vs_uncached": -0.006355963572749701,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "imaging_quality",
+    "method": "SenCache",
+    "score": 0.6627874392662519,
+    "delta_vs_uncached": -0.009178819825914286,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "object_class",
+    "method": "Uncached",
+    "score": 0.74625,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "object_class",
+    "method": "TeaCache",
+    "score": 0.75875,
+    "delta_vs_uncached": 0.012500000000000067,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "object_class",
+    "method": "MagCache",
+    "score": 0.7775,
+    "delta_vs_uncached": 0.03125,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "object_class",
+    "method": "SeaCache",
+    "score": 0.77125,
+    "delta_vs_uncached": 0.025000000000000022,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "object_class",
+    "method": "SenCache",
+    "score": 0.78125,
+    "delta_vs_uncached": 0.03500000000000003,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "multiple_objects",
+    "method": "Uncached",
+    "score": 0.68875,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "multiple_objects",
+    "method": "TeaCache",
+    "score": 0.66875,
+    "delta_vs_uncached": -0.020000000000000018,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "multiple_objects",
+    "method": "MagCache",
+    "score": 0.68,
+    "delta_vs_uncached": -0.008749999999999925,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "multiple_objects",
+    "method": "SeaCache",
+    "score": 0.6825,
+    "delta_vs_uncached": -0.006249999999999978,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "multiple_objects",
+    "method": "SenCache",
+    "score": 0.70125,
+    "delta_vs_uncached": 0.012500000000000067,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "human_action",
+    "method": "Uncached",
+    "score": 0.76,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "human_action",
+    "method": "TeaCache",
+    "score": 0.78,
+    "delta_vs_uncached": 0.020000000000000018,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "human_action",
+    "method": "MagCache",
+    "score": 0.76,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "human_action",
+    "method": "SeaCache",
+    "score": 0.76,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "human_action",
+    "method": "SenCache",
+    "score": 0.8,
+    "delta_vs_uncached": 0.040000000000000036,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "color",
+    "method": "Uncached",
+    "score": 0.9372685185185186,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 36,
+    "n_prompts_declared": 10,
+    "pairing_note": "Valid sets differ by method; compare common records before paired inference",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "color",
+    "method": "TeaCache",
+    "score": 0.9538095238095238,
+    "delta_vs_uncached": 0.016541005291005217,
+    "n_valid_videos": 35,
+    "n_prompts_declared": 10,
+    "pairing_note": "Valid sets differ by method; compare common records before paired inference",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "color",
+    "method": "MagCache",
+    "score": 0.9343629343629343,
+    "delta_vs_uncached": -0.0029055841555842843,
+    "n_valid_videos": 37,
+    "n_prompts_declared": 10,
+    "pairing_note": "Valid sets differ by method; compare common records before paired inference",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "color",
+    "method": "SeaCache",
+    "score": 0.9428746928746929,
+    "delta_vs_uncached": 0.005606174356174387,
+    "n_valid_videos": 37,
+    "n_prompts_declared": 10,
+    "pairing_note": "Valid sets differ by method; compare common records before paired inference",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "color",
+    "method": "SenCache",
+    "score": 0.9515542328042328,
+    "delta_vs_uncached": 0.014285714285714235,
+    "n_valid_videos": 36,
+    "n_prompts_declared": 10,
+    "pairing_note": "Valid sets differ by method; compare common records before paired inference",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "spatial_relationship",
+    "method": "Uncached",
+    "score": 0.8110906241395593,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "spatial_relationship",
+    "method": "TeaCache",
+    "score": 0.7556152075316726,
+    "delta_vs_uncached": -0.055475416607886796,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "spatial_relationship",
+    "method": "MagCache",
+    "score": 0.7614636619702939,
+    "delta_vs_uncached": -0.04962696216926543,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "spatial_relationship",
+    "method": "SeaCache",
+    "score": 0.7599128803974255,
+    "delta_vs_uncached": -0.0511777437421338,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "spatial_relationship",
+    "method": "SenCache",
+    "score": 0.7506608268266696,
+    "delta_vs_uncached": -0.06042979731288978,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "scene",
+    "method": "Uncached",
+    "score": 0.08625,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "scene",
+    "method": "TeaCache",
+    "score": 0.06,
+    "delta_vs_uncached": -0.026249999999999996,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "scene",
+    "method": "MagCache",
+    "score": 0.085,
+    "delta_vs_uncached": -0.0012499999999999872,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "scene",
+    "method": "SeaCache",
+    "score": 0.06375,
+    "delta_vs_uncached": -0.022499999999999992,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "scene",
+    "method": "SenCache",
+    "score": 0.05875,
+    "delta_vs_uncached": -0.027499999999999997,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "appearance_style",
+    "method": "Uncached",
+    "score": 0.20415717592592553,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "appearance_style",
+    "method": "TeaCache",
+    "score": 0.2019660300925927,
+    "delta_vs_uncached": -0.002191145833332825,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "appearance_style",
+    "method": "MagCache",
+    "score": 0.20222777777777773,
+    "delta_vs_uncached": -0.0019293981481477984,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "appearance_style",
+    "method": "SeaCache",
+    "score": 0.2023653549382721,
+    "delta_vs_uncached": -0.0017918209876534308,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "appearance_style",
+    "method": "SenCache",
+    "score": 0.20235239197530974,
+    "delta_vs_uncached": -0.0018047839506157848,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_style",
+    "method": "Uncached",
+    "score": 0.23692883044481278,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_style",
+    "method": "TeaCache",
+    "score": 0.23867688328027725,
+    "delta_vs_uncached": 0.0017480528354644753,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_style",
+    "method": "MagCache",
+    "score": 0.23733526229858398,
+    "delta_vs_uncached": 0.0004064318537712053,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_style",
+    "method": "SeaCache",
+    "score": 0.23676092505455018,
+    "delta_vs_uncached": -0.000167905390262596,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "temporal_style",
+    "method": "SenCache",
+    "score": 0.23831657886505128,
+    "delta_vs_uncached": 0.0013877484202385049,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "overall_consistency",
+    "method": "Uncached",
+    "score": 0.20884540155529976,
+    "delta_vs_uncached": 0.0,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "overall_consistency",
+    "method": "TeaCache",
+    "score": 0.2086724729835987,
+    "delta_vs_uncached": -0.00017292857170106424,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "overall_consistency",
+    "method": "MagCache",
+    "score": 0.20656440079212188,
+    "delta_vs_uncached": -0.0022810007631778872,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "overall_consistency",
+    "method": "SeaCache",
+    "score": 0.2071351945400238,
+    "delta_vs_uncached": -0.0017102070152759663,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  },
+  {
+    "dimension": "overall_consistency",
+    "method": "SenCache",
+    "score": 0.2082708279788494,
+    "delta_vs_uncached": -0.0005745735764503546,
+    "n_valid_videos": 50,
+    "n_prompts_declared": 10,
+    "pairing_note": "Dimension summaries; no paired significance claim",
+    "interpretation_note": "Interpret this dimension independently; no overall mean"
+  }
+]

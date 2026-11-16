@@ -1,0 +1,1072 @@
+{
+  "schema_version": 1,
+  "flux": [
+    {
+      "prompt_id": "db_053",
+      "prompt": "Three cats and three dogs sitting on the grass.",
+      "category": "Counting",
+      "config_id": "uncached",
+      "method": "uncached",
+      "threshold": null,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 6.542486650054343,
+      "file": "flux_db_053_uncached.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "4d17d1caca9d87ed7134d830f9db34f23c2c232fa583b7efe2ca9fc77b443797",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/uncached/db_053.png"
+    },
+    {
+      "prompt_id": "db_053",
+      "prompt": "Three cats and three dogs sitting on the grass.",
+      "category": "Counting",
+      "config_id": "teacache_0.5",
+      "method": "teacache",
+      "threshold": 0.5,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 2.659325227024965,
+      "file": "flux_db_053_teacache_0.5.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "893d2fd49c55f6fb11f45c9ff2ee4428f043177f7996a88f2a4ca5e0490354b9",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/teacache_0.5/db_053.png"
+    },
+    {
+      "prompt_id": "db_053",
+      "prompt": "Three cats and three dogs sitting on the grass.",
+      "category": "Counting",
+      "config_id": "magcache_0.12",
+      "method": "magcache",
+      "threshold": 0.12,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 2.6433279890334234,
+      "file": "flux_db_053_magcache_0.12.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "f73dfbf2fabb4595fb77b97976053bd2c4228c70ef58c3caf394457e93bbb7e2",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/magcache_0.12/db_053.png"
+    },
+    {
+      "prompt_id": "db_053",
+      "prompt": "Three cats and three dogs sitting on the grass.",
+      "category": "Counting",
+      "config_id": "seacache_0.6",
+      "method": "seacache",
+      "threshold": 0.6,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 2.679769793059677,
+      "file": "flux_db_053_seacache_0.6.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "1c4604c5598074f5310b9542273918497799a0e890c841152be3005eddb666aa",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/seacache_0.6/db_053.png"
+    },
+    {
+      "prompt_id": "db_053",
+      "prompt": "Three cats and three dogs sitting on the grass.",
+      "category": "Counting",
+      "config_id": "sencache_2",
+      "method": "sencache",
+      "threshold": 2.0,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 2.646689255023375,
+      "file": "flux_db_053_sencache_2.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "ba5edc0c3e2aecd731616c9409e30a59f8ea11c8e4ba1a82a91e0d6da914a386",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/sencache_2/db_053.png"
+    },
+    {
+      "prompt_id": "db_101",
+      "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+      "category": "Gary Marcus et al.",
+      "config_id": "uncached",
+      "method": "uncached",
+      "threshold": null,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 6.52933396899607,
+      "file": "flux_db_101_uncached.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "6807ca285477ea9d7b4504f6681f01574516cb99f6de0123dbdbada6bf40fdb8",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/uncached/db_101.png"
+    },
+    {
+      "prompt_id": "db_101",
+      "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+      "category": "Gary Marcus et al.",
+      "config_id": "teacache_0.5",
+      "method": "teacache",
+      "threshold": 0.5,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 2.663619893952273,
+      "file": "flux_db_101_teacache_0.5.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "f7c34fe67adc61c70917fb8d7613dc4858951115fb1fb80b9d86959191c797b0",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/teacache_0.5/db_101.png"
+    },
+    {
+      "prompt_id": "db_101",
+      "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+      "category": "Gary Marcus et al.",
+      "config_id": "magcache_0.12",
+      "method": "magcache",
+      "threshold": 0.12,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 2.6415859770495445,
+      "file": "flux_db_101_magcache_0.12.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "84a1f42eb4d814a4ae894f313d7e8922dbc77b78e2cd0ae19bf44796c031c23c",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/magcache_0.12/db_101.png"
+    },
+    {
+      "prompt_id": "db_101",
+      "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+      "category": "Gary Marcus et al.",
+      "config_id": "seacache_0.6",
+      "method": "seacache",
+      "threshold": 0.6,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 2.680958427954465,
+      "file": "flux_db_101_seacache_0.6.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "d1c53674e7c0d483802ad63a75ac8932b82575f986fcf981de14bc1449dad203",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/seacache_0.6/db_101.png"
+    },
+    {
+      "prompt_id": "db_101",
+      "prompt": "A donkey and an octopus are playing a game. The donkey is holding a rope on one end, the octopus is holding onto the other. The donkey holds the rope in its mouth. A cat is jumping over the rope.",
+      "category": "Gary Marcus et al.",
+      "config_id": "sencache_2",
+      "method": "sencache",
+      "threshold": 2.0,
+      "seed": 0,
+      "gpu": "NVIDIA H200",
+      "generation_s": 2.652096571982838,
+      "file": "flux_db_101_sencache_2.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "58702d6525011dfd408aa52a405b295ee25be169b81a21dace7828537a3db553",
+      "source_archive": "CE6190_FLUX_Cases_and_Sen_Records_20261113(1).zip",
+      "source_member": "CE6190_FLUX_Supplement_20261113/case_originals/sencache_2/db_101.png"
+    }
+  ],
+  "wan": [
+    {
+      "file": "wan_success_baseline_frame01.png",
+      "dimensions": [
+        271,
+        157
+      ],
+      "sha256": "a1e51e0b0af5cef1b5feee12188a38e15733f391431912d7b5ed56272300c363",
+      "case": "success",
+      "method": "baseline",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        113,
+        398,
+        270
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": null,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_baseline_frame41.png",
+      "dimensions": [
+        271,
+        157
+      ],
+      "sha256": "b1680bb77fccd05f56ecafb46c717f7fb0ae38f969b992894644f58109c2392e",
+      "case": "success",
+      "method": "baseline",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        113,
+        705,
+        270
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": null,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_baseline_frame81.png",
+      "dimensions": [
+        271,
+        157
+      ],
+      "sha256": "2143d06cb1faa7059d27f9e4a0a657737d9ff9866f440748b846939a784eb058",
+      "case": "success",
+      "method": "baseline",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        113,
+        1012,
+        270
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": null,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_teacache_frame01.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "a0d47a3616b3e7613b45e0747a0bd376f2481151d7b21954226b2eaff5145be4",
+      "case": "success",
+      "method": "teacache",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        292,
+        398,
+        448
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_teacache_frame41.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "3e5fde4c0bec69a3bf1bc3274298e78f02f229a6ca13059275abb77ec783d954",
+      "case": "success",
+      "method": "teacache",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        292,
+        705,
+        448
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_teacache_frame81.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "4c1f5eddee85c5012eafe11946359e2f558a282da72a36a29d6bf6b5fa30df74",
+      "case": "success",
+      "method": "teacache",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        292,
+        1012,
+        448
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_magcache_frame01.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "6a66069b50374977480aec1cbfdffe63d768108498156d1d894e1623f82c2862",
+      "case": "success",
+      "method": "magcache",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        471,
+        398,
+        627
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": 4,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_magcache_frame41.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "540de9b4df635240c00fad439fb859cc3e2e0585e11cca5ad6f12a0f5931f769",
+      "case": "success",
+      "method": "magcache",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        471,
+        705,
+        627
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": 4,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_magcache_frame81.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "c366af84b74b8767c52ddcce668fc447c31e3a026bfcdb30738caf0d948a784a",
+      "case": "success",
+      "method": "magcache",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        471,
+        1012,
+        627
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": 4,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_seacache_frame01.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "00a856851af2138cd6438dac9a5a6c462a8470ccdcc2899b078f947eab9c3261",
+      "case": "success",
+      "method": "seacache",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        649,
+        398,
+        805
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.2,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_seacache_frame41.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "864d4bc790f2bac74bc73577ef3ae8e80ee5f92d2c4e2278757ff4e39477f199",
+      "case": "success",
+      "method": "seacache",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        649,
+        705,
+        805
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.2,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_seacache_frame81.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "4fc524eb93e49d7d7ba030a2ff728a7968dbe692d2e1ac50c4310a1de53c8d57",
+      "case": "success",
+      "method": "seacache",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        649,
+        1012,
+        805
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.2,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_sencache_frame01.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "5d07dcfdf999c8b2705ac39194990153895be0c51dfb19fdc78a55197bf6d3fc",
+      "case": "success",
+      "method": "sencache",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        828,
+        398,
+        984
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.5,
+      "max_skip": 3,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_sencache_frame41.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "ab8a986d76e3a8bd4aae3bc276ced6ba13232d06fbd475fa04babe0a6130cda1",
+      "case": "success",
+      "method": "sencache",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        828,
+        705,
+        984
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.5,
+      "max_skip": 3,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_success_sencache_frame81.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "d95dcbefb2518153627f48a80877eafd703c4186d78a3d6b5fbac3dac75a8b61",
+      "case": "success",
+      "method": "sencache",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        828,
+        1012,
+        984
+      ],
+      "source_panel": "analysis/figures/qualitative_success.png",
+      "source_panel_sha256": "2b31439fa4c9d84f33c016ce25a2d5807baf976d98dca56554bc15d67a41d374",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3bed2fd412cca0c9e73d",
+      "prompt_id": "0dea713ccf226afa",
+      "prompt": "a banana on the top of an apple, front view",
+      "seed": 2,
+      "threshold": 0.5,
+      "max_skip": 3,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_baseline_frame01.png",
+      "dimensions": [
+        271,
+        157
+      ],
+      "sha256": "ae33fe5da4f28a8e655b88a8fd9db0e3cfcbacb8fadff7253c5220d65de0fe5d",
+      "case": "failure",
+      "method": "baseline",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        113,
+        398,
+        270
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": null,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_baseline_frame41.png",
+      "dimensions": [
+        271,
+        157
+      ],
+      "sha256": "40912f35c14f213e37371d53f43f3ddb06aec4bcd73997c70e7bbf7d4bfad805",
+      "case": "failure",
+      "method": "baseline",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        113,
+        705,
+        270
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": null,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_baseline_frame81.png",
+      "dimensions": [
+        271,
+        157
+      ],
+      "sha256": "8f6aff8715c152687d866f9ef7b324f002af414c06d5c2136a69e0902eccf194",
+      "case": "failure",
+      "method": "baseline",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        113,
+        1012,
+        270
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": null,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_teacache_frame01.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "fac67e2a32e5f5b202cbc8c504f54649823201acfa904ddb2f0024c72663389f",
+      "case": "failure",
+      "method": "teacache",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        292,
+        398,
+        448
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_teacache_frame41.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "8aeb8c8f2eaa2dc1eb8193843544a062b5052e152afb4c865724bfc321c49706",
+      "case": "failure",
+      "method": "teacache",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        292,
+        705,
+        448
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_teacache_frame81.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "b5c8220ab7cf5234116bd7170e3d6a2f9e48606a62960567a5ed5663b9058be5",
+      "case": "failure",
+      "method": "teacache",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        292,
+        1012,
+        448
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_magcache_frame01.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "23421a278d9adeb47e8c964e0d22f412e6a21e82708437b5e9d17a60b1e1d940",
+      "case": "failure",
+      "method": "magcache",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        471,
+        398,
+        627
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": 4,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_magcache_frame41.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "74f23fa17325bc71cf0639e6e1e80740f72408c9f2ed7525c0d77d65b56b3855",
+      "case": "failure",
+      "method": "magcache",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        471,
+        705,
+        627
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": 4,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_magcache_frame81.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "e2684919321a8e23b65e8600c0d5b34cb85306d358a15c8b3994ec4400ae672d",
+      "case": "failure",
+      "method": "magcache",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        471,
+        1012,
+        627
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.12,
+      "max_skip": 4,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_seacache_frame01.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "04582e8d8ad032ac432b8a9f012a94e1ab6d02c1c628aa3154959c8924dec4c8",
+      "case": "failure",
+      "method": "seacache",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        649,
+        398,
+        805
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.2,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_seacache_frame41.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "e1a9a3a4a75fc473d849025964658eaf7025ae9c1d5d452268e091e12a661eac",
+      "case": "failure",
+      "method": "seacache",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        649,
+        705,
+        805
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.2,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_seacache_frame81.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "334a4244840348595cfe30de37645cb57935a1209ef03fbeafe4ee0087a88265",
+      "case": "failure",
+      "method": "seacache",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        649,
+        1012,
+        805
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.2,
+      "max_skip": null,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_sencache_frame01.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "8145a49a5e0e27c3b0617be25096a022c53606257379c4ec02cfc2d72a1c5f0a",
+      "case": "failure",
+      "method": "sencache",
+      "frame": 1,
+      "crop_bbox": [
+        127,
+        828,
+        398,
+        984
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.5,
+      "max_skip": 3,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_sencache_frame41.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "bfff0d324cdca2abedf8b43841ecf7ce007a0720a79fea391b7a84641c3a5f99",
+      "case": "failure",
+      "method": "sencache",
+      "frame": 41,
+      "crop_bbox": [
+        434,
+        828,
+        705,
+        984
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.5,
+      "max_skip": 3,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    },
+    {
+      "file": "wan_failure_sencache_frame81.png",
+      "dimensions": [
+        271,
+        156
+      ],
+      "sha256": "0a69e66dcfbf86176f64cab848bfd6afbf430a6bb6ac301a30a04e6ceb85c3f2",
+      "case": "failure",
+      "method": "sencache",
+      "frame": 81,
+      "crop_bbox": [
+        741,
+        828,
+        1012,
+        984
+      ],
+      "source_panel": "analysis/figures/qualitative_failure.png",
+      "source_panel_sha256": "55a5b05521088307559cd4225b13c71f92f068d818a0533e69c760ede25f5a70",
+      "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+      "source_prefix": "deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/",
+      "pair_id": "3594e7177730de4da5e2",
+      "prompt_id": "fd17d76d4ced9971",
+      "prompt": "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, zoom out",
+      "seed": 2,
+      "threshold": 0.5,
+      "max_skip": 3,
+      "selection_rule": "(fixed before looking at any frame): among prompt-seed pairs (sample_index < 5) where all four cached methods have a\nfidelity record, the SUCCESS case is the pair with the lowest worst-method LPIPS and the FAILURE case the pair with the\nhighest mean LPIPS over the four methods. Frames 1, 41 and 81 are shown uncropped for uncached + 4 methods.",
+      "selection_candidates": 550
+    }
+  ],
+  "notes": [
+    "FLUX inputs are unchanged original PNGs from the supplied supplement.",
+    "Wan inputs preserve exact frame-cell pixels cropped from the archived qualitative panels; they are rendered frame samples, not the original full-resolution video frames. No filters or content edits were applied.",
+    "Crop boxes use Pillow coordinates: left/top inclusive, right/bottom exclusive."
+  ]
+}

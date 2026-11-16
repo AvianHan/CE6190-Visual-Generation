@@ -1,0 +1,86 @@
+{
+  "input_hashes": {
+    "/workspace/scratch/14968d99de7d/group/CE6190_Results_Storyline_20261113.xlsx": "7914e2df11c3eb6c74a6a6f7f536a05d33db6a79986c97804e53c88eadecb69f",
+    "/workspace/scratch/14968d99de7d/CE6190-Visual-Generation-review/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/analysis/phaseC_summary.json": "61e1dd4a8900340b482ffe3232d263580018ef61f12607672e10b4ed69afff7d",
+    "/workspace/scratch/14968d99de7d/CE6190-Visual-Generation-review/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/analysis/phaseC_denoise_speedup.json": "028fbd89079d0d250307eac4ca8d5c5560a5b85194e0821b7f7292a332ae9018",
+    "/workspace/scratch/14968d99de7d/CE6190-Visual-Generation-review/results/drawbench_flux/summary_all.csv": "e8f5f39577298720989e3e07922ebe5555fa72b8a6e4b8ec3485c8c53ca7511b",
+    "/workspace/scratch/14968d99de7d/CE6190-Visual-Generation-review/results/drawbench_flux/pairwise_lpips.csv": "d31be9828aec237d6660d25a97571ba1dfff3adbbb722d8171ee8c497f33bbed",
+    "/workspace/scratch/14968d99de7d/CE6190-Visual-Generation-review/results/drawbench_flux/speed_vs_lpips.png": "e0095fe051b77f5b87b452fde679ea9bf68efeecb4f84263fd736417c469a110",
+    "/workspace/scratch/14968d99de7d/report_data_20261116/raw_source/schedule_stats.json": "214c3c2af4614386a6bd3f16f02acd331f3a8e367b92feb47f199190e114bc43",
+    "/workspace/scratch/14968d99de7d/report_data_20261116/raw_source/ablation_seacache_variants.json": "ef6597e91f1ced3a817c1b5b17048cdabc289fe8a3fc9cdaaeb1cf71a8d5b359",
+    "/workspace/scratch/14968d99de7d/report_data_20261116/raw_source/ablation_sencache_variants.json": "a7108718b7532d56df8fd31075b192507eda2946601066447cc5098b6db2547d",
+    "/workspace/scratch/14968d99de7d/report_data_20261116/raw_source/ablation_sencache_official.json": "c4903e0cf3b6f3ddbc1f054c134f52eb5405bc4529e55afe49619ff1905f68d4",
+    "/workspace/scratch/14968d99de7d/report_data_20261116/raw_source/ablation_seacache_official.json": "b109000f5c5ddf104acbb026219a187591dc8ae45893485ba0ffab04aa85de18",
+    "/workspace/scratch/14968d99de7d/report_data_20261116/raw_source/grid_summary.json": "8aa45ffbbe315219fd57f408bb8956fbd9a0a0d372ea0b507fc85af82a63cc9e"
+  },
+  "source_tables": {
+    "wan_primary": [
+      "https://github.com/AvianHan/CE6190-Visual-Generation/blob/7a23544a006eabfeca45648a79f189069d0ef2f5/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/analysis/phaseC_summary.json",
+      "https://github.com/AvianHan/CE6190-Visual-Generation/blob/7a23544a006eabfeca45648a79f189069d0ef2f5/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/analysis/phaseC_denoise_speedup.json"
+    ],
+    "wan_development_grid": {
+      "immediate_input": "raw_source/grid_summary.json (cross-checked against workbook)",
+      "upstream": "https://github.com/AvianHan/CE6190-Visual-Generation/blob/7a23544a006eabfeca45648a79f189069d0ef2f5/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/analysis/grid_summary.json"
+    },
+    "wan_component_ablations": {
+      "immediate_input": "raw_source/ablation_{seacache,sencache}_{official,variants}.json (workbook table had rounded means)",
+      "upstream": [
+        "https://github.com/AvianHan/CE6190-Visual-Generation/blob/7a23544a006eabfeca45648a79f189069d0ef2f5/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/analysis/ablation_seacache_official.json",
+        "https://github.com/AvianHan/CE6190-Visual-Generation/blob/7a23544a006eabfeca45648a79f189069d0ef2f5/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/analysis/ablation_seacache_variants.json",
+        "https://github.com/AvianHan/CE6190-Visual-Generation/blob/7a23544a006eabfeca45648a79f189069d0ef2f5/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/analysis/ablation_sencache_official.json",
+        "https://github.com/AvianHan/CE6190-Visual-Generation/blob/7a23544a006eabfeca45648a79f189069d0ef2f5/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/analysis/ablation_sencache_variants.json"
+      ]
+    },
+    "vbench_16dims": {
+      "immediate_input": [
+        "workbook VBench!A6:K22",
+        "workbook VBench!A26:F42"
+      ],
+      "upstream": "https://github.com/AvianHan/CE6190-Visual-Generation/blob/7a23544a006eabfeca45648a79f189069d0ef2f5/deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113/vbench_out/",
+      "verified_original_inputs": "raw_source/vbench/*_eval_results.json (all 80 scores/counts independently checked; see vbench_source_verification.json)"
+    },
+    "flux_all_configs": "https://github.com/AvianHan/CE6190-Visual-Generation/blob/3e27f5c39b318b2ba2e60d75582467b28cbbd615/results/drawbench_flux/summary_all.csv",
+    "flux_paired_lpips_comparisons": "https://github.com/AvianHan/CE6190-Visual-Generation/blob/3e27f5c39b318b2ba2e60d75582467b28cbbd615/results/drawbench_flux/pairwise_lpips.csv"
+  },
+  "rows": {
+    "wan_primary": 5,
+    "wan_development_grid": 14,
+    "wan_development_near_budget": 9,
+    "wan_component_ablations": 21,
+    "vbench_dimensions": 16,
+    "vbench_long": 80,
+    "flux_all_configs": 24,
+    "flux_near_budget": 19
+  },
+  "limitations": [
+    "VBench values were extracted from the workbook, then independently compared with all 80 original evaluator JSONs: all aggregate scores and returned per-video counts are exactly equal. Grid/ablation tables use the original source JSONs.",
+    "Wan primary exact values were cross-checked against restored original Phase C summary JSON.",
+    "Primary ratio-of-total-times speedups have no CI in these sources. Available mean-paired-speedup CI is a different statistic and is separately named.",
+    "Grid and ablation LPIPS CIs are marginal prompt-level bootstrap intervals; they are not CIs of differences between methods.",
+    "Ablation original JSON confirms Sea: 7 prompts/21 pairs; Sen: 8 prompts/24 pairs. Workbook ablation means were rounded, so exact raw-summary means replace them here.",
+    "VBench has no aggregate total. color valid sets differ (35–37). dynamic_degree is motion fraction. No significance claims.",
+    "FLUX per-config quality CIs not included; pairwise LPIPS comparison CIs are in separate source table.",
+    "Uncached fidelity is a self-reference definition; not a measured quality score.",
+    "No new GPU generation, image metric evaluation, or threshold experiment was run."
+  ],
+  "vbench_original_source_verification": {
+    "status": "pass",
+    "source_commit": "7a23544a006eabfeca45648a79f189069d0ef2f5",
+    "scope": "All 80 original VBench evaluator JSON aggregates and returned per-video record counts compared with report data tables; no model or evaluator run",
+    "expected_files": 80,
+    "read_files": 80,
+    "passed": 80,
+    "mismatches": 0,
+    "unverified": 0,
+    "max_absolute_score_difference": 0.0,
+    "all_valid_counts_equal": true,
+    "all_video_paths_unique": true,
+    "color_valid_counts": {
+      "Uncached": 36,
+      "MagCache": 37,
+      "SeaCache": 37,
+      "SenCache": 36,
+      "TeaCache": 35
+    }
+  }
+}

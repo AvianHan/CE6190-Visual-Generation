@@ -1,0 +1,12 @@
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrrrrr@{}}
+\toprule
+Method & $\epsilon$ & \shortstack{Time\\(s)} & \shortstack{Gen.\\speedup} & \shortstack{Denoise\\speedup} & \shortstack{PSNR $\uparrow$\\(dB)} & SSIM $\uparrow$ & LPIPS $\downarrow$ & \shortstack{Compute\\(\%)} \\
+\midrule
+Uncached & -- & 271.33 & 1.000 & 1.000 & -- & -- & -- & 100.0 \\
+\midrule
+TeaCache & 0.12 & 171.52 & 1.582 & 2.369 & 21.80 & 0.794 & 0.1464 & 42.0 \\
+MagCache & 0.12 & 171.48 & 1.582 & 2.370 & 25.30 & 0.871 & 0.0873 & 42.0 \\
+SeaCache & 0.2 & 182.53 & 1.486 & 2.058 & 29.22 & 0.929 & \textbf{0.0482} & 48.0 \\
+SenCache & 0.5 & 164.84 & 1.646 & 2.606 & 22.10 & 0.800 & 0.1423 & 38.2 \\
+\bottomrule
+\end{tabular*}

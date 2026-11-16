@@ -1,0 +1,257 @@
+{
+    "human_action": [
+        0.76,
+        [
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is marching-0.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is marching-1.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is marching-2.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is marching-3.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is marching-4.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is tasting beer-0.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is tasting beer-1.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is tasting beer-2.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is tasting beer-3.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is tasting beer-4.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shooting basketball-0.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shooting basketball-1.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shooting basketball-2.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shooting basketball-3.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shooting basketball-4.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is taking a shower-0.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is taking a shower-1.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is taking a shower-2.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is taking a shower-3.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is taking a shower-4.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is hula hooping-0.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is hula hooping-1.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is hula hooping-2.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is hula hooping-3.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is hula hooping-4.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is washing hands-0.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is washing hands-1.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is washing hands-2.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is washing hands-3.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is washing hands-4.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is cutting nails-0.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is cutting nails-1.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is cutting nails-2.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is cutting nails-3.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is cutting nails-4.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is doing aerobics-0.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is doing aerobics-1.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is doing aerobics-2.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is doing aerobics-3.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is doing aerobics-4.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is getting a haircut-0.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is getting a haircut-1.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is getting a haircut-2.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is getting a haircut-3.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is getting a haircut-4.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shining shoes-0.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shining shoes-1.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shining shoes-2.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shining shoes-3.mp4",
+                "video_results": false,
+                "cor_num_per_video": 0
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/A person is shining shoes-4.mp4",
+                "video_results": true,
+                "cor_num_per_video": 1
+            }
+        ]
+    ]
+}

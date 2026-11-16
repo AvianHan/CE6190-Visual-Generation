@@ -1,114 +1,54 @@
-# Text-to-image extension: FLUX.1-dev on DrawBench
+# DrawBench × FLUX.1-dev
 
-## Setup
+## Protocol
 
-We carried the comparison from Wan2.1/VBench over to text-to-image generation. The setup is:
+We evaluate 200 DrawBench prompts at seed 0 using FLUX.1-dev (revision `3de623fc3c33e44ffbe2bad470d0f45bccf2eb21`), 28 FlowMatch-Euler steps, 1024×1024, guidance 3.5, BF16 and batch size 1 on H200. The 24 configurations comprise Uncached, four cache methods and a fixed-schedule control. Sen-FLUX is our port of the Wan decision rule, calibrated on 64 DOCCI images; it is not an official SenCache FLUX result.
 
-- **Generation:** FLUX.1-dev (revision `3de623f`), 1024×1024, 28 FlowMatch-Euler steps, guidance 3.5, BF16.
-- **Prompts:** all 200 DrawBench prompts, with seed 0 for every prompt.
-- **Software:** one NVIDIA H200, diffusers 0.32.2.
+All methods use the shared residual-cache forward. The fixed control computes the first six steps and distributes the remaining computes, including the final step. Sen instead uses a tighter early threshold; its first six computes are observed, not hard-coded.
 
-**Shared caching mechanism ("how").** All methods share one compute path. On a reuse step, the whole double- and single-block stack is replaced by `h_in + r`, where `r = h_out − h_in` is the cached residual from the most recent full computation. Only the rule that decides *when* to recompute differs between methods:
+PSNR/SSIM/LPIPS measure similarity to the paired Uncached output. CLIP and ImageReward are automated quality/alignment proxies. Speedup is the median paired same-GPU time ratio. Timing covers pipeline generation and excludes model loading and PNG saving. Two Uncached batches produced identical images; later configurations use their own batch's timing reference. Threshold grids were selected for speed coverage, not a globally optimal policy.
 
-- **TeaCache, MagCache, SeaCache:** the rule is the authors' own FLUX code, unchanged.
-- **Equivalence check:** on a small random FLUX model, our forward pass produced bit-identical outputs to each upstream forward pass, across 8 thresholds per method.
+## Representative operating points
 
-**SenCache port.** SenCache has no official FLUX implementation, so we ported the decision rule from the authors' Wan2.1 code. We checked it on a stub model: our rule made the same compute/reuse decision as the upstream rule at every step, for 24 threshold combinations. The rule and its settings are:
+LPIPS is lower when closer to Uncached. Values below are observed means and speedups, not interpolated measurements.
 
-- **Decision rule:** reuse the cache while `J_z·‖Δz‖ + J_t·|Δt|` stays below the threshold. A stricter threshold (0.045) applies during the first 20% of steps, and at most K = 3 reuses may occur in a row. These values come from the authors' Wan README, since no FLUX values exist.
-- **Calibration:** `J_z` and `J_t` were measured with the authors' finite-difference procedure on 64 real images from DOCCI, which do not overlap DrawBench. The per-image values were averaged arithmetically.
-- **Threshold scaling:** the threshold is multiplied by `sqrt(numel(z))`. The constant hard-coded upstream (1447.98) equals `sqrt(numel)` of the Wan latent, so this is the same scaling applied to the FLUX latent size (factor 512).
-- **Threshold choice:** the threshold-to-speed relationship was mapped on 16 held-out DOCCI captions before any DrawBench run.
+| Approximate budget | Configuration | Speedup | LPIPS |
+|---|---|---:|---:|
+| 1.7× | Sea 0.3 | 1.71× | 0.06286 |
+| | Sen 0.5 | 1.72× | 0.07201 |
+| | Fixed 16 | 1.72× | 0.07216 |
+| | Tea 0.25 | 1.72× | 0.23170 |
+| 2.25× | Sen 1.0 | 2.26× | 0.12593 |
+| | Fixed 12 | 2.27× | 0.13845 |
+| | Sea 0.45 | 2.25× | 0.14015 |
+| | Mag 0.09 | 2.27× | 0.17627 |
+| 2.45× | Sen 2 | 2.46× | 0.15758 |
+| | Sea 0.6 | 2.44× | 0.19301 |
+| | Mag 0.12 | 2.47× | 0.19960 |
+| | Tea 0.5 | 2.45× | 0.32311 |
+| 3.0× | Fixed 9 | 2.98× | 0.24801 |
+| | Mag 0.24 | 2.99× | 0.25835 |
 
-**Static-schedule control.** We added a prompt-independent schedule of our own design, which is not a published method. It computes the first 6 steps (20%, the same as SenCache's strict phase), then spreads the remaining refreshes evenly and always computes the final step.
+Tea 0.8 reaches 3.30×/0.42134 LPIPS, a different budget. Sea/Sen have no measured 3× point in this grid.
 
-**Metrics.** We report two groups of metrics, which answer different questions:
-
-- **Fidelity** (PSNR, SSIM, LPIPS): how close each image is to the uncached image for the same prompt and seed.
-- **Quality** (CLIP score with ViT-L/14, ImageReward v1.0): how well the image matches the prompt and how good it looks.
-
-Speedup is the median over prompts of `t_uncached / t_cached`, measured end to end (text encoding through VAE decoding) on the same GPU. We re-ran the uncached reference, and it reproduced all 200 images bit-exactly, with a median time ratio of 0.9999. Every configuration used about 33.9 GiB of peak memory, so memory does not separate the methods.
-
-Thresholds were chosen only to land on shared speed budgets: the initial grids came from the method defaults and the DOCCI pilot, and later fill-in points were interpolated from measured speedups. None were tuned for quality on DrawBench. Comparisons are made at matched speedup, never at matched threshold. Thresholds are not comparable across methods.
-
-## Results
-
-![speed vs LPIPS](speed_vs_lpips.png)
-
-| Budget | Config (speedup) | PSNR ↑ | SSIM ↑ | LPIPS ↓ | CLIP | ImageReward |
-|---|---|---|---|---|---|---|
-| — | Uncached (1.00×, 6.51 s) | — | — | — | 27.55 | 1.030 |
-| ~1.7× | SeaCache 0.3 (1.71×) | **29.43** | **0.930** | **0.063** | 27.62 | 1.008 |
-| | SenCache 0.5 (1.72×) | 28.31 | 0.920 | 0.072 | 27.56 | 1.025 |
-| | Static, 16 steps (1.72×) | 28.19 | 0.920 | 0.072 | 27.59 | 1.023 |
-| | TeaCache 0.25 (1.72×) | 19.77 | 0.786 | 0.232 | 27.89 | 1.049 |
-| ~1.8× | SenCache 0.6 (1.83×) | **28.04** | **0.916** | **0.078** | 27.60 | 1.025 |
-| | MagCache 0.06 (1.84×) | 26.48 | 0.898 | 0.097 | 27.57 | 1.020 |
-| ~2.25× | SenCache 1.0 (2.26×) | **25.62** | **0.875** | **0.126** | 27.46 | 1.007 |
-| | Static, 12 steps (2.27×) | 24.87 | 0.864 | 0.138 | 27.53 | 1.008 |
-| | SeaCache 0.45 (2.25×) | 24.26 | 0.862 | 0.140 | 27.58 | 1.007 |
-| | MagCache 0.09 (2.27×) | 22.42 | 0.832 | 0.176 | 27.69 | 1.027 |
-| ~2.45× | SenCache 2 (2.46×) | **24.56** | **0.846** | **0.158** | 27.49 | 1.004 |
-| | SeaCache 0.6 (2.44×) | 22.25 | 0.822 | 0.193 | 27.78 | 1.014 |
-| | MagCache 0.12 (2.47×) | 21.82 | 0.817 | 0.200 | 27.68 | 1.005 |
-| | TeaCache 0.5 (2.45×) | 17.97 | 0.727 | 0.323 | 27.78 | 1.017 |
-| ~3× | Static, 9 steps (2.98×) | **22.44** | **0.794** | **0.248** | 27.56 | 0.948 |
-| | MagCache 0.24 (2.99×) | 20.40 | 0.774 | 0.258 | 27.93 | 0.995 |
-| | TeaCache 0.8 (3.30×) | 16.69 | 0.674 | 0.421 | 27.49 | 0.949 |
-
-![examples at about 2.45x](examples_2.45x.jpg)
-
-Four prompts drawn at random (RNG seed 0, not hand-picked) at about 2.45×. TeaCache drifts in layout and identity. MagCache, SeaCache and SenCache keep the uncached composition and differ in fine detail, matching the LPIPS ranking.
-
-Paired LPIPS differences with 95% bootstrap confidence intervals over prompts are in `pairwise_lpips.csv`. Every ranking claimed below has a confidence interval that excludes zero, unless we call it a tie. Complete per-configuration and per-image numbers are in `summary_all.csv` and `per_image_metrics_all.csv`.
+![Speed versus fidelity](speed_vs_lpips.png)
 
 ## Findings
 
-**1. Fidelity differences between methods are large, but quality metrics barely move.** At matched speed, LPIPS differs by up to 5× between methods. TeaCache is the furthest from uncached at every budget: SeaCache beats it on 100% of prompts at about 1.7×, and SenCache on 97.5% at about 2.45×. Yet CLIP score stays within ±0.4 of uncached for every configuration. ImageReward stays within about 0.03 up to 2.5×, and only begins to fall near 3× (0.95 for both TeaCache 0.8 and Static-9, compared with 1.03 uncached). A cached image can therefore drift a long way from the uncached image while remaining an equally good answer to the prompt. We therefore report fidelity as "deviation from the full computation", not as image quality, and we do not rank methods on CLIP or ImageReward.
+1. **The preferred method depends on the budget.** Sea has the lowest mean LPIPS among the displayed 1.7× points; Sen has the lowest at approximately 2.25× and 2.45×. These results do not establish universal superiority over Tea/Mag or across metrics/tasks.
+2. **Computation count is insufficient.** Tea/Mag/Sen at approximately 2.45× all compute eleven stages but differ substantially in LPIPS. Schedule placement is a plausible mechanism; this observational comparison does not isolate its causal effect.
+3. **Adaptation adds value in some regimes.** Sen 1.0 improves mean LPIPS over Fixed 12 by about 0.0125, winning on 93.5% of paired prompts. Sen 0.5 and Fixed 16 are not separated by the reported paired interval. At about 1.96×, Fixed 14 has better LPIPS/SSIM than Sen 0.8, while PSNR favors Sen. The control is one designed schedule, not the best possible static policy.
+4. **The high-threshold Sen batch is cap-controlled.** All 200 threshold-2 records share one schedule. A read-only audit attributes every post-prefix refresh to K=3 and proves a conditional schedule-preserving threshold interval. The eleven computes attain the count minimum conditional on the observed six-compute prefix. This is not a universal 2.45× ceiling, nor evidence from an unmeasured threshold-1.2 run. See [proof](../../report/sen_plateau_proof.md).
+5. **Fidelity and task quality answer different questions.** CLIP/ImageReward do not follow the LPIPS ranking consistently. Similar proxy averages do not establish equal human-perceived quality. The uncached reference can itself miss object counts or prompt relations.
 
-**2. The position of refresh steps explains most of the ranking.** The methods' decision rules vary very little with the prompt (`schedules.csv`):
+![Four paired cases](examples_2.45x.jpg)
 
-- MagCache produces one identical schedule for all 200 prompts at every threshold.
-- SenCache at threshold 2 also produces a single schedule.
-- The other configurations produce 1–11 distinct schedules, and the most common schedule covers 27–100% of prompts.
+The four prompts were selected by RNG seed 0. They illustrate deviations from the reference; each case must also be checked against its text prompt. The original PNGs in the separate supplement support closer inspection.
 
-In practice, each method acts as a schedule generator. The best-performing schedules protect the early, high-noise steps:
+## Wan comparison and limitations
 
-- **Early steps computed, out of the first 6:** SenCache 6, SeaCache 4–6, MagCache 4–5, TeaCache 2–4. This order matches the fidelity order at every budget.
-- **The simple static control** (compute 6 steps, then refresh evenly) beats MagCache at about 2.25× (80% of prompts). It roughly matches MagCache at about 3×, with ΔLPIPS −0.010 and a 95% CI of [−0.019, −0.0015]. It beats TeaCache by a wide margin at every budget.
+The final Wan test is a 110-prompt VBench subset, with 550 primary videos per method on A100. Its LPIPS/speed pairs are Sea 0.0482/1.49×, Mag 0.0873/1.58×, Sen 0.1423/1.65× and Tea 0.1464/1.58×. These thresholds target at least 2× denoising speed on development data; they are not an exactly matched end-to-end budget. Wan's larger retained runtime prevents direct speed comparison with FLUX.
 
-**3. Adaptive rules help only in specific regimes.** The comparison against static schedules with the same number of steps shows where each decision rule adds value:
+`results/wan_schedules/schedules_wan.csv` is a historical 183-run sample, not the final complete Wan audit. Do not use it to claim that all Wan schedules are prompt-independent, or that K alone explains seventeen computes. No Wan fixed-schedule control was run.
 
-- **SeaCache at about 1.7×** is better than the static schedule, with ΔLPIPS −0.009 and a CI that excludes zero.
-- **SenCache at about 2.25×** is better than the static schedule on 93.5% of prompts, with ΔLPIPS −0.013. Its refreshes are placed unevenly, following the calibrated sensitivity curve.
-- **SenCache at about 1.7×** ties with the static schedule (ΔLPIPS −0.0002, CI includes 0).
-- **SenCache at about 1.96×** is slightly worse than the static schedule, though the static schedule computes about 0.6 more steps on average.
-- **SeaCache at about 2.25×** ties with the static schedule.
-
-The gain from SenCache therefore comes from a calibrated, timestep-dependent placement that is nearly identical for every prompt. It does not come from adapting to each sample.
-
-**4. SenCache has a speed ceiling under its default rules.** Two rules cap the speedup: every step in the first 20% is computed (in practice no step there passes the strict threshold), and no more than 3 reuses may occur in a row. Together they limit SenCache to 11 of 28 computed steps, about 2.45×. Above a threshold of about 1.2, the schedule stops changing and the method becomes a fixed schedule: the first 6 steps, then every 4th step.
-
-Wan2.1 shows the same ceiling (cross-check below). So "best fidelity at 2.45×" describes this fixed schedule, not the sensitivity criterion. SenCache cannot reach the 3× budget without changing K, which would no longer be the authors' setting.
-
-**5. Speedup is set almost entirely by the fraction of refreshed steps.** At a refresh ratio of 0.393, TeaCache, SenCache and MagCache reach 2.45×, 2.46× and 2.47× respectively. SeaCache's spectral filter adds a small overhead. Comparing methods at matched refresh ratio is therefore close to comparing them at matched wall-clock time.
-
-## Cross-check on Wan2.1 (existing runs, no new experiments)
-
-We read the compute/reuse traces of the 183 Wan2.1-T2V-1.3B runs that are already complete (`scripts/wan_schedule_audit.py`, output in `results/wan_schedules/schedules_wan.csv` in the repository (`wan_schedules/` in the handoff package)). These runs use 50 steps with CFG, one A100, and 16–24 prompt–seed pairs per configuration. Two schedule-level findings carry over:
-
-- **No per-prompt adaptation (finding 2).** TeaCache (thresholds 0.04–0.16) and SenCache (0.5, 2, 4) each produce a single schedule for every prompt–seed pair. SenCache at threshold 1 produces two schedules, one of which covers 21 of the 22 pairs.
-- **SenCache ceiling (finding 4).** Thresholds 1, 2 and 4 give the same schedule: 17 of 50 steps computed, a refresh ratio of 0.34. This matches the plateau at about 2.47× in the Wan speed table. On Wan the strict early phase still skips some steps (7 of the first 10 are computed), so here the K = 3 limit alone sets the ceiling.
-
-Finding 3 depends on the static-schedule control, which was not run on Wan, so it rests on FLUX alone. Two observations make a partial check possible on Wan without new runs, once fidelity is computed for the Wan outputs:
-
-- SenCache at threshold 2 and TeaCache at 0.16 both refresh 34% of steps through different fixed schedules, so they can be compared directly.
-- MagCache and SeaCache have only one finished Wan run each. Their schedules can be audited with the same script as their runs complete.
-
-## Limitations
-
-- Single seed per prompt. Close calls are reported as ties, and differences are given as paired win rates with bootstrap confidence intervals.
-- The static-schedule control (finding 3) exists only on FLUX; the Wan cross-check covers findings 2 and 4 from existing traces.
-- The SenCache FLUX version is our own port, including its calibration data, its threshold scaling, and the K and start threshold taken from Wan. It is not an authors' result.
-- The static control is one hand-designed schedule, not an optimised one. A better static schedule could close the remaining gaps in finding 3.
-- Fidelity is measured against the uncached FLUX output, not against real images or human ratings.
+DrawBench uses one seed. Paired bootstrap intervals describe this prompt set and are exploratory across many comparisons. Original Sen per-image records omit runtime binding of K, early threshold and profile hash; the supplement supplies retrospective provenance. The existing aggregate CSVs remain unchanged. Some rows of `pairwise_lpips.csv` have different speeds (e.g. Fixed 10 vs Mag 0.24); read both speed columns before calling them matched-budget comparisons.

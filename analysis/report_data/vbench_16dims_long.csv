@@ -1,0 +1,81 @@
+dimension,method,score,delta_vs_uncached,n_valid_videos,n_prompts_declared,pairing_note,interpretation_note
+subject_consistency,Uncached,0.9611249516159296,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+subject_consistency,TeaCache,0.9630174320712686,0.001892480455338963,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+subject_consistency,MagCache,0.9622990756444633,0.001174124028533674,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+subject_consistency,SeaCache,0.9616853734329343,0.0005604218170046638,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+subject_consistency,SenCache,0.9622343022301794,0.001109350614249771,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+background_consistency,Uncached,0.98040576171875,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+background_consistency,TeaCache,0.9804511108398437,4.534912109366296e-05,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+background_consistency,MagCache,0.9793540649414062,-0.0010516967773438468,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+background_consistency,SeaCache,0.9796978149414063,-0.0007079467773437598,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+background_consistency,SenCache,0.9804482421875,4.248046874999467e-05,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_flickering,Uncached,0.9893867281581842,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_flickering,TeaCache,0.9880470344599557,-0.0013396936982285057,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_flickering,MagCache,0.9873860364147261,-0.0020006917434580718,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_flickering,SeaCache,0.9874558384652231,-0.0019308896929610686,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_flickering,SenCache,0.9876995993595499,-0.0016871287986343075,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+motion_smoothness,Uncached,0.9804862628538997,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+motion_smoothness,TeaCache,0.9808592540515807,0.0003729911976809719,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+motion_smoothness,MagCache,0.9808728405448719,0.00038657769097216743,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+motion_smoothness,SeaCache,0.9808362457710114,0.0003499829171116353,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+motion_smoothness,SenCache,0.9808054043888522,0.000319141534952494,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+dynamic_degree,Uncached,0.72,0.0,50,10,Dimension summaries; no paired significance claim,Motion proportion; higher does not automatically mean better
+dynamic_degree,TeaCache,0.68,-0.039999999999999925,50,10,Dimension summaries; no paired significance claim,Motion proportion; higher does not automatically mean better
+dynamic_degree,MagCache,0.7,-0.020000000000000018,50,10,Dimension summaries; no paired significance claim,Motion proportion; higher does not automatically mean better
+dynamic_degree,SeaCache,0.7,-0.020000000000000018,50,10,Dimension summaries; no paired significance claim,Motion proportion; higher does not automatically mean better
+dynamic_degree,SenCache,0.68,-0.039999999999999925,50,10,Dimension summaries; no paired significance claim,Motion proportion; higher does not automatically mean better
+aesthetic_quality,Uncached,0.6566365396976471,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+aesthetic_quality,TeaCache,0.6533964443206787,-0.003240095376968455,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+aesthetic_quality,MagCache,0.6499983710050583,-0.0066381686925888195,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+aesthetic_quality,SeaCache,0.6515364199876785,-0.005100119709968598,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+aesthetic_quality,SenCache,0.6501775991916656,-0.006458940505981503,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+imaging_quality,Uncached,0.6719662590921662,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+imaging_quality,TeaCache,0.6627060231338313,-0.009260235958334917,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+imaging_quality,MagCache,0.6598046033976989,-0.012161655694467366,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+imaging_quality,SeaCache,0.6656102955194165,-0.006355963572749701,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+imaging_quality,SenCache,0.6627874392662519,-0.009178819825914286,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+object_class,Uncached,0.74625,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+object_class,TeaCache,0.75875,0.012500000000000067,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+object_class,MagCache,0.7775,0.03125,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+object_class,SeaCache,0.77125,0.025000000000000022,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+object_class,SenCache,0.78125,0.03500000000000003,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+multiple_objects,Uncached,0.68875,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+multiple_objects,TeaCache,0.66875,-0.020000000000000018,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+multiple_objects,MagCache,0.68,-0.008749999999999925,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+multiple_objects,SeaCache,0.6825,-0.006249999999999978,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+multiple_objects,SenCache,0.70125,0.012500000000000067,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+human_action,Uncached,0.76,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+human_action,TeaCache,0.78,0.020000000000000018,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+human_action,MagCache,0.76,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+human_action,SeaCache,0.76,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+human_action,SenCache,0.8,0.040000000000000036,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+color,Uncached,0.9372685185185186,0.0,36,10,Valid sets differ by method; compare common records before paired inference,Interpret this dimension independently; no overall mean
+color,TeaCache,0.9538095238095238,0.016541005291005217,35,10,Valid sets differ by method; compare common records before paired inference,Interpret this dimension independently; no overall mean
+color,MagCache,0.9343629343629343,-0.0029055841555842843,37,10,Valid sets differ by method; compare common records before paired inference,Interpret this dimension independently; no overall mean
+color,SeaCache,0.9428746928746929,0.005606174356174387,37,10,Valid sets differ by method; compare common records before paired inference,Interpret this dimension independently; no overall mean
+color,SenCache,0.9515542328042328,0.014285714285714235,36,10,Valid sets differ by method; compare common records before paired inference,Interpret this dimension independently; no overall mean
+spatial_relationship,Uncached,0.8110906241395593,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+spatial_relationship,TeaCache,0.7556152075316726,-0.055475416607886796,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+spatial_relationship,MagCache,0.7614636619702939,-0.04962696216926543,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+spatial_relationship,SeaCache,0.7599128803974255,-0.0511777437421338,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+spatial_relationship,SenCache,0.7506608268266696,-0.06042979731288978,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+scene,Uncached,0.08625,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+scene,TeaCache,0.06,-0.026249999999999996,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+scene,MagCache,0.085,-0.0012499999999999872,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+scene,SeaCache,0.06375,-0.022499999999999992,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+scene,SenCache,0.05875,-0.027499999999999997,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+appearance_style,Uncached,0.20415717592592553,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+appearance_style,TeaCache,0.2019660300925927,-0.002191145833332825,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+appearance_style,MagCache,0.20222777777777773,-0.0019293981481477984,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+appearance_style,SeaCache,0.2023653549382721,-0.0017918209876534308,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+appearance_style,SenCache,0.20235239197530974,-0.0018047839506157848,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_style,Uncached,0.23692883044481278,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_style,TeaCache,0.23867688328027725,0.0017480528354644753,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_style,MagCache,0.23733526229858398,0.0004064318537712053,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_style,SeaCache,0.23676092505455018,-0.000167905390262596,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+temporal_style,SenCache,0.23831657886505128,0.0013877484202385049,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+overall_consistency,Uncached,0.20884540155529976,0.0,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+overall_consistency,TeaCache,0.2086724729835987,-0.00017292857170106424,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+overall_consistency,MagCache,0.20656440079212188,-0.0022810007631778872,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+overall_consistency,SeaCache,0.2071351945400238,-0.0017102070152759663,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean
+overall_consistency,SenCache,0.2082708279788494,-0.0005745735764503546,50,10,Dimension summaries; no paired significance claim,Interpret this dimension independently; no overall mean

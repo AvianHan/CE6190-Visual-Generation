@@ -1,0 +1,87 @@
+{
+  "status": "pass",
+  "scope": "Existing 200 Sen-FLUX threshold-2 records; no model execution",
+  "zip_path": "/workspace/scratch/14968d99de7d/CE6190-Visual-Generation-review/results/drawbench_flux/sen_plateau_records.zip",
+  "source_member": "CE6190_FLUX_Supplement_20261113/previous_handoff/code/src/flux_cache.py",
+  "source_sha256": "046e2863fe52a210178817c736c8be8bd23a0d197f4fec82dd0c5430710ca43a",
+  "profile_sha256": "32f30df679c913211131882f8720c664b0d50fed6e349ba49cde6bad8a43b2e3",
+  "records_sha256_sorted_paths_and_bytes": "88660537a6a6ecca016457c629e43aa8c10540b7124d2598168d7a4a993657ec",
+  "record_count": 200,
+  "unique_prompts": 200,
+  "seeds": {
+    "0": 200
+  },
+  "gpus": {
+    "NVIDIA H200": 200
+  },
+  "thresholds": {
+    "2.0": 200
+  },
+  "declared_gate_parameters": {
+    "steps": 28,
+    "K": 3,
+    "threshold_start": 0.045,
+    "threshold_main": 2.0,
+    "switch_after_steps": 6
+  },
+  "schedules": {
+    "1111110001000100010001000100": 200
+  },
+  "compute_counts": {
+    "11": 200
+  },
+  "longest_reuse_run": 3,
+  "observed_prefix_compute_steps": 6,
+  "early_noninitial_error_min": 0.35405504423704093,
+  "early_noninitial_error_max": 2.8174289949616065,
+  "post_prefix_reuse_events": 3400,
+  "post_prefix_cap_refresh_events": 1000,
+  "post_prefix_uncapped_refresh_events": 0,
+  "max_reuse_error_witness": {
+    "normalized_error": 1.606399434983263,
+    "prompt_id": "db_070",
+    "step_1based": 9,
+    "record_path": "CE6190_FLUX_Supplement_20261113/run_records/drawbench_flux_28step_sencache/sencache_2/db_070.json"
+  },
+  "schedule_preserving_main_threshold_interval": {
+    "lower_exclusive": 1.606399434983263,
+    "upper_inclusive": null,
+    "upper_unbounded": true,
+    "interpretation": "epsilon > lower, while early threshold, K, source, profile, inputs, and deterministic execution stay fixed"
+  },
+  "threshold_2_margin_above_lower": 0.3936005650167369,
+  "compute_count_bounds": {
+    "first_step_only": 7,
+    "conditional_on_observed_prefix": 11,
+    "conditional_bound_attained": true
+  },
+  "limitations": [
+    "First six computes are observed and explained by tight-threshold comparisons, not unconditionally forced by SenGate.",
+    "K and threshold_start are reconstructed from delivered provenance/source; original per-image JSON does not bind them or the profile hash at runtime.",
+    "The platform proof is conditional on fixed inputs/profile/source and deterministic forward/sampler execution, and concerns these 200 prompts at seed0 only.",
+    "Identical schedules under those assumptions do not prove best quality, global generalization, or that early steps are intrinsically more important.",
+    "No changed threshold or model generation was actually executed."
+  ],
+  "check_counts": {
+    "exactly_200_original_records": 1,
+    "declared_K_is_3": 1,
+    "declared_start_is_0_045": 1,
+    "declared_steps_is_28": 1,
+    "delivered_profile_hash_matches": 1,
+    "method_and_threshold_identity": 200,
+    "seed_and_gpu": 200,
+    "28_decisions_and_errors": 200,
+    "binary_decisions": 200,
+    "initial_compute_without_cached_error": 200,
+    "observed_first_six_compute": 200,
+    "eleven_compute_steps": 200,
+    "refresh_ratio_matches": 200,
+    "equals_cap_schedule_after_observed_prefix": 200,
+    "finite_nonnegative_normalized_error": 5400,
+    "decision_matches_logged_error_and_declared_gate": 5400,
+    "no_more_than_three_consecutive_reuses": 5400,
+    "exact_prompt_coverage_without_duplicates": 1,
+    "no_uncapped_refreshes_after_step_six": 1
+  },
+  "violations": []
+}

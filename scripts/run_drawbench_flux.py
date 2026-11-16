@@ -3,7 +3,9 @@
 Each shard runs *all* configs for its prompts on one GPU, so paired speedups
 (uncached / cached, same prompt, same GPU) are well defined. Outputs per job:
 ``<out>/<config_id>/<prompt_id>.png`` (lossless) + ``.json`` (timing, refresh
-schedule, peak memory). ``--resume`` skips jobs whose json already exists.
+schedule, peak memory). ``--resume`` skips only verified PNG/JSON pairs with
+matching scientific settings and immutable invocation records. Legacy results
+remain readable, but cannot be resumed without their missing provenance.
 
 Timing scope = text encoding + latent init + denoising + VAE decode +
 postprocess on GPU (``output_type='pt'``); excludes model load, PNG encoding.
@@ -12,7 +14,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import json
 import platform
 import socket
 import sys
@@ -24,6 +25,7 @@ import torch
 from PIL import Image
 
 from cachebench import flux_cache as fc
+from cachebench import drawbench_provenance as provenance
 
 DEFAULT_CONFIGS = ["uncached", "teacache:0.25", "teacache:0.4", "teacache:0.6", "teacache:0.8",
                    "magcache:0.06", "magcache:0.12", "magcache:0.24",
@@ -136,31 +138,58 @@ def main():
         parse_spec(spec)
         (out / config_id(spec)).mkdir(exist_ok=True)
 
-    pipe = FluxPipeline.from_pretrained(args.model, revision=args.revision, torch_dtype=torch.bfloat16).to("cuda")
-    pipe.set_progress_bar_config(disable=True)
     env = {"host": socket.gethostname(), "gpu": torch.cuda.get_device_name(), "torch": torch.__version__,
            "diffusers": diffusers.__version__, "python": platform.python_version(), "argv": sys.argv,
            "settings": {k: getattr(args, k) for k in ("model", "revision", "seed", "steps", "guidance", "height",
                                                        "width", "sen_calibration", "sen_thresh_start",
                                                        "sen_k")}}
-    (out / f"env_shard{i}of{n}.json").write_text(json.dumps(env, indent=1))
+    scientific_configs = {}
+    for spec in args.configs:
+        method, threshold = parse_spec(spec)
+        settings = {k: getattr(args, k) for k in ("model", "revision", "seed", "steps", "guidance",
+                                                 "height", "width")}
+        settings.update(method=method, threshold=threshold, dtype="bfloat16", batch_size=1,
+                        max_sequence_length=512, torch=env["torch"], diffusers=env["diffusers"],
+                        flux_cache_sha256=provenance.sha256_file(fc.__file__))
+        if method == "sencache":
+            if not args.sen_calibration:
+                raise ValueError("sencache needs --sen-calibration")
+            settings.update(sen_profile_sha256=provenance.sha256_file(args.sen_calibration),
+                            sen_thresh_start=args.sen_thresh_start, sen_k=args.sen_k)
+        scientific_configs[config_id(spec)] = settings
+    env["scientific_configs"] = scientific_configs
+    env["runner_sha256"] = provenance.sha256_file(__file__)
+
+    todo = []
+    for row in prompts:
+        for spec in args.configs:
+            stem = out / config_id(spec) / row["prompt_id"]
+            if not provenance.check_existing_result(
+                    stem, output_root=out, scientific_config=scientific_configs[config_id(spec)],
+                    sample=row, resume=args.resume, gpu=env["gpu"]):
+                todo.append((row, spec))
+    invocation = provenance.write_invocation(out, env)
+    if not todo:
+        print(f"[shard {i}/{n}] all requested results verified; nothing to generate", flush=True)
+        return
+
+    pipe = FluxPipeline.from_pretrained(args.model, revision=args.revision, torch_dtype=torch.bfloat16).to("cuda")
+    pipe.set_progress_bar_config(disable=True)
 
     for spec in args.configs:
         for _ in range(args.warmup):
             generate(pipe, args, spec, WARMUP_PROMPT, 1234)
         print(f"[shard {i}/{n}] warmed up {spec}", flush=True)
 
-    todo = [(r, s) for r in prompts for s in args.configs]
     for k, (row, spec) in enumerate(todo):
         stem = out / config_id(spec) / row["prompt_id"]
-        if args.resume and stem.with_suffix(".json").is_file():
-            continue
         rgb, rec = generate(pipe, args, spec, row["prompt"], args.seed)
-        Image.fromarray(rgb).save(stem.with_suffix(".png"))
+        with stem.with_suffix(".png").open("xb") as stream:
+            Image.fromarray(rgb).save(stream, format="PNG")
         method, thresh = parse_spec(spec)
         rec.update(row, config_id=config_id(spec), method=method, threshold=thresh, seed=args.seed,
                    gpu=env["gpu"], shard=args.shard)
-        stem.with_suffix(".json").write_text(json.dumps(rec))
+        provenance.write_result_metadata(stem, rec, scientific_configs[config_id(spec)], invocation)
         print(f"[shard {i}/{n}] {k + 1}/{len(todo)} {row['prompt_id']} {config_id(spec)} "
               f"{rec['generation_s']:.2f}s steps={rec['compute_steps']}", flush=True)
 

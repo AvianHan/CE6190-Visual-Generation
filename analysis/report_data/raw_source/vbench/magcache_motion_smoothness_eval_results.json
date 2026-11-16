@@ -1,0 +1,207 @@
+{
+    "motion_smoothness": [
+        0.9808728405448719,
+        [
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person giving a presentation to a room full of colleagues-0.mp4",
+                "video_results": 0.9928009138968755
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person giving a presentation to a room full of colleagues-1.mp4",
+                "video_results": 0.9923226304243652
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person giving a presentation to a room full of colleagues-2.mp4",
+                "video_results": 0.9941526967658056
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person giving a presentation to a room full of colleagues-3.mp4",
+                "video_results": 0.9891366751344635
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person giving a presentation to a room full of colleagues-4.mp4",
+                "video_results": 0.9927578981762978
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person eating a burger-0.mp4",
+                "video_results": 0.9878230745172669
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person eating a burger-1.mp4",
+                "video_results": 0.991353980666452
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person eating a burger-2.mp4",
+                "video_results": 0.9879076288401312
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person eating a burger-3.mp4",
+                "video_results": 0.9904587936286293
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a person eating a burger-4.mp4",
+                "video_results": 0.9944215138011668
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a bus accelerating to gain speed-0.mp4",
+                "video_results": 0.9662042514755635
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a bus accelerating to gain speed-1.mp4",
+                "video_results": 0.9626091290181938
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a bus accelerating to gain speed-2.mp4",
+                "video_results": 0.9705508260929906
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a bus accelerating to gain speed-3.mp4",
+                "video_results": 0.9757010732695187
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a bus accelerating to gain speed-4.mp4",
+                "video_results": 0.9736781378800853
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a train crossing over a tall bridge-0.mp4",
+                "video_results": 0.9798215557473657
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a train crossing over a tall bridge-1.mp4",
+                "video_results": 0.9848076973811694
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a train crossing over a tall bridge-2.mp4",
+                "video_results": 0.9856458244138334
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a train crossing over a tall bridge-3.mp4",
+                "video_results": 0.9788491866398001
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a train crossing over a tall bridge-4.mp4",
+                "video_results": 0.9901801162906402
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat sailing smoothly on a calm lake-0.mp4",
+                "video_results": 0.9826384199195838
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat sailing smoothly on a calm lake-1.mp4",
+                "video_results": 0.9891601303098029
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat sailing smoothly on a calm lake-2.mp4",
+                "video_results": 0.9877648168442057
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat sailing smoothly on a calm lake-3.mp4",
+                "video_results": 0.9781649790809085
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a boat sailing smoothly on a calm lake-4.mp4",
+                "video_results": 0.9912214920506798
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat grooming itself meticulously with its tongue-0.mp4",
+                "video_results": 0.9696407821959581
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat grooming itself meticulously with its tongue-1.mp4",
+                "video_results": 0.970592318788493
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat grooming itself meticulously with its tongue-2.mp4",
+                "video_results": 0.9719453145457569
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat grooming itself meticulously with its tongue-3.mp4",
+                "video_results": 0.9541812275457726
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cat grooming itself meticulously with its tongue-4.mp4",
+                "video_results": 0.9774141922009857
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a horse galloping across an open field-0.mp4",
+                "video_results": 0.9795660689456072
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a horse galloping across an open field-1.mp4",
+                "video_results": 0.9790838913339774
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a horse galloping across an open field-2.mp4",
+                "video_results": 0.9880649063828925
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a horse galloping across an open field-3.mp4",
+                "video_results": 0.9819315429196518
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a horse galloping across an open field-4.mp4",
+                "video_results": 0.983181601019147
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sheep running to join a herd of its kind-0.mp4",
+                "video_results": 0.9735153048799647
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sheep running to join a herd of its kind-1.mp4",
+                "video_results": 0.9773932585437354
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sheep running to join a herd of its kind-2.mp4",
+                "video_results": 0.9757991340883976
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sheep running to join a herd of its kind-3.mp4",
+                "video_results": 0.9808291824926418
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a sheep running to join a herd of its kind-4.mp4",
+                "video_results": 0.982522274855455
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cow bending down to drink water from a river-0.mp4",
+                "video_results": 0.9785638317877231
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cow bending down to drink water from a river-1.mp4",
+                "video_results": 0.9868630707825331
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cow bending down to drink water from a river-2.mp4",
+                "video_results": 0.9885080597092603
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cow bending down to drink water from a river-3.mp4",
+                "video_results": 0.9835839550797616
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/a cow bending down to drink water from a river-4.mp4",
+                "video_results": 0.9855445586304099
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/an elephant running to join a herd of its kind-0.mp4",
+                "video_results": 0.9708228215798873
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/an elephant running to join a herd of its kind-1.mp4",
+                "video_results": 0.9676144835822282
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/an elephant running to join a herd of its kind-2.mp4",
+                "video_results": 0.9808184966043709
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/an elephant running to join a herd of its kind-3.mp4",
+                "video_results": 0.9610323206673161
+            },
+            {
+                "video_path": "/home/ecs-user/ce6190-runtime/a100x8-20261110/vbench_stage/magcache/videos/an elephant running to join a herd of its kind-4.mp4",
+                "video_results": 0.9844959858158675
+            }
+        ]
+    ]
+}
