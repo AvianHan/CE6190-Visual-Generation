@@ -56,7 +56,8 @@
 \AtBeginEnvironment{table*}{\setlength{\aboverulesep}{0pt}\setlength{\belowrulesep}{0pt}%
   \renewcommand{\arraystretch}{1.25}}
 
-%% Author block: each name with the student ID below; the envelope icon after the ID links to the email.
+%% Author block: each name with the student ID below; the small envelope icon after the ID links to the email.
+%% The icon is black, like the ID, and \scriptsize so that its stroke weight matches the Courier digits.
 \usepackage{fontawesome5}
 \usepackage{tikz}
 \definecolor{grouptag}{HTML}{2A9D8F}
@@ -66,7 +67,7 @@
   text=white, rounded corners=7pt, inner xsep=7pt, inner ysep=3pt,
   font=\rmfamily\bfseries\normalsize](t){GROUP 7};}
 \newcommand{\member}[3]{\begin{tabular}[c]{@{}c@{}}%
-  #1\textsuperscript{*}\\[1pt]{\small\ttfamily #3}\hspace{.4em}%
-  \href{mailto:#2}{\textcolor{black}{\raisebox{.05ex}{\small\faEnvelope[regular]}}}\end{tabular}}
+  #1\textsuperscript{*}\\[1pt]{\small\ttfamily #3}\hspace{.35em}%
+  \href{mailto:#2}{\textcolor{black}{\scriptsize\faEnvelope[regular]}}\end{tabular}}
 %% Unnumbered first-page footnote with a * mark, for the equal-contribution note.
 \newcommand{\equalfootnote}{{\renewcommand{\thefootnote}{*}\footnotetext{Equal contribution; authors listed in alphabetical order.}}}

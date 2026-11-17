@@ -8,7 +8,7 @@
 
 ## 0. 任务一句话
 
-为 CVPR 双栏论文 *Beyond Skip Counts: Understanding Adaptive Caching for Efficient Generation*（CE6190 课程组报告，Group 8）画一张全宽总览图 Figure 1。读者只看这张图和图注，就应理解：
+为 CVPR 双栏论文 *Beyond Skip Counts: Understanding Adaptive Caching for Efficient Generation*（CE6190 课程组报告，Group 7）画一张全宽总览图 Figure 1。读者只看这张图和图注，就应理解：
 
 1. 本文比较的五种方法共享同一个"计算或复用"的缓存操作；
 2. 它们的区别在于"何时复用"的决策：不同的决策信号加上保护规则（guards）；
