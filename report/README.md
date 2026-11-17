@@ -4,7 +4,7 @@
 
 [PDF](report.pdf) · [LaTeX source](report.tex)
 
-The 14-page report uses the two-column CVPR 2027 author kit (`cvpr.sty`, `ieeenat_fullname.bst`, tag `CVPR2027-v1` of https://github.com/cvpr-org/author-kit) in camera-ready mode with page numbers. It includes 7 figures, 8 tables, 46 references and 3 appendices. The four equal-contribution authors are set in `authors.tex`, after a small teal GROUP 7 tag (`\grouptag` in `preamble.tex`): each name has the student ID below it, followed by an envelope icon that links to the member's email. The equal-contribution note is a page-1 footnote next to the repository footnote; the appendix starts on its own page. Report-specific packages, colours and table macros are in `preamble.tex`.
+The 14-page report uses the two-column CVPR 2027 author kit (`cvpr.sty`, `ieeenat_fullname.bst`, tag `CVPR2027-v1` of https://github.com/cvpr-org/author-kit) in camera-ready mode with page numbers. It includes 7 figures, 8 tables, 46 references and 3 appendices. The four equal-contribution authors are set in `authors.tex`, after a small teal GROUP 7 tag (`\grouptag` in `preamble.tex`): each name has the student ID below it, followed by an envelope icon that links to the member's email. The equal-contribution note is an unnumbered footnote at the foot of the left column on page 1 (placed right after `\maketitle`, as for `\thanks` notes in CVPR papers); the repository link is the last sentence of the abstract; the appendix starts on its own page. Report-specific packages, colours and table macros are in `preamble.tex`.
 
 ## Build
 
