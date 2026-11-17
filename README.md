@@ -36,13 +36,3 @@ The report connects these findings to component ablations, recorded schedules, m
 | `validation/` | Historical implementation-check records |
 
 Start with the [Wan handoff](deliverables/CE6190_Friend_Handoff_20261106/report_handoff_20261113), [FLUX results](results/drawbench_flux/README.md) and [report build instructions](report/README.md). Selected visual outputs are retained; complete generated videos and images are not included.
-
-## Course submission
-
-The assignment requires at least two methods and one dataset, own experimental results, parameter analysis, component ablations, comparisons, visualizations and discussion of improvements. Methods must differ from Project 1; the report must contain at least four pages.
-
-Submit `group_XX_report_project2.pdf` and `group_XX_code_project2.zip`, replacing `XX` with the group ID (Group 7). The recorded deadline is **17 November 2026**; check NTULearn for the submission time. Submit the files themselves and exclude model weights and datasets from the code ZIP.
-
-```bash
-python scripts/package_submission.py --output /path/to/group_XX_code_project2.zip
-```
